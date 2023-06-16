@@ -1,0 +1,512 @@
+<!DOCTYPE html><html><head>
+<meta charset="UTF-8">
+<meta content="#0072CF" name="theme-color">
+<meta content="NOODP" name="googlebot">
+<meta content="Groups,Polynomial functions and their roots,algebra,arithmetic,cambridge,children,curriculum,education,enrichment,geometry,math,mathematics,maths,maths,nrich,number,pattern,primary,school,secondary,shape,symmetry,teachers,teaching,trigonometry" name="keywords">
+<meta content="This article only skims the surface of Galois theory and should
+probably be accessible to a 17 or 18 year old school student with a
+strong interest in mathematics." name="Description">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta content="An Introduction to Galois Theory" property="og:title">
+<meta content="This article only skims the surface of Galois theory and should
+probably be accessible to a 17 or 18 year old school student with a
+strong interest in mathematics." property="og:description">
+<meta content="https://nrich.maths.org/content/02/02/art2/icon.jpg" property="og:image">
+<meta content="https://nrich.maths.org/1422" property="og:url">
+<meta content="An Introduction to Galois Theory" name="twitter:title">
+<meta content="This article only skims the surface of Galois theory and should
+probably be accessible to a 17 or 18 year old school student with a
+strong interest in mathematics." name="twitter:description">
+<meta content="https://nrich.maths.org/content/02/02/art2/icon.jpg" name="twitter:image">
+<meta content="summary_large_image" name="twitter:card">
+<link href="https://nrich.maths.org/1422" rel="canonical"><title>An Introduction to Galois Theory</title>
+<link href="/public/rss.php" rel="alternate" title="NRICH!" type="application/rss+xml">
+<link href="/cache/59142a25a5f5f570d4dbfabaf291fccb.css" rel="stylesheet" type="text/css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({
+    extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+        inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+        displayMath: [ ["$$","$$"], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    "HTML-CSS": {
+        availableFonts: ["TeX"]
+    }
+});</script>
+<script src="/javascript/MathJax/MathJax.js?config=TeX-AMS_HTML"></script>
+<script src="/cache/2c7ebbe51362fc6db85995e3d3b5b9d5.js"></script><script>
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+  ga('create', 'UA-791317-1', 'auto');
+  ga('set', 'dimension1', 'secondary');
+ga('set', 'dimension2', 'article');ga('set', 'dimension3', 'Groups,Polynomial functions and their roots');
+  ga('send', 'pageview');
+
+</script><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J6SPK1E9FZ"></script>
+<script>
+            window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-J6SPK1E9FZ');
+</script>
+            </head><body class=""><div id="bodydiv"><div id="console"></div><div id="header" class="student-menu-on"><header id="uniheader">
+  <div class="clearfix">
+    <div class="container" style="display: block;">
+        <div class="row">
+            <div class="col-sm-3">
+                <a href="https://www.maths.cam.ac.uk/" title="Cambridge University Faculty of Mathematics" id="unilogo" class="cam-main-logo">
+                <img id="faclogo" width="160px" src="/media/v6/fom-logo-bb.svg" alt="Home"></a>
+            </div>
+        </div>
+    </div>
+  </div>
+ </header><a class="skiplink" accesskey="s" href="#startcontent">Skip over navigation</a>
+    <div class="mobile-sitename">NRICH</div>
+<div class="controls">
+            <a href="#" id="open-menu">Main menu</a>
+	    <a href="#" id="open-search">Search</a>
+</div>
+
+<nav class="site-navigation">
+<ul class="accesskeys">
+<li>
+<a href="/accessibility" accesskey="0" title="accessibility">accessibility</a>
+<a href="/contact" accesskey="9" title="contact">contact</a>
+<a href="#startcontent" accesskey="s" >Skip over navigation</a>
+<a href="/terms" accesskey="8">Terms and conditions</a>
+</li>
+</ul>
+<div class="site-logo" ><ul><li><a href="/" accesskey="1">Home</a></li></ul></div>
+<div class="sitename"><a href="/">nrich</a></div>
+<ul class="student-level-links">
+<li class="menu-heading"><span>Students</span></li>
+<li class="primary-lower house">
+<a href="/primary" >
+primary
+<div class="explain">
+</div>
+<span class="explaintext">age 5-11</span></a>
+<a href="/primary"><span class="group">primary students</span></a>
+</li>
+<li class="secondary-upper house">
+<a href="/secondary" >secondary
+<div class="explain">
+</div>
+<span class="explaintext">age 11-18</span></a>
+<a href="/secondary"><span class="group">secondary students</span></a>
+</li>
+
+<li class="ksfive-upper house">
+<a href="/post-16">Post 16
+<div class="explain">
+</div>
+<span class="explaintext">age 16+</span></a>
+<a href="/post-16"><span class="group">post 16</span></a>
+</li>
+
+</ul>
+
+<ul class="teacher-level-links">
+<li class="menu-heading"><span>Teachers</span></li>
+<li class="ey house">
+<a href="/early-years">
+early years
+<div class="explain">
+</div>
+<span class="explaintext">age 0-5</span></a>
+<a href="/early-years"><span class="group">Early years</span></a>
+</li>
+<li class="primary house">
+<a href="/teacher-primary" title="teacher primary">primary
+<div class="explain">
+</div>
+<span class="explaintext">age 5-11</span></a>
+<a href="/teacher-primary"><span class="group">Primary teachers</span></a>
+</li>
+<li class="secondary house">
+<a href="/teacher-secondary">secondary
+<div class="explain">
+</div>
+<span class="explaintext">age 11+</span></a>
+<a href="/teacher-secondary" ><span class="group">Secondary teachers</span></a>
+</li>
+</ul>
+
+
+<ul class="search-links">
+<li class="menu-heading"><span>More links</span></li>
+<li class="topics"><a href="/public/topic.php" title="search by topics">Topics</a></li>
+</ul>
+<ul class="ancillary-links one">
+<li><a class="events" href="/events">Events
+<div class="explain">
+</div>
+<span class="explaintext">Nrich Events</span></a>
+</li>
+</ul>
+<ul class="ancillary-links two">
+<li><a class="donate" href="/support">Donate
+<div class="explain">
+</div>
+<span class="explaintext offset">Donate to NRICH</span></a>
+</li>
+</ul>
+
+<div class="search-box">
+<form method="get" action="/search/">
+  <input accesskey="4" class="search" type="text" name="search" placeholder="Search NRICH"/>
+  <input class="submit" type="submit" value="Go"/>
+</form>
+</div>
+</nav>
+<div class="mobile-search-box">
+<form method="get" action="/search/" id="searchform">
+  <input class="search" type="text" name="search" placeholder="Search NRICH"/>
+  <input class="submit" type="submit" value="Go"/>
+</form>
+</div></div><a id="startcontent"></a><div id="contentwrapper" class=" pg-viewer-php contenttype-article"><div id="columnfull" class="col-sm-12"><div id="staticbanner"><h1 class="headh4">An Introduction to Galois Theory</h1></div><h5 class="contdifflevel"><span class="contdifftext">Age 16 to 18</span> </h5><span class="author">Article by Dan Goodman</span><div id="datepub"><p>Published 2002 <span class="revised">Revised 2022</span></p></div><div id="problemview" class="view-article-css part-index"><p>This is a short introduction to Galois theory. The level of this article is necessarily quite high compared to some NRICH articles, because Galois theory is a very difficult topic usually only introduced in the final year of an undergraduate mathematics degree. This article only skims the surface of Galois theory and should probably be accessible to a 17 or 18 year old school student with a
+strong interest in mathematics. There is a short and very vague overview of a two important applications of Galois theory in the introduction below. If you want to know more about Galois theory the rest of the article is more in depth, but also harder.</p>
+<div>The two most important things to know about in order to understand the in depth part of the article are complex numbers and group theory. If you've not come across complex numbers before you can read <a href="/1403">An Introduction to Complex Numbers</a> , which should be accessible to 15 or 16 year old students. If you haven't come across group theory before, don't worry. I introduce the
+idea of a group below, although it might be better to try and find a book or web site that goes into more detail.</div>
+<p> </p>
+<h1>1 Introduction</h1>
+<h2>1.1 Motivation</h2>
+<div>Galois theory is a very big subject, and until you are quite immersed in mathematical study in a way which is unusual unless studying for a degree in maths, it can seem quite pointless. However, there are two problems which provide some motivation for studying Galois theory - the existence of polynomials which aren't soluble by radicals, and some results about classical Euclidean geometry,
+for example that you cannot trisect an angle using a ruler and compass, and that certain regular polygons cannot be constructed using a ruler and compass.</div>
+<p> </p>
+<div>The first problem is this, given a polynomial $p(x)$ with rational coefficients, for example $p(x)=x^2+3x+1$, can you express the roots of $p(x)$ using only rational numbers, multiplication, division, addition, subtraction and the operation of raising a number to the power $1/n$ for $n$ an integer? So, for example, we can solve $a x^2+b x+c=0$ using only these operations, because we know
+that the solutions are:$$ x=\frac{-b\pm\sqrt{b^2-4a c}}{2a} $$The coefficients $a$, $b$, $c$ are all rational, and we have only used multiplication, division, addition, subtraction and square root (which is raising to the power of $1/2$).</div>
+<div> </div>
+<div>We can find more complicated examples, suppose $p(x)=x^4-4x^2+2$. We can factorise this as $p(x)=(x^2-2)^2-2$. So the solutions will satisfy $x^2-2=\pm\sqrt{2}$, or $x^2=2\pm\sqrt{2}$. Square rooting this we get $x=\pm\sqrt{2\pm\sqrt{2}}$. So, $x^4-4x^2+2$ can be solved in this way too.</div>
+<div> </div>
+<div><strong style="font-weight:bold">Definition</strong> <em style="font-style:italic">When we can find the solutions for a polynomial with rational coefficients using only rational numbers and the operations of addition, subtraction, division, multiplication and finding nth roots, we say that $p(x)$ is</em> soluble by radicals.</div>
+<div> </div>
+<div>Using Galois theory, you can prove that if the degree of $p(x)$ (i.e. the highest power of $x$ in $p(x)$) is less than $5$ then the polynomial is soluble by radicals, but there are polynomials of degree $5$ and higher not soluble by radicals. In other words, polynomials of degree $5$ whose solutions cannot be written down using $n^{\textrm{th}}$ roots and the arithmetical operations, no
+matter how complicated.</div>
+<p> </p>
+<h2>1.2 History</h2>
+<div>So, why is Galois theory called Galois theory? The answer is that it is named after a French mathematician <em style="font-style:italic">Evariste Galois</em> (1811-1832) who did some very important work in this area. He had a very dramatic and difficult life, failing to get much of his work recognised due to his great difficulty in expressing himself clearly. For example, he wasn't admitted
+to the leading university in Paris, the <em style="font-style:italic">Ecole Polytechnique</em> , and had to make do with the <em style="font-style:italic">Ecole Normale</em> . He also met with difficulty because of his political sympathies, he was a republican. This led to him being expelled from the Ecole Normale when he wrote a letter to a newspaper criticising the director of the school. He
+joined a republican branch of the militia and was later imprisoned (twice) because of his membership. The second time whilst in prison he fell in love with the daughter of the prison physician, <em style="font-style:italic">Stephanie-Felice du Motel</em> and after being released died in a duel with <em style="font-style:italic">Perscheux d'Herbinville</em> . The reasons for the duel are not
+entirely clear, but it seems likely it had something to do with Stephanie. His death started republican riots and rallies which lasted for several days.</div>
+<p> </p>
+<div>Although Galois is often credited with inventing group theory and Galois theory, it seems that an Italian mathematician <em style="font-style:italic">Paolo Ruffini</em> (1765-1822) may have come up with many of the ideas first. Unfortunately his ideas were not taken seriously by the rest of the mathematical community at the time. There are some links at the end of this document for anyone
+interested in finding out more about the history of group theory and Galois theory.</div>
+<p> </p>
+<h2>1.3 Overview</h2>
+<div>Galois theory is concerned with symmetries in the roots of a polynomial $p(x)$. For example, if $p(x)=x^2-2$ then the roots are $\pm\sqrt{2}$. A symmetry of the roots is a way of swapping the solutions around in a way which doesn't matter in some sense. So, $\sqrt{2}$ and $-\sqrt{2}$ are the same because any polynomial expression involving $\sqrt{2}$ will be the same if we replace $\sqrt{2}$
+by $-\sqrt{2}$. For example, we know that $\sqrt{2}^2+\sqrt{2}+1=3+\sqrt{2}$. Or $\alpha^2+\alpha+1=3+\alpha$ when $\alpha=\sqrt{2}$. However, the same equation is true when $\alpha=-\sqrt{2}$, and this will be true for any expression involving only adding and multiplying $\sqrt{2}$.</div>
+<p> </p>
+<div>The way the result about solubility by radicals above is proved (using Galois theory) is to prove a result about the collection of symmetries among the roots of a polynomial given that the roots are built up using only the special operations above. (It turns out that the collection of symmetries must form what is called a soluble group. More on this near the end of this article.) Then you
+find a polynomial for which the symmetries of the roots does not have this special property, so you know that the roots couldn't be built up from the special operations.</div>
+<div> </div>
+<div>The subject of the rest of this article is making precise what we mean by a symmetry of the roots and about the structure of the collection of these symmetries.</div>
+<p> </p>
+<h2>1.4 Notation</h2>
+<p>Throughout this article, I'll use the following notation. The set of integers will be written $Z$, so writing $n\in Z$ means that $n$ is in $Z$, the set of integers, i.e. $n$ is an integer. The set of rational numbers is $Q$, the set of real numbers is $R$ and the set of complex numbers is $C$.</p>
+<h2>1.5 Advice on reading this article</h2>
+<div>The rest of this article is quite difficult. A large number of new ideas are introduced and used over and over again, and there are lots of unfamiliar words. By the end of the article I'll be using phrases like $Q[\sqrt{1+\sqrt{2}}]$ is a radical field extension of $Q$ because it can be built up using only cyclotomic field extensions at each stage. Don't be too put off by this seemingly
+alien language, every word is explained as it is introduced. The best strategy for reading it is to go slowly and make sure you understand exactly what every word means before going on to the next section, because that word will be used again and again, and if you don't quite understand it then everything will just get more and more confusing as you read on. However, if you are reading this
+online you can simply click on any of the underlined words and the original definition will pop up in a small window.</div>
+<h1>2 Groups and Fields</h1>
+<h2>2.1 Groups</h2>
+<table style="border-spacing:2px" border="1">
+<tbody>
+<tr>
+<td><strong>Definition (Group):</strong><br />
+A <em style="font-style:italic">group</em> $G$ is a collection of objects with an operation $\cdot$ satisfying the following rules (axioms):<br />
+ 
+<div>(1) For any two elements $x$ and $y$ in the group $G$ we also have $x\cdot y$ in the group $G$.</div>
+(2) There is an element (usually written $1$ or $e$, but sometimes $0$) called the <em style="font-style:italic">identity</em> in $G$ such that for any $x$ in the group $G$ we have $1\cdot x=x=x\cdot 1$.
+<div>(3) For any elements $x$, $y$, $z$ in $G$ we have $(x\cdot y)\cdot z=x\cdot(y\cdot z)$ (so it doesn't matter what order we do the calculations in). This property is called <em style="font-style:italic">associativity</em> ; it means we can write $x\cdot y\cdot z$ unambiguously (otherwise it would not be clear what we meant by $x\cdot y\cdot z$: would it be $x\cdot(y\cdot z)$ or $(x\cdot
+y)\cdot z$?).</div>
+(4) Every element $x$ in $G$ has a unique inverse $y$ (sometimes written $-x$ or $x^{-1}$) so that $x\cdot y=y\cdot x=1$.</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+For example, the integers $Z$ are a group with the operation of addition (we write this group$(Z,+)$ or sometimes, lazily, just $Z$). We can check thefour axioms: (1) If $n$, $m$ are integers then $n+m$ is an integer, so we're OK here. (2) $n+0=n=0+n$ so $0$ is the identity for the integers. (3) $(n+m)+p=n+m+p=n+(m+p)$ so $+$ is associative. (4) $n+(-n)=0=(-n)+n$ so we have inverses.<br />
+<br />
+However, the integers are not a group with multiplication, because the identity on the integers with multiplication is $1$, and there is no integer $n$ with $2n=1$.</p>
+<p> </p>
+<p> </p>
+<table style="border-spacing:2px" border="1">
+<tbody>
+<tr>
+<td><strong>Definition (Cyclic Group):</strong><br />
+Important finite groups are things like $C_p$ which is the <em style="font-style:italic">cyclic group of order $p$</em> . This is the set of elements $1$, $x$, $x^2$, $\ldots$, $x^{p-1}$ with the operation $x^n\cdot x^m=x^{n+m}$ and also the relation that $x^p=1$. So, for example, in $C_5$ we have that $x^2\cdot x^4=x^6=x^5\cdot x=x$. You can tell this is a group because the inverse of $x^n$ is
+$x^{p-n}$.</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p> </p>
+<p> </p>
+<table style="border-spacing:2px" border="1">
+<tbody>
+<tr>
+<td><strong>Definition (Symmetric Group):</strong><br />
+Another important example of a finite group is $S_n$, the <em style="font-style:italic">symmetric group on $n$ elements</em> . Suppose we rearrange the numbers $1$, $2$, $\ldots$, $n$. For example, we could rearrange $1$, $2$, $3$ to $2$, $3$, $1$. In other words, we take $1$ to $2$, $2$ to $3$ and $3$ to $1$. The collection of all of these rearrangements forms a group. The operation is do the
+second one, then the first. So, if we write $\sigma$ for the rearrangement $1$, $2$, $3$ goes to $2$, $3$, $1$ and $\tau$ for the rearrangement $1$, $2$, $3$ goes to $3$, $2$, $1$ then the rearrangement $\sigma\cdot\tau$ does the following: it rearranges $1$, $2$, $3$ to $3$, $2$, $1$ (that's $\tau$) then it rearranges this to $1$, $3$, $2$ (because $\sigma$ takes $3$ to $1$, $2$ to $3$ and $1$
+to $2$). So the group $S_n$ is the collection of rearrangements of $1$, $2$, $3$, $\ldots$, $n$.<br />
+<br />
+Another way of thinking about it, for those who are happy with the ideas of sets and functions, is to define the symmetric group on a set $X$ to be $S_X=\{f:X\rightarrow X | f \textrm{is invertible}\}$ with the operation that for the functions $f$, $g\in S_X$ we have the function $f\cdot g$ defined to be $(f\cdot g)(x)=f(g(x))$. The symmetric group above, $S_n=S_{\{1,2,\ldots,n\}}$, is the
+symmetric group on a set with $n$ elements.</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+At this point, you may want to check you've followed so far. See if you can prove that $S_n$ is a group and that it has $n!$ elements. If you're happy with the idea of sets and functions then you can prove that $S_X$ is a group even if $X$ is an infinite set.</p>
+<p> </p>
+<h2>2.2 Fields</h2>
+<table style="border-spacing:2px" border="1">
+<tbody>
+<tr>
+<td><strong>Definition (Field):</strong><br />
+A <em style="font-style:italic">field</em> $F$ is a bit like a group, but we have two operations, usually written $\cdot$ and $+$. $F$ is a field if $F$ has elements $0$ and $1$ such that $F$ with the operation $+$ is agroup (i.e. $(F,+)$ is a group), the set $F$ without the element $0$ is a group with the operation $\cdot$ (i.e. $(F\setminus\{0\},\cdot)$ is a group) and we have relations like
+$(x+y)\cdot z=x\cdot z+y\cdot z$ (we say that $\cdot$ is <em style="font-style:italic">distributive</em> over $+$), $0\cdot x=0=x\cdot 0$, $x\cdot y=y\cdot x$ and $x+y=y+x$ (which isn't always true for a group) and so on.<br />
+<br />
+The definition of a field above is quite abstract, all it means is that a field is a set in which you can add, subtract and multiply any elements, and you can divide by any element other than $0$.</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+A good example of a field is the real numbers or the rational numbers. (Check the axioms.)<br />
+<br />
+A less obvious example of a field (the important example for Galois theory) is $Q[\sqrt{2}]$. This is the set of all numbers which can be written $a+b\sqrt{2}$ for $a$ and $b$ rational numbers. It is not immediately obvious that this is a field, because we do not know, for example, if $1/(a+b\sqrt{2})$ can be written as $c+d\sqrt{2}$. However, you can always do this. If $x=1/(a+b\sqrt{2})$ then
+(multiplying the top and bottom by $a-b\sqrt{2}$):$$ x=\frac{a-b\sqrt{2}}{(a+b\sqrt{2})(a-b\sqrt{2})}$$ And $(a+b\sqrt{2})(a-b\sqrt{2})=a^2-2b^2=p$ say. So we have that $x=a/p-(b/p)\sqrt{2}$. So $Q[\sqrt{2}]$ really is a field (the other axioms are clearly true, check them if you like).</p>
+<p> </p>
+<p> </p>
+<table style="border-spacing:2px" border="1">
+<tbody>
+<tr>
+<td><strong>Definition (Algebraic Number):</strong><br />
+More generally, if $\alpha$ is a real number with the property that $p(\alpha)=0$ for some polynomial $p(x)$, then we say that $\alpha$ is an <em style="font-style:italic">algebraic number</em>.</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+If $\alpha$ is an algebraic number then $Q[\alpha]$ is a field. We can think of $Q[\alpha]$ in two ways. Firstly, as the set of elements $a_0+a_1\alpha+\ldots+a_{n-1}\alpha^{n-1}$ where each $a_i$ is a rational number and $n$ is the smallest integer such that there is a polynomial $p(x)$ of degree $n$ with $p(\alpha)=0$. The second way is that $Q[\alpha]$ is the smallest field extension of $Q$
+containing $\alpha$, this is explained in the next section. You can try to prove that $Q[\alpha]$ is a field if you like, but you need to know a theorem called the Remainder Theorem.<br />
+<br />
+This gives us lots of examples of fields. For example, $Q[\sqrt[3]{2}]=\{a+b\sqrt[3]{2}+c\sqrt[3]{2}^2: a, b, c\in Q\}$ is a field.<br />
+<br />
+You can extend this idea to define, for $\alpha$, $\beta$ both algebraic, $Q[\alpha, \beta]$ to be the set of all expressions like $2\alpha\beta$, $\alpha+\alpha^2\beta$, and so on.<br />
+<br />
+To test yourself, you might like to see if you can show that $Q[\alpha,\beta]=Q[\alpha][\beta]$ (the right hand side makes sense because $Q[\alpha][\beta]=K[\beta]$ where $K=Q[\alpha]$ which is a field). This shows that $Q[\alpha,\beta]$ is a field.<br />
+<br />
+This gives us even more examples of fields, for example $Q[\sqrt{2},\sqrt{3}]=\{a+b\sqrt{2}+c\sqrt{3}+d\sqrt{6}:a,b,c,d\in Q\}$.</p>
+<p> </p>
+<p> </p>
+<h2>2.3 Field extensions</h2>
+<table style="border-spacing:2px" border="1">
+<tbody>
+<tr>
+<td><strong>Definition (Field Extension):</strong><br />
+A <em style="font-style:italic">field extension</em> of a field $F$ is a field $K$ containing $F$ (we write a field extension as $F\subseteq K$ or $K/F$). For example, the real numbers are a field extension of the rational numbers, because the reals are a field and every rational is also a real number.</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+The example above, $Q[\sqrt{2}]$ is a field extension of $Q$ since if $a\in Q$ then $a+0\sqrt{2}\in Q[\sqrt{2}]$, so $Q\subseteq Q[\sqrt{2}]$. More generally we have that $Q[\alpha]$ is a field extension of $Q$ for $\alpha$ an algebraic number.</p>
+<h2>2.4 Splitting Fields</h2>
+<div>Here's where the Galois theory bit starts.</div>
+<table style="border-spacing:2px" border="1">
+<tbody>
+<tr>
+<td><strong>Definition (Splitting Field):</strong><br />
+Given a polynomial $p(x)$ we have what is called the <em style="font-style:italic">splitting field</em> of $p(x)$ which is the smallest field extension of $Q$ that contains all the roots of $p(x)$. So, if $p(x)=x^2-2$ then the splitting field of $p(x)$ is $Q[\sqrt{2}]$ (it contains all the roots of $p(x)$ and if it had fewer elements it either wouldn't contain all the roots or wouldn't be a
+field).</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+Another example is that the splitting field of $p(x)=x^4-5x^2+6$ is $Q[\sqrt{2},\sqrt{3}]$. Can you see why?</p>
+<h1>3 Automorphisms and Galois Groups</h1>
+<h2>3.1 Automorphisms</h2>
+<div>At this point you may be wondering why I was talking about symmetries of roots at the beginning of this article. Here's where the idea of a field automorphism comes in. Let's use $Q[\sqrt{2}]$ as an example. If we define a function $f: Q[\sqrt{2}]\rightarrow Q[\sqrt{2}]$ by taking $f(a+b\sqrt{2})=a-b\sqrt{2}$ then we find that $f$ is what is called a field automorphism.</div>
+<p> </p>
+<table style="border-spacing:2px" border="1">
+<tbody>
+<tr>
+<td><strong>Definition (Field Automorphism):</strong><br />
+A <em style="font-style:italic">field automorphism</em> $f$ has to be an invertible function (which the $f$ above clearly is) such that $f(x+y)=f(x)+f(y)$, $f(a x)=f(a)f(x)$ and $f(1/x)=1/f(x)$.</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+You can check that for the function $f$ above really does satisfy all the conditions.<br />
+<br />
+The idea of a field automorphism is that it is just a way of relabelling the elements of the field without changing the structure at all. In other words, we can replace the symbol $\sqrt{2}$ with the symbol $-\sqrt{2}$, do all our calculations and then change the symbol $-\sqrt{2}$ back to $\sqrt{2}$ and we get the right answer. Field automorphisms are the right way of expressing this idea,
+because the conditions that $f(x+y)=f(x)+f(y)$ preserve multiplication, addition and so on.</p>
+<p> </p>
+<table style="border-spacing:2px" border="1">
+<tbody>
+<tr>
+<td><strong>Definition (F-Automorphism):</strong><br />
+More specifically, if we have a field extension $K$ of a field $F$, then an <em style="font-style:italic">$F$-automorphism of $K$</em> is an automorphism $f$ of $K$ with the additional property that $f(x)=x$ for all $x$ in $F$.</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+This is the precise way of defining the symmetry of the roots that I talked about above, because the $F$-automorphism leaves all elements of $F$ unchanged and only relabels the new elements we added to form $K$. It turns out that for $Q[\sqrt{2}]$ the function $f$ I defined above is the only $Q$-automorphism other than the obvious $g(x)=x$.<br />
+<br />
+If $p(x)$ is any polynomial (with rational coefficients, as always), $K/Q$ is a field extension, and $f$ is a $Q$-automorphism of $K$ then $f(p(x))=p(f(x))$, see if you can prove this.<br />
+<br />
+The reason this is useful is that it shows that a $Q$-automorphism of a splitting field $K$ of a polynomial $p(x)$ rearranges the roots of $p(x)$. If $p(\alpha)=0$ then $p(f(\alpha))=f(p(\alpha))=f(0)=0$, so $f(\alpha)$ is then a root of $p(x)$.<br />
+<br />
+In fact, we can go further than this and show that knowing how a $Q$-automorphism of a splitting field rearranges the roots of $p(x)$ is enough to tell us precisely what that $Q$-automorphism does to every element of the splitting field. However, not every rearrangement of the roots of $p(x)$ comes from a $Q$-automorphism. For example, if $p(x)=x^4-5x^2+6$ (which we showed has splitting field
+$K=Q[\sqrt{2},\sqrt{3}]$) which has roots $\pm \sqrt{2}$ and $\pm \sqrt{3}$ then there is no $Q$-automorphism $f$ of $K$ with $f(\sqrt{2})=\sqrt{3}$. Suppose there was, then $f(\sqrt{2})^2 =f(\sqrt{2}^2)=f(2)=2$ because $f$ preserves multiplicative structure and $f(x)=x$ for rational $x$. But if $f(\sqrt{2})=\sqrt{3}$ then $f(\sqrt{2})^2=\sqrt{3}^2$, i.e. $2=3$ which is clearly nonsense.<br />
+<br />
+So now we can see why a $Q$-automorphism of a splitting field gives us exactly the right idea of a symmetry of the roots which doesn't matter (i.e. doesn't change the structure at all).<br />
+<br />
+So for the polynomial $p(x)=x^2-2$ we have the following:<br />
+<br />
+(a) The splitting field of $p(x)$ is $Q[\sqrt{2}]$.<br />
+(b) The $Q$-automorphisms of $p(x)$, which we can think of as the symmetries of the roots, are $f(a+b\sqrt{2})=a-b\sqrt{2}$ and $g(x)=x$.<br />
+<br />
+At this point, you may want to see if you can find the splitting field and the $Q$-automorphisms of$p(x)=x^2-5$ (two $Q$-automorphisms), and if you know about complex numbers, you could try $x^4-1$ (also two $Q$-automorphisms).</p>
+<p> </p>
+<p> </p>
+<h2>3.2 The Galois Group</h2>
+<table style="border-spacing:2px" border="1">
+<tbody>
+<tr>
+<td><strong>Definition (Galois Group):</strong><br />
+Now, if we have a field $F$ which is a field extension of $Q$ then we have a collection $G$ of $Q$-automorphisms of $F$. This collection $G$ is a group (with the operation defined by: if $f$ and $g$ are in $G$, i.e. they are $Q$-automorphisms of $F$, then $f\cdot g$ is a $Q$-automorphism defined by $(f\cdot g)(x)=f(g(x))$ - check that this really is a group). It is called the <em style="font-style:italic">Galois group of the field extension $F$ over $Q$</em> , usually written $\mathrm{Gal}(F/Q)$. If $F$ is the splitting field of a polynomial $p(x)$ then $G$ is called the <em style="font-style:italic">Galois group of the polynomial</em> $p(x)$, usually written $\mathrm{Gal}(p)$.</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+So, taking the polynomial $p(x)=x^2-2$, we have $G=\mathrm{Gal}(p)=\{f,g\}$ where $f(a+b\sqrt{2})=a-b\sqrt{2}$ and $g(x)=x$. Here, $g$ is the identity element of the group, and we have that $f\cdot f=g$, because $(f\cdot f)(a+b\sqrt{2})=f(f(a+b\sqrt{2})=f(a-b \sqrt{2})=a+b\sqrt{2}=g(a+b\sqrt{2})$. So, the group $G$ is the same as $C_2$, the cyclic group of order 2, or $S_2$, the symmetric group
+of order 2, because we have a single element $f$ with $f^2=f\cdot f=1$ the identity on the group.<br />
+<br />
+As an exercise, you might like to find the Galois group of $p(x)=a x^2+bx=c$. [Hint: there are two cases to consider, $b^2-4a c =r^2$ for some rational $r$ or $b^2-4a c\neq r^2$ for any rational $r$.]<br />
+<br />
+If you know a bit about complex numbers (specifically, roots of unit) and you're quite adventurous, you might like to try and show that for $p(x)=x^q-1$ with $q$ a prime number, $\mathrm{Gal}(p)=C_{q-1}$ the cyclic group of order $q-1$.<br />
+<br />
+If you know about subgroups, you can use the fact that the $Q$-automorphisms of a splitting field rearrange the roots (and that the rearrangement of the roots alone tells us what the $Q$-automorphism is) is to show that $\mathrm{Gal}(p)\leq S_n$ where $n$ is the degree of $p(x)$. In particular, all polynomials have finite Galois group.</p>
+<h1>4 Solubility by Radicals</h1>
+<div>To go any further into Galois theory would, unfortunately, be too complicated. I'll sketch the rest of the proof of the existence of polynomials that are not soluble by radicals.</div>
+<p> </p>
+<div> </div>
+<p> </p>
+<table style="border-spacing:2px" border="1">
+<tbody>
+<tr>
+<td><strong>Definition (Cyclotomic Field Extension):</strong><br />
+First, you define a <em style="font-style:italic">cyclotomic field extension</em> to be a field extension of $F$ where you take an element $x$ in $F$ and add the $n^{\textrm{th}}$ root. So, $Q[\sqrt{2}]$ is a cyclotomic field extension of $Q$.</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<table style="border-spacing:2px" border="1">
+<tbody>
+<tr>
+<td><strong>Definition (Radical Field Extension):</strong><br />
+Second, you define a <em style="font-style:italic">radical field extension</em> $K$ of a field $F$ to be a field extension which you can get to only using cyclotomic field extensions. So, $Q[\sqrt{1+\sqrt{2}}]$ is a radical field extension because you can start with $Q$, add $\sqrt{2}$ to form $Q[\sqrt{2}]$. Now, $1+\sqrt{2}$ is in $Q[\sqrt{2}]$, so taking the square root of this you get
+$Q[\sqrt{1+\sqrt{2}}]$. If the polynomial $p(x)$ is soluble by radicals, then the splitting field $F$ of $p(x)$ is a radical field extension of $Q$ (can you see why?).</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+Third, you prove that the Galois group of any radical field extensionis soluble. This is the hardest part by a long, long way. In fact, I'm not even going to attempt to explain what a soluble group is here, because it would take too long.<br />
+<br />
+Fourth, you prove that the group $S_5$ (the symmetric group on $5$ elements) is not soluble. If you know a bit of group theory, this isn't very difficult.<br />
+<br />
+Fifth, you find a polynomial $p(x)$ whose Galois groupis $S_5$. The splitting field of this polynomial cannot be a radical field extension (because all radical field extensions have soluble Galois groups, so the roots of $p(x)$ cannot be built up from $+$, $-$, $\times$, $/$ and the $n^{\textrm{th}}$ roots.</p>
+<p> </p>
+<h1>5 Trisecting Angles</h1>
+<div>As I mentioned above, you can use Galois theory to show that it is impossible to trisect all angles using ruler and compass methods. I'll outline a proof that you cannot construct an angle of $20^{\circ}$ using ruler and compasses (and so you cannot trisect an angle of $60^{\circ}$).</div>
+<table style="border-spacing:2px" border="1">
+<tbody>
+<tr>
+<td><strong>Definition (Constructible Numbers and Constructible Field Extensions):</strong><br />
+The basic idea is to define a <em style="font-style:italic">constructible number</em> to be a real number that can be found using geometric constructions with an unmarked ruler and a compass. You can show that any constructible number must lie in a field extension $Q[\sqrt{\alpha_1}, \sqrt{\alpha_2}, \ldots, \sqrt{\alpha_n}]$ with each $\alpha_i\in Q[\sqrt{\alpha_1}, \ldots,
+\sqrt{\alpha_{i-1}}]$. We'll call a field extension that looks like this a <em style="font-style:italic">constructible field extension</em> . So, for example, $Q[\sqrt{2}]$ is a constructible field extension, and so is $Q[\sqrt{1+\sqrt{2}}]$, because you can write $Q[\sqrt{1+\sqrt{2}}]=Q[\sqrt{2},\sqrt{1+\sqrt{2}}]$.</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+It's not obvious that any constructible number must lie in a field extension of this form, but we can sort of see why because given line segments of length $x$, $y$, it is possible to construct other line segments of length $x+y$, $x y$ and $1/x$ using geometric constructions. Moreover, you can construct a line segment of length $\sqrt{x}$ using only geometric constructions. In fact, you can also
+show that these are the only things you can do with geometric constructions. (If you want to try, the way to prove this is to use the fact that all you can do with unmarked rulers and compasses is to find the intersection between two lines, which only gives you arithmetical operations, find the intersection between a line and a circle, which gives you square roots, and intersections between
+circles and circles, which gives you square roots.) Can you see why this means that a number in a constructible field extension (as defined above) can be constructed using only an unmarked ruler and compass, and that only numbers in constructible field extensions can be made in this way?<br />
+<br />
+Next, you show that if you have a cubic polynomial $p(x)=a x^3+b x^2+c x +d$ whose roots are not rational numbers then the roots are not constructible? This isn't very difficult to prove but requires some knowledge beyond what I'm assuming for this article.<br />
+<br />
+Here's the clever part. Suppose you could construct a $20^{\circ}$ angle, then the number $\cos(20^{\circ})$ would be constructible (you can just drop a perpendicular from a point on a line at $20^{\circ}$ to the horizontal, distance $1$ from the origin). However, you can show that $\alpha=\cos(20^{\circ})$ is a root of the equation $8x^3-6x-1=0$ (by expanding $\cos(60^{\circ})$ in terms of
+$\cos(20^{\circ})$ using the addition formula). It is easy to show that this has no rational roots, and so the roots are not constructible. This means that we couldn't have constructed a $20^{\circ}$ angle, because then we would be able to construct $\cos(20^{\circ})$ which is impossible. So a $60^{\circ}$ angle cannot be trisected.<br />
+<br />
+You can use methods like this to prove other results about what shapes can or can't be constructed and so forth.</p>
+<h1>6 Further Reading</h1>
+<ol>
+<li><a href="http://mathworld.wolfram.com/CubicEquation.html">http://mathworld.wolfram.com/CubicEquation.html</a> (lots about solving polynomials of degree 3, quite hard)</li>
+<li><a href="http://mathworld.wolfram.com/QuarticEquation.html">http://mathworld.wolfram.com/QuarticEquation.html</a> (lots about solving polynomials of degree 4, quite hard)</li>
+<li><a href="http://mathworld.wolfram.com/Group.html">http://mathworld.wolfram.com/Group.html</a> (information about group theory, quite hard but lots of links to interesting things about group theory)</li>
+<li><a href="http://members.tripod.com/~dogschool/">http://members.tripod.com/~dogschool/</a> (long introduction to group theory, seems quite good and not too difficult)</li>
+<li><a href="https://mathshistory.st-andrews.ac.uk/HistTopics/Development_group_theory/">https://mathshistory.st-andrews.ac.uk/HistTopics/Development_group_theory/</a> (history of work on group theory, quite a lot about Galois theory)</li>
+<li><a href="https://mathshistory.st-andrews.ac.uk/HistTopics/Abstract_groups/">https://mathshistory.st-andrews.ac.uk/HistTopics/Abstract_groups/</a> (history of the development of the concept of a group)</li>
+<li><a href="https://mathshistory.st-andrews.ac.uk/Biographies/Galois/">https://mathshistory.st-andrews.ac.uk/Biographies/Galois/</a> (biography of Galois, whose life story is very dramatic - involving duels and political riots)</li>
+<li><a href="https://mathshistory.st-andrews.ac.uk/Biographies/Abel/">https://mathshistory.st-andrews.ac.uk/Biographies/Abel/</a> (biography of Abel, another important person in the development of Galois theory)</li>
+<li><a href="https://mathshistory.st-andrews.ac.uk/Biographies/Ruffini/">https://mathshistory.st-andrews.ac.uk/Biographies/Ruffini/</a> (biography of Ruffini, who is the first person to have come up with a proof that there are quintic equations which are not soluble by radicals, although his work was little recognised at the time)</li>
+<li><a href="http://mathworld.wolfram.com/Trisection.html">http://mathworld.wolfram.com/Trisection.html</a> (trisecting angles, no proofs)</li>
+<li><a href="http://mathworld.wolfram.com/ConstructiblePolygon.html">http://mathworld.wolfram.com/ConstructiblePolygon.html</a> (constructible polygons, no proofs)</li>
+<li>http://www.cut-the-knot.org/arithmetic/rational.shtml (constructible numbers, with proofs)</li>
+<li>http://www.cut-the-knot.com/arithmetic/cubic.shtml (trisecting angles, with proofs)</li>
+</ol>
+<p> </p></div></div></div>
+<div class="footer-menu"> 
+
+<nav>
+<ul>
+<li><a href="/about">About</a> 
+</li><li><a href="/contact">Contact us</a> 
+</li><li><a href="/2714">Meet the team</a> 
+</li><li><a href="/support">Support us</a> 
+</li><li><a href="/funding">Our funders</a> 
+</li><li><a href="/searchhelp">Tech help</a> 
+</li><li><a href="https://docs.google.com/document/d/1CdweNrAUFFGiO7XZV_TFVCdla-iw-7RP99VPZRuXNUc" target="_blank">Accessibility</a> 
+</li></ul>
+</nav>
+
+<div class="mission" itemscope itemtype="https://www.schema.org/EducationalOrganization" >
+The NRICH Project aims to enrich the mathematical experiences of all learners. To support this aim, members of the 
+NRICH team work in a wide range of capacities, including providing professional development for teachers wishing to 
+embed rich mathematical tasks into everyday classroom practice.
+</div>
+
+<div class="social">
+<ul>
+<li><a class="twitter" href="https://twitter.com/#!/nrichmaths">twitter</a>
+</li><li><a class="facebook" href="https://www.facebook.com/nrichmaths">facebook</a>
+</li></ul>
+</div>
+
+<div class="mailing-list">
+<ul>
+<li><a href="/newsletter">Register for our mailing list</a></li></ul>
+</div>
+</div>
+
+<div class="footer">
+<div class="caminfo">
+  <a href="https://www.cam.ac.uk"><img loading="lazy" class="camlogo" 
+  src="/media/v6/main-logo-small-trans.png" alt="Cambridge University logo" /></a>
+</div>
+<div class="copyright">
+<a href="https://nrich.maths.org/terms"> Copyright &#169; 1997 - 2023. University of Cambridge. 
+All rights reserved.</a><br />NRICH is part of the family of activities in the <a 
+href="https://mmp.maths.org">Millennium Mathematics Project</a>.
+</div>
+</div> <!--footer-->
+</div><link href="/css/print.css" media="print" rel="stylesheet" type="text/css" />
+<!-- end bodydiv --><script>let nconsole=false;</script></body></html>

@@ -1,0 +1,832 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD><TITLE>Permutations</TITLE></HEAD>
+<body><!--'"</title></head>-->
+
+<script type="text/javascript">
+//OwnerIQ
+var __oiq_pct = 50;
+if( __oiq_pct>=100 || Math.floor(Math.random()*100/(100-__oiq_pct)) > 0 ) {
+var _oiqq = _oiqq || [];
+_oiqq.push(['oiq_addPageBrand','Lycos']);
+_oiqq.push(['oiq_addPageCat','Internet > Websites']);
+_oiqq.push(['oiq_addPageLifecycle','Intend']);
+_oiqq.push(['oiq_doTag']);
+(function() {
+var oiq = document.createElement('script'); oiq.type = 'text/javascript'; oiq.async = true;
+oiq.src = document.location.protocol + '//px.owneriq.net/stas/s/lycosn.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(oiq, s);
+})();
+}
+//Google Analytics
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount','UA-21402695-19']);
+_gaq.push(['_setDomainName','tripod.com']);
+_gaq.push(['_setCustomVar',1,'member_name','dogschool',3]);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+//Lycos Init
+function getReferrer() {
+var all= this.document.cookie;
+if (all== '') return false;
+var cookie_name = 'REFERRER=';
+var start = all.lastIndexOf(cookie_name);
+if (start == -1) return false;
+start += cookie_name.length;
+var end = all.indexOf(';', start);
+if (end == -1) end = all.length;
+return all.substring(start, end);
+}
+function getQuery() {
+var rfr = getReferrer();
+if (rfr == '') return false;
+var q = extractQuery(rfr, 'yahoo.com', 'p=');
+if (q) return q;
+q = extractQuery(rfr, '', 'q=');
+return q ? q : "";
+}
+function extractQuery(full, site, q_param) {
+var start = full.lastIndexOf(site);
+if (start == -1) return false;
+start = full.lastIndexOf(q_param);
+if (start == -1) return false;
+start += q_param.length;
+var end = full.indexOf('&', start);
+if (end == -1) end = full.length;
+return unescape(full.substring(start, end)).split(" ").join("+");
+}
+function generateHref(atag, template){
+atag.href=template.replace('_MYURL_', window.location.href.replace('http://', '')).replace('_MYTITLE_','Check%20out%20this%20Tripod%20Member%20site!'); 
+}
+var lycos_ad = Array();
+var lycos_onload_timer;
+var cm_role = "live";
+var cm_host = "tripod.lycos.com";
+var cm_taxid = "/memberembedded";
+var tripod_member_name = "dogschool";
+var tripod_member_page = "dogschool/permutation.html";
+var tripod_ratings_hash = "1686895962:d11f31ca36d16a51a79b86f45456bba6";
+
+var lycos_ad_category = {"dmoz":"reference\/knots","ontarget":"&CAT=education&L2CAT=reference","find_what":"graduate courses"};
+
+var lycos_ad_remote_addr = "209.202.244.9";
+var lycos_ad_www_server = "www.tripod.lycos.com";
+var lycos_ad_track_small = "";
+var lycos_ad_track_served = "";
+var lycos_search_query = getQuery();
+</script>
+
+<script type="text/javascript" src="https://scripts.lycos.com/catman/init.js"></script>
+
+<script type='text/javascript'>
+ var googletag = googletag || {};
+ googletag.cmd = googletag.cmd || [];
+ (function() {
+   var gads = document.createElement('script');
+   gads.async = true;
+   gads.type = 'text/javascript';
+   var useSSL = 'https:' == document.location.protocol;
+   gads.src = (useSSL ? 'https:' : 'http:') +
+     '//www.googletagservices.com/tag/js/gpt.js';
+   var node = document.getElementsByTagName('script')[0];
+   node.parentNode.insertBefore(gads, node);
+ })();
+</script>
+
+<script type='text/javascript'>
+ googletag.cmd.push(function() {
+   googletag.defineSlot('/95963596/TRI_300X250_dfp', [300, 250], 'div-gpt-ad-1450204159126-0').addService(googletag.pubads());
+   googletag.defineSlot('/95963596/TRI_above_728x90_dfp', [728, 90], 'div-gpt-ad-1450204159126-1').addService(googletag.pubads());
+   googletag.defineSlot('/95963596/TRI_below_728x90_dfp', [728, 90], 'div-gpt-ad-1450204159126-2').addService(googletag.pubads());
+   googletag.pubads().enableSingleRequest();
+   googletag.enableServices();
+ });
+</script>
+
+
+<script type="text/javascript"> 
+(function(isV)
+{
+    if( !isV )
+    {
+        return;
+    }
+    var adMgr = new AdManager();
+    var lycos_prod_set = adMgr.chooseProductSet();
+    var slots = ["leaderboard", "leaderboard2", "toolbar_image", "toolbar_text", "smallbox", "top_promo", "footer2", "slider"];
+    var adCat = this.lycos_ad_category;
+    adMgr.setForcedParam('page', (adCat && adCat.dmoz) ? adCat.dmoz : 'member');
+    if (this.lycos_search_query)
+    {
+        adMgr.setForcedParam("keyword", this.lycos_search_query);
+    } 
+    else if(adCat && adCat.find_what)
+    {
+        adMgr.setForcedParam('keyword', adCat.find_what);
+    }
+    
+    for (var s in slots)
+    {
+        var slot = slots[s];
+        if (adMgr.isSlotAvailable(slot))
+        {
+            this.lycos_ad[slot] = adMgr.getSlot(slot);
+        }
+    }
+
+    adMgr.renderHeader();
+    adMgr.renderFooter();
+}((function() {
+
+var w = 0, h = 0, minimumThreshold = 300;
+
+if (top == self)
+{
+    return true;
+}
+if (typeof(window.innerWidth) == 'number' )
+{
+    w = window.innerWidth;
+    h = window.innerHeight;
+}
+else if (document.documentElement && (document.documentElement.clientWidth || document.documentElement.clientHeight))
+{
+    w = document.documentElement.clientWidth;
+    h = document.documentElement.clientHeight;
+}
+else if (document.body && (document.body.clientWidth || document.body.clientHeight))
+{
+    w = document.body.clientWidth;
+    h = document.body.clientHeight;
+}
+return ((w > minimumThreshold) && (h > minimumThreshold));
+}())));
+
+
+
+
+window.onload = function()
+{
+    var f = document.getElementById("FooterAd");
+    var b = document.getElementsByTagName("body")[0];
+    b.appendChild(f);
+    f.style.display = "block";
+    document.getElementById('lycosFooterAdiFrame').src = '/adm/ad/footerAd.iframe.html';
+    
+
+
+    
+    // DOM Inj Ad
+    (function(isTrellix)
+    {
+        var e = document.createElement('iframe');
+        e.style.border = '0';
+        e.style.margin = 0;
+        e.style.display = 'block';
+        e.style.cssFloat = 'right';
+        e.style.height = '254px';
+        e.style.overflow = 'hidden';
+        e.style.padding = 0;
+        e.style.width = '300px';
+
+
+        var isBlokedByDomain = function( href )
+        {
+            var blockedDomains = [
+                "ananyaporn13000.tripod.com",
+                "xxxpornxxx.tripod.com"
+            ];
+            var flag = false;
+            
+            for( var i=0; i<blockedDomains.length; i++ )
+            {
+                if( href.search( blockedDomains[ i ] ) >= 0 )
+                {
+                    flag = true;
+                }
+            }
+            return flag;
+        }
+
+        var getMetaContent = function( metaName )
+        {
+            var metas = document.getElementsByTagName('meta');
+            for (i=0; i<metas.length; i++)
+            { 
+                if( metas[i].getAttribute("name") == metaName )
+                { 
+                    return metas[i].getAttribute("content"); 
+                } 
+            }
+            return false;
+        }
+        
+        var getCommentNodes = function(regexPattern)
+        {
+            var nodes = {};
+            var nodesA = [];
+            var preferredNodesList = ['a', 'c', 'b'];
+        
+            (function getNodesThatHaveComments(n, pattern)
+            {
+                if (n.hasChildNodes())
+                {
+                    if (n.tagName === 'IFRAME')
+                    {
+                        return false;
+                    }
+                    for (var i = 0; i < n.childNodes.length; i++)
+                    {
+                        if ((n.childNodes[i].nodeType === 8) && (pattern.test(n.childNodes[i].nodeValue)))
+                        {
+                            var areaName = pattern.exec(n.childNodes[i].nodeValue)[1];
+                            nodes[areaName] = n;
+                        }
+                        else if (n.childNodes[i].nodeType === 1)
+                        {
+                            getNodesThatHaveComments(n.childNodes[i], pattern);
+                        }
+                    }
+                }
+            }(document.body, regexPattern));
+
+            for (var i in preferredNodesList)
+            {
+                if (nodes[preferredNodesList[i]])
+                {
+                    if( isTrellix && nodes[preferredNodesList[i]].parentNode.parentNode.parentNode.parentNode )
+                    {
+                        nodesA.push(nodes[preferredNodesList[i]].parentNode.parentNode.parentNode.parentNode);
+                    }
+                    else
+                    {
+                        nodesA.push( nodes[preferredNodesList[i]] );
+                    }
+                }
+            }
+            return nodesA;
+        }
+        
+        
+        var properNode = null;
+        var areaNodes = getCommentNodes( new RegExp( '^area Type="area_(\\w+)"' ) );
+
+        for (var i = 0; i < areaNodes.length; i++)
+        {
+            var a = parseInt(getComputedStyle(areaNodes[i]).width);
+            if ((a >= 300) && (a <= 400))
+            {
+                properNode = areaNodes[i];
+                break;
+            }
+        }
+
+
+        var propertyName = getMetaContent("property") || false;
+        if( isTrellix && (properNode) )
+        {
+            e.src = '/adm/ad/injectAd.iframe.html';
+            properNode.insertBefore(e, properNode.firstChild);
+        }
+        else if( isTrellix && !( properNode ) ) // Slap the ad eventhought there is no alocated slot
+        {
+            e.src = '/adm/ad/injectAd.iframe.html';
+            e.style.cssFloat = 'none';
+            var cdiv = document.createElement('div');
+            cdiv.style = "width:300px;margin:10px auto;";
+            cdiv.appendChild( e );
+            b.insertBefore(cdiv, b.lastChild);
+        }
+        else if( !isBlokedByDomain( location.href ) )
+        {
+            var injF = document.createElement('iframe');
+            injF.style.border = '0';
+            injF.style.margin = 0;
+            injF.style.display = 'block';
+            injF.style.cssFloat = 'none';
+            injF.style.height = '254px';
+            injF.style.overflow = 'hidden';
+            injF.style.padding = 0;
+            injF.style.width = '300px';
+            injF.src = '/adm/ad/injectAd.iframe.html';
+
+            if( b && ( !isTrellix || ( typeof isTrellix == "undefined" ) ) ) // All other tripod props
+            {
+                var cdiv = document.createElement('div');
+                cdiv.style = "width:300px;margin:10px auto;";
+                cdiv.appendChild( injF );
+                b.insertBefore(cdiv, b.lastChild);
+            } 
+        }
+  }( document.isTrellix ));
+}
+
+</script>
+
+<div id="tb_container" style="background:#DFDCCF; border-bottom:1px solid #393939; position:relative; z-index:999999999!important">
+<!--form name="search" onSubmit="return searchit()" id='header_search' >
+<input type="text" placeholder="Search" size=30 name="search2" value="">
+<input type="button" value="Go!" onClick="searchit()">
+</form>
+<style>
+form#header_search {
+    width: 916px;
+    margin: 0 auto 8px;
+    position: relative;
+}
+
+
+form#header_search input {
+    height: 40px;
+    font-size: 14px;
+    line-height: 40px;
+    padding: 0 8px;
+    box-sizing: border-box;
+    background: #F4F2E9;
+    border: 1px solid #BBB8B8;
+    transition: background-color 300ms ease-out,
+                color 300ms ease;
+}
+
+form#header_search input[type="text"] {
+    width: 100%;
+}
+form#header_search input[type="text"]:focus {
+    border-color: #A2D054;
+    background-color: #fff;
+    box-shadow: 0 0px 12px -4px #A2D054;
+}
+
+
+
+form#header_search input[type="button"] {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    opacity: 1;
+    background: #DFDCCF;
+    color: #463734;
+    width: 125px;
+    cursor: pointer;
+    height: 38px;
+    border: none;
+}
+form#header_search input[type="text"]:focus ~ input[type='button']:hover,
+form#header_search input[type='button']:hover {
+    background-color: #A5CE56;
+    color: #fff;
+}
+form#header_search input[type="text"]:focus ~ input[type='button'] {
+    background-color: #52AEDF;
+    color: #fff;
+}
+
+</style>
+
+<script>
+function searchit(){
+    
+    // determine environment 
+    var search_env 
+    if (lycos_ad_www_server.indexOf(".pd.") > -1) {
+       search_env = 'http://search51.pd.lycos.com/a/';
+    } else if (lycos_ad_www_server.indexOf(".qa.") > -1) {
+       search_env = 'http://search51.qa.lycos.com/a/';
+    } else {
+       search_env = 'http://search51.lycos.com/a/';
+    }
+
+var search_term = encodeURIComponent(document.search.search2.value)
+var search_url = search_env+search_term;
+window.open(search_url);
+
+return false
+}
+</script-->
+<style>
+    .adCenterClass{margin:0 auto}
+</style>
+<div id="tb_ad" class="adCenterClass" style="display:block!important; overflow:hidden; width:916px;">
+
+<div id="ad_container" style="display:block!important; float:left; width:728px ">
+<script type="text/javascript">
+if (typeof lycos_ad !== "undefined" && "leaderboard" in lycos_ad) {
+  document.write(lycos_ad['leaderboard']);
+}
+</script>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+if (typeof lycos_ad !== "undefined" && "slider" in lycos_ad) {
+  document.write(lycos_ad['slider']);
+}
+</script> <!-- added 7/22 -->
+<div id="FooterAd" style="background:#DFDCCF; border-top:1px solid #393939; clear:both; display:none; width:100%!important; position:relative; z-index:999999!important; height:90px!important"> 
+<div class="adCenterClass" style="display:block!important; overflow:hidden; width:916px;">
+<div id="footerAd_container" style="display:block!important; float:left; width:728px">
+<iframe id="lycosFooterAdiFrame" style="border:0; display:block; float:left; height:96px; overflow:hidden; padding:0; width:750px"></iframe>
+</div>
+</div>
+</div>
+
+
+
+<CENTER>
+<FONT SIZE="+3">
+10. Permutations
+</FONT>
+</CENTER>
+<P>
+
+The "old shell game" is an example of a permutation.  Three shells, 
+one containing a pea, are in a row in front of the sucker -- er, I 
+mean, client.  The operator then changes the order of the shells 
+and challenges the client to tell which one contains the pea.  The 
+changing of the order constitutes a <b>permutation</b>.  In the 
+shell game there are 6 possible permutations.  The operator may 
+do nothing.  This would be the identity permutation where shell 1 
+stays in its position, shell 2 stays in its position and shell 3 
+also stays in its position.  We can notate this permutation as
+<p>
+<pre>       | 1 2 3 |
+       | 1 2 3 |
+</pre>
+<p>
+The top row of numbers indicates the starting position of a shell.  
+The bottom row indicates the final position of the shell.  Thus 
+to find where an object went under a permutation look up its 
+number in the top row and its final place will be under that number.  
+Thus if the shell-game operator switches shells 1 and 2 we can 
+notate this permutation by
+<p>
+<pre>       | 1 2 3 |
+       | 2 1 3 |
+</pre>
+<p>
+Shell 1 went to the place formerly occupied by shell 2 (the 2 in 
+the bottom row is below the 1) and shell 2 went to the place 
+formerly occupied by shell 1 (the 1 in the bottom row is below 
+the 2).  Since there are six different orders that the numerals "1, 
+2" and "3" can be ordered in the bottom row [the 1 2 3 in the top 
+row is fixed] there are 6 permutations of 3 objects.
+<p>
+The main reasons for interest in permutations are
+<UL>
+<LI>They form a group when we use the operation "followed by."
+<LI>Understanding them helps to solve Rubik's Cube.
+<LI>There is a theorem due to Arthur Cayley that says that <b>every 
+group is isomorphic to a permutation group</b>.
+<LI>Permutations are everywhere whether we know it or not.
+</UL>
+For a given set the permutations on it form a group with the 
+operation 
+<i>followed by</i>.  This is because (a) permutations are closed 
+under
+the operation <i>followed by</i>, (b) since the operation is 
+"followed by" 
+it is associative, (c) the "leave everything where it is" 
+permutation 
+is the identity and (c) every permutation can be undone by 
+"running the
+film backwards" thus all permutations have inverses.
+<p>
+In a Cayley table for a group each element appears exactly once 
+in each
+row and exactly once in each column (<i>Latin square property</i>).  
+This
+is a "pictorial" representation of the cancellation property.  If 
+I take
+a group element <b>a</b> and multiply it on the right to every 
+element
+of a group I'll get all the elements of the group back again.  For 
+any
+element <b>x</b> of <i>G</i> <b>x &#149 a</b> will be in <i>G</i> 
+(This
+is just the closure property).  
+<p>
+Furthermore any element of <i>G</i> will be one of the <b>x &#149 
+a</b>'s since for any
+<b>b</b> in <i>G</i> the equation <b>x &#149 a = b</b> has a 
+solution.
+Thus multiplication on the right by <b>a</b> permutes the elements 
+of 
+<i>G</i>.  What if we were to first permute the elements of <i>G</i> 
+by
+multiplying on the right by <b>a</b> <i>followed by</i> multiplying 
+on
+the right by <b>b</b>?  That would give us a new permutation which 
+would
+(by the associative property) be the same as multiplying on the 
+right
+by <b>a &#149 b</b>.  
+<p>
+Thus each element of <i>G</i> corresponds to a unique permutation 
+of the elements of <i>g</i>.  And the
+permutation corresponding to the product of two elements of <i>G</i> 
+is
+the composition under <i>followed by</i> of the permutations 
+corresponding
+to the two elements singly.  This fits the definition of an 
+isomorphism.
+Thus every group is isomorphic to a permutation group.  This result
+is known as <b>Cayley's Theorem</b>.
+<p>
+<b>Rubik's Cube</b> and similar puzzles are examples of 
+<b>permutation puzzles</b>.
+ The challenge is to form a certain permutation from the 
+composition of
+a limited set of permutations.  The permutation you are challenged 
+to
+find is the one that permutes everything into the <i>solved</i> 
+state.  Exactly which permutation that is depends on the initial
+state. We will have much more to say concerning Rubik's Cube
+in a later chapter.
+<p>
+<center><b><font size =+1>Even and Odd Permutations</font></b></center>
+<p>
+An old bar bet involves three glasses on the bar.  They are in a row
+in front of the sucker -- er, I mean client, but the first and third
+glasses are mouth-down on the bar.  Let "D" stand for a mouth-down glass
+and "U" stand for a mouth-up glass.  Then the client sees the following
+row of glasses:
+<b><pre>
+            D U D
+</b></pre>
+"The object of the game," you tell him, "is to get all the glasses
+mouth-up in exactly three moves.  A move consists of turning two
+glasses over together, one in each hand."  Then you demonstrate by
+turning over the first two glasses to reach
+<b><pre>
+            U D D
+</b></pre>
+Then you turn over the 1st and 3rd glasses
+<b><pre>
+            D D U
+</b></pre>
+Finally you turn over the first two glasses again
+<b><pre>
+            U U U
+</b></pre>
+All very clean and simple.  You now turn over the middle
+glass and bet your "friend" that he can't do what he just saw
+you do.  He, having had a few drinks, pulls out his wallet and
+bets you.  He begins facing
+<b><pre>
+            U D U
+</b></pre>
+and no matter what he tries he can't get them all mouth-up in
+exactly three moves.
+<p>
+The secret of the trick is <b>parity</b>.  The number of mouth-up
+glasses is either even or odd.  Turning over one glass will change
+the number of mouth-up glasses from odd to even or else from even 
+to odd since you will be either adding a mouth-up glass or 
+subtracting a mouth-up glass.  In the game you must turn over 
+<i>two</i> glasses simultaneously and therefore the parity, either 
+<b>odd</b> or <b>even</b> of the number of mouth-up glasses does 
+not change.  Now the desired final position has 3 (an odd number) 
+of mouth up glasses.  The trick is that <b>you</b> start with 1 
+(an odd number) of mouth-up glasses but you have your "friend" 
+begin with 2 (an even number) of mouth up glasses.  He can't win.
+<p>
+Permutations also have a parity which is changed by a 
+<b>transposition</b>.  A transposition is a permutation which
+exchanges the place of two objects whilst leaving all the other
+objects unmoved.  Thus
+<pre>
+          | 1 2 3 4 5 |
+          | 1 5 3 4 2 |
+</pre>
+is a transposition as it swaps elements 2 and 5 and does not change
+the positions of 1, 3 and 4.  An important fact is that any 
+permutation on n objects can be done with a series of transpositions.
+It is a further fact that if it can be done in an even number of
+permutations then it can't be done in an odd number and vice versa.
+<p>
+<b>Theorem</b>: Every permutation is equivalent to a product of
+transpositions.
+<p>
+<b>Proof:</b> A simple way to see this is to think of how you might
+reorder a dozen eggs in an egg carton.  Suppose the eggs were 
+numbered 1 to 12.  If you were given a permutation of the eggs and 
+told to rearrange the eggs into that permutation you might begin 
+with the first place in the egg carton, find the numbered egg that 
+went into that place and traded the egg in the first place with the 
+egg that belonged there.  Repeat this process with the second place 
+then the third place etc.  After a minimum of 11 transpositions you 
+would be done. (Why a minimum of ll and not 12?)
+<p>
+The same could be done with any permutation on n objects.  First
+note the object that 1 goes to.  If necessary exchange it for 
+object 1.  Next note the object that 2 goes to.  If necessary 
+exchange it for object 2 etc.  After, at most, n-1 such 
+transpositions you will have the desired permutation.
+<p>
+[<b>Exercise</b>:  Use the above procedure to express the permutation
+<pre>
+            | 1 2 3 4 5 6 7 8 |
+            | 4 5 6 3 8 7 1 2 |
+</pre>
+as the product of transpositions.]
+<p>
+The second fact is that if a permutation can result from an 
+<b>odd</b> number of transpositions then it can't result from an 
+<b>even</b> number of permutations and vice versa.  To see this we
+will define the parity of a permutation:  For each element count up
+the number of elements that were before it in the order before the
+permutation which are after it after the permutation has been applied.
+For instance in the permutation
+<pre>
+            | 1 2 3 4 5 6 7 |
+            | 1 4 6 3 5 2 7 |
+</pre>
+there are no elements before 1 before the permutation so the total
+for 1 is zero.  There are two elements after 4 that were before 4
+to begin with, namely 2 and 3 so the total for 4 is 2.  Continuing
+in this manner we find that the total for 6 is 3, the total for 3
+is 1, the total for 5 is 1, the total for 2 is zero, and the total 
+for 7 is zero.  Adding up these totals we get a <b>grand total</b>:  
+<p>
+<center><b> 0 + 2 + 3 + 1 + 1 + 0 + 0 = 7 </b></center>
+<p>
+If the grand total is an odd number then the permutation is of <b>odd 
+parity</b>.  If the grand total is an even number then the permutation
+is of <b>even parity</b>.
+<p>
+7 is an odd number so the example is an odd permutation.  If you apply
+any transposition to this permutation you will end up with an even
+permutation. (Try it!).
+<p>
+Why is this so?  Why does each transposition change the parity of
+a permutation?  Let's look at what a transposition does to the parity.
+Let the following represent an ordering of the n numbers 1 to n.
+<p><center>
+<b> a</b><sub>1</sub><b> a</b><sub>2</sub><b> . . . x . . . y . . . 
+a</b><sub>n-1</sub> <b>a</b><sub>1</sub></center>   
+<p>
+Each number in the string of numbers  can affect the grand total in 
+two ways.  First when it is the number we're using to count how many
+smaller numbers are beyond it and second when it is one of the 
+numbers "beyond" whatever number we're using to count how many smaller
+numbers are beyond.
+<p>
+Now if we exchange elements labeled <b>x</b> and <b>y</b> how will
+the parity of the grand total change?  Let's break up the numbers
+into three groups.
+<OL>
+<LI>The numbers either before both <b>x</b> and <b>y</b> or after 
+    both <b>x</b> and <b>y</b>
+<LI>The numbers between <b>x</b> and <b>y</b>.
+<LI><b>x</b> and <b>y</b>.
+</OL>
+The same numbers will be before and after the numbers in group 1 so 
+their contribution to the grand total will not change.  The numbers 
+in group 2 will each contribute to the grand total twice once for 
+the change in <b>x</b>'s position (either they were less than x 
+or x was less than them.) and again for the change in <b>y</b>'s 
+position.  Thus their total contribution will be to change the 
+grand total by an even number.  This will not affect the parity of 
+the permutation.  Finally, <b>x</b> and <b>y</b>
+switching places will add or subtract 1 from the grand total depending
+on whether <b>x</b> or <b>y</b> is greater.  Thus the parity of the
+grand total (odd or even) will change.
+<p>
+Now we are in a position to appreciate Samuel Loyd's famous challenge
+with his 14-15 puzzle back in the 1800's.  The puzzle consisted
+of 15 sliding tiles in a square frame with an empty space which a tile could slide into.  The tiles were numbered from 1 to 15.  The task was to get the tiles into the normal order:
+<p>
+<TABLE BORDER>
+<TR>
+<TD>1</TD><TD>2</TD><TD>3</TD><TD>4</TD>
+</TR>
+<TR>
+<TD>5</TD><TD>6</TD><TD>7</TD><TD>8</TD>
+</TR>
+<TR>
+<TD>9</TD><TD>10</TD><TD>11</TD><TD>12</TD>
+</TR>
+<TR>
+<TD>13</TD><TD>14</TD><TD>15</TD><TD> . </TD>
+</TR>
+</TABLE>
+<p>
+Sliding a tile into the empty space is equivalent to a transposition
+of the moved tile and the "ghost" tile in the empty space.  Thus every
+move is a transposition. (read the numbers from right to left, top row
+to bottom to get the permutation). 
+<p>
+Sam Loyd offered $1000 to any one who could find a way to solve the
+puzzle from the position shown below.
+<p>
+<TABLE BORDER>
+<TR>
+<TD>1</TD><TD>2</TD><TD>3</TD><TD>4</TD>
+</TR>
+<TR>
+<TD>5</TD><TD>6</TD><TD>7</TD><TD>8</TD>
+</TR>
+<TR>
+<TD>9</TD><TD>10</TD><TD>11</TD><TD>12</TD>
+</TR>
+<TR>
+<TD>13</TD><TD>15</TD><TD>14</TD><TD> . </TD>
+</TR>
+</TABLE>
+<p>
+Note that this is a transposition away from the solution.  However
+it is impossible to solve from this position since it would take
+an odd number of transpositions to go from the 13-15-14 position 
+to the solved 13-14-15 position. But the empty square can only
+return to the lower right-hand corner after an even number of moves.
+The simplest way to see this is to imagine a checkerboard pattern
+of light and dark squares painted beneath the tiles.  Then each move
+would change the color of the background square that is showing from 
+light to dark or from dark to light.  Loyd 
+sold a pavillion of the puzzles to suckers -- er, I mean puzzle fans
+eager to win the prize.  He reported that
+<BLOCKQUOTE>
+   A prize of $1,000 offered for the first correct solution to
+   the problem, has never been claimed, although there are 
+   thousands of persons who say they performed the required feat.
+   <p>
+   People became infatuated with the puzzle and ludicrous tales
+   are told of shopkeepers who neglected to open their stores;
+   of a distinguished clergyman who stood under a street lamp all
+   through a wintry night trying to recall the way he had performed
+   the feat.  The mysterious feature of the puzzle is that none
+   seem to be able to remember the sequence of moves whereby they
+   feel sure they succeeded in solving the puzzle.  Pilots are said
+   to have wrecked their ships, and engineers rush their trains past
+   stations.  A famous Baltimore editor tells how he went for his
+   noon lunch and was discovered by his frantic staff long past
+   midnight pushing little pieces of pie around on a plate!
+</bLOCKQUOTE>
+<p>
+A particularly insidious version of the puzzle has letters on the 
+tiles instead of numbers.  One of its "solved" configurations is
+<p>
+<TABLE BORDER>
+<TR>
+<TD>R</TD><TD>A</TD><TD>T</TD><TD>E</TD>
+</TR>
+<TR>
+<TD>Y</TD><TD>O</TD><TD>U</TD><TD>R</TD>
+</TR>
+<TR>
+<TD>M</TD><TD>I</TD><TD>N</TD><TD>D</TD>
+</TR>
+<TR>
+<TD>P</TD><TD>A</TD><TD>L</TD><TD> . </TD>
+</TR>
+</TABLE>
+<p>
+Notice that there are two 'R's and two 'A's.  If the "wrong"  
+'R' and 'A' are used to begin the word "RATE" it will be 
+impossible to get the "PAL" to come out correctly in the last 
+row.  With this version the group theorist "bets" the sucker -- 
+er, I mean friend, that although the friend is accomplished at 
+solving the 13-14-15 puzzle the use of letters rather than 
+numbers will throw him off psychologically.  The group theorist 
+mixes up the tiles in front of the friend's eyes but leaves the 
+'R' in the upper left-hand corner in place while taking the 
+'A' next to it far down to the lower row.  At the same time the 
+'A' in "PAL" is transferred near the upper left-hand corner.  The
+friend is given a time limit to solve the puzzle.  If he uses the
+'R' and 'A' together that the group theorist has so kindly put
+almost into place for him he cuts his own throat.  To 
+solve the puzzle with the 'R' and 'A' as given is equivalent to 
+making a transposition of the 'A's.  As we now know, this is not 
+possible.
+
+
+<HR>
+<CENTER>
+<FONT SIZE="+3">
+To Be Continued . . .
+</FONT>
+</CENTER>
+<P>
+
+
+<HR>
+<A HREF="https://members.tripod.com/~dogschool/permgroups.html">next: 11. Permutation Groups</A>: <BR>
+<p>
+<A HREF="https://members.tripod.com/~dogschool/index.html">Back to the Index</A>: <BR>
+
+<HR>
+
+<P>
+
+&copy 1998 by Arfur Dogfrey
+<HR>
+
+
+
+
+</HTML>
+                                                               

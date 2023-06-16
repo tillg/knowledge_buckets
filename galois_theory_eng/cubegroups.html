@@ -1,0 +1,1132 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="lpomeroy">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>cubegroups</title>
+</head>
+<body><!--'"</title></head>-->
+
+<script type="text/javascript">
+//OwnerIQ
+var __oiq_pct = 50;
+if( __oiq_pct>=100 || Math.floor(Math.random()*100/(100-__oiq_pct)) > 0 ) {
+var _oiqq = _oiqq || [];
+_oiqq.push(['oiq_addPageBrand','Lycos']);
+_oiqq.push(['oiq_addPageCat','Internet > Websites']);
+_oiqq.push(['oiq_addPageLifecycle','Intend']);
+_oiqq.push(['oiq_doTag']);
+(function() {
+var oiq = document.createElement('script'); oiq.type = 'text/javascript'; oiq.async = true;
+oiq.src = document.location.protocol + '//px.owneriq.net/stas/s/lycosn.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(oiq, s);
+})();
+}
+//Google Analytics
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount','UA-21402695-19']);
+_gaq.push(['_setDomainName','tripod.com']);
+_gaq.push(['_setCustomVar',1,'member_name','dogschool',3]);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+//Lycos Init
+function getReferrer() {
+var all= this.document.cookie;
+if (all== '') return false;
+var cookie_name = 'REFERRER=';
+var start = all.lastIndexOf(cookie_name);
+if (start == -1) return false;
+start += cookie_name.length;
+var end = all.indexOf(';', start);
+if (end == -1) end = all.length;
+return all.substring(start, end);
+}
+function getQuery() {
+var rfr = getReferrer();
+if (rfr == '') return false;
+var q = extractQuery(rfr, 'yahoo.com', 'p=');
+if (q) return q;
+q = extractQuery(rfr, '', 'q=');
+return q ? q : "";
+}
+function extractQuery(full, site, q_param) {
+var start = full.lastIndexOf(site);
+if (start == -1) return false;
+start = full.lastIndexOf(q_param);
+if (start == -1) return false;
+start += q_param.length;
+var end = full.indexOf('&', start);
+if (end == -1) end = full.length;
+return unescape(full.substring(start, end)).split(" ").join("+");
+}
+function generateHref(atag, template){
+atag.href=template.replace('_MYURL_', window.location.href.replace('http://', '')).replace('_MYTITLE_','Check%20out%20this%20Tripod%20Member%20site!'); 
+}
+var lycos_ad = Array();
+var lycos_onload_timer;
+var cm_role = "live";
+var cm_host = "tripod.lycos.com";
+var cm_taxid = "/memberembedded";
+var tripod_member_name = "dogschool";
+var tripod_member_page = "dogschool/cubegroups.html";
+var tripod_ratings_hash = "1686896019:f571c66bebf1f45aabeb7ac8cce597a8";
+
+var lycos_ad_category = {"dmoz":"reference\/knots","ontarget":"&CAT=education&L2CAT=reference","find_what":"graduate courses"};
+
+var lycos_ad_remote_addr = "209.202.244.9";
+var lycos_ad_www_server = "www.tripod.lycos.com";
+var lycos_ad_track_small = "";
+var lycos_ad_track_served = "";
+var lycos_search_query = getQuery();
+</script>
+
+<script type="text/javascript" src="https://scripts.lycos.com/catman/init.js"></script>
+
+<script type='text/javascript'>
+ var googletag = googletag || {};
+ googletag.cmd = googletag.cmd || [];
+ (function() {
+   var gads = document.createElement('script');
+   gads.async = true;
+   gads.type = 'text/javascript';
+   var useSSL = 'https:' == document.location.protocol;
+   gads.src = (useSSL ? 'https:' : 'http:') +
+     '//www.googletagservices.com/tag/js/gpt.js';
+   var node = document.getElementsByTagName('script')[0];
+   node.parentNode.insertBefore(gads, node);
+ })();
+</script>
+
+<script type='text/javascript'>
+ googletag.cmd.push(function() {
+   googletag.defineSlot('/95963596/TRI_300X250_dfp', [300, 250], 'div-gpt-ad-1450204159126-0').addService(googletag.pubads());
+   googletag.defineSlot('/95963596/TRI_above_728x90_dfp', [728, 90], 'div-gpt-ad-1450204159126-1').addService(googletag.pubads());
+   googletag.defineSlot('/95963596/TRI_below_728x90_dfp', [728, 90], 'div-gpt-ad-1450204159126-2').addService(googletag.pubads());
+   googletag.pubads().enableSingleRequest();
+   googletag.enableServices();
+ });
+</script>
+
+
+<script type="text/javascript"> 
+(function(isV)
+{
+    if( !isV )
+    {
+        return;
+    }
+    var adMgr = new AdManager();
+    var lycos_prod_set = adMgr.chooseProductSet();
+    var slots = ["leaderboard", "leaderboard2", "toolbar_image", "toolbar_text", "smallbox", "top_promo", "footer2", "slider"];
+    var adCat = this.lycos_ad_category;
+    adMgr.setForcedParam('page', (adCat && adCat.dmoz) ? adCat.dmoz : 'member');
+    if (this.lycos_search_query)
+    {
+        adMgr.setForcedParam("keyword", this.lycos_search_query);
+    } 
+    else if(adCat && adCat.find_what)
+    {
+        adMgr.setForcedParam('keyword', adCat.find_what);
+    }
+    
+    for (var s in slots)
+    {
+        var slot = slots[s];
+        if (adMgr.isSlotAvailable(slot))
+        {
+            this.lycos_ad[slot] = adMgr.getSlot(slot);
+        }
+    }
+
+    adMgr.renderHeader();
+    adMgr.renderFooter();
+}((function() {
+
+var w = 0, h = 0, minimumThreshold = 300;
+
+if (top == self)
+{
+    return true;
+}
+if (typeof(window.innerWidth) == 'number' )
+{
+    w = window.innerWidth;
+    h = window.innerHeight;
+}
+else if (document.documentElement && (document.documentElement.clientWidth || document.documentElement.clientHeight))
+{
+    w = document.documentElement.clientWidth;
+    h = document.documentElement.clientHeight;
+}
+else if (document.body && (document.body.clientWidth || document.body.clientHeight))
+{
+    w = document.body.clientWidth;
+    h = document.body.clientHeight;
+}
+return ((w > minimumThreshold) && (h > minimumThreshold));
+}())));
+
+
+
+
+window.onload = function()
+{
+    var f = document.getElementById("FooterAd");
+    var b = document.getElementsByTagName("body")[0];
+    b.appendChild(f);
+    f.style.display = "block";
+    document.getElementById('lycosFooterAdiFrame').src = '/adm/ad/footerAd.iframe.html';
+    
+
+
+    
+    // DOM Inj Ad
+    (function(isTrellix)
+    {
+        var e = document.createElement('iframe');
+        e.style.border = '0';
+        e.style.margin = 0;
+        e.style.display = 'block';
+        e.style.cssFloat = 'right';
+        e.style.height = '254px';
+        e.style.overflow = 'hidden';
+        e.style.padding = 0;
+        e.style.width = '300px';
+
+
+        var isBlokedByDomain = function( href )
+        {
+            var blockedDomains = [
+                "ananyaporn13000.tripod.com",
+                "xxxpornxxx.tripod.com"
+            ];
+            var flag = false;
+            
+            for( var i=0; i<blockedDomains.length; i++ )
+            {
+                if( href.search( blockedDomains[ i ] ) >= 0 )
+                {
+                    flag = true;
+                }
+            }
+            return flag;
+        }
+
+        var getMetaContent = function( metaName )
+        {
+            var metas = document.getElementsByTagName('meta');
+            for (i=0; i<metas.length; i++)
+            { 
+                if( metas[i].getAttribute("name") == metaName )
+                { 
+                    return metas[i].getAttribute("content"); 
+                } 
+            }
+            return false;
+        }
+        
+        var getCommentNodes = function(regexPattern)
+        {
+            var nodes = {};
+            var nodesA = [];
+            var preferredNodesList = ['a', 'c', 'b'];
+        
+            (function getNodesThatHaveComments(n, pattern)
+            {
+                if (n.hasChildNodes())
+                {
+                    if (n.tagName === 'IFRAME')
+                    {
+                        return false;
+                    }
+                    for (var i = 0; i < n.childNodes.length; i++)
+                    {
+                        if ((n.childNodes[i].nodeType === 8) && (pattern.test(n.childNodes[i].nodeValue)))
+                        {
+                            var areaName = pattern.exec(n.childNodes[i].nodeValue)[1];
+                            nodes[areaName] = n;
+                        }
+                        else if (n.childNodes[i].nodeType === 1)
+                        {
+                            getNodesThatHaveComments(n.childNodes[i], pattern);
+                        }
+                    }
+                }
+            }(document.body, regexPattern));
+
+            for (var i in preferredNodesList)
+            {
+                if (nodes[preferredNodesList[i]])
+                {
+                    if( isTrellix && nodes[preferredNodesList[i]].parentNode.parentNode.parentNode.parentNode )
+                    {
+                        nodesA.push(nodes[preferredNodesList[i]].parentNode.parentNode.parentNode.parentNode);
+                    }
+                    else
+                    {
+                        nodesA.push( nodes[preferredNodesList[i]] );
+                    }
+                }
+            }
+            return nodesA;
+        }
+        
+        
+        var properNode = null;
+        var areaNodes = getCommentNodes( new RegExp( '^area Type="area_(\\w+)"' ) );
+
+        for (var i = 0; i < areaNodes.length; i++)
+        {
+            var a = parseInt(getComputedStyle(areaNodes[i]).width);
+            if ((a >= 300) && (a <= 400))
+            {
+                properNode = areaNodes[i];
+                break;
+            }
+        }
+
+
+        var propertyName = getMetaContent("property") || false;
+        if( isTrellix && (properNode) )
+        {
+            e.src = '/adm/ad/injectAd.iframe.html';
+            properNode.insertBefore(e, properNode.firstChild);
+        }
+        else if( isTrellix && !( properNode ) ) // Slap the ad eventhought there is no alocated slot
+        {
+            e.src = '/adm/ad/injectAd.iframe.html';
+            e.style.cssFloat = 'none';
+            var cdiv = document.createElement('div');
+            cdiv.style = "width:300px;margin:10px auto;";
+            cdiv.appendChild( e );
+            b.insertBefore(cdiv, b.lastChild);
+        }
+        else if( !isBlokedByDomain( location.href ) )
+        {
+            var injF = document.createElement('iframe');
+            injF.style.border = '0';
+            injF.style.margin = 0;
+            injF.style.display = 'block';
+            injF.style.cssFloat = 'none';
+            injF.style.height = '254px';
+            injF.style.overflow = 'hidden';
+            injF.style.padding = 0;
+            injF.style.width = '300px';
+            injF.src = '/adm/ad/injectAd.iframe.html';
+
+            if( b && ( !isTrellix || ( typeof isTrellix == "undefined" ) ) ) // All other tripod props
+            {
+                var cdiv = document.createElement('div');
+                cdiv.style = "width:300px;margin:10px auto;";
+                cdiv.appendChild( injF );
+                b.insertBefore(cdiv, b.lastChild);
+            } 
+        }
+  }( document.isTrellix ));
+}
+
+</script>
+
+<div id="tb_container" style="background:#DFDCCF; border-bottom:1px solid #393939; position:relative; z-index:999999999!important">
+<!--form name="search" onSubmit="return searchit()" id='header_search' >
+<input type="text" placeholder="Search" size=30 name="search2" value="">
+<input type="button" value="Go!" onClick="searchit()">
+</form>
+<style>
+form#header_search {
+    width: 916px;
+    margin: 0 auto 8px;
+    position: relative;
+}
+
+
+form#header_search input {
+    height: 40px;
+    font-size: 14px;
+    line-height: 40px;
+    padding: 0 8px;
+    box-sizing: border-box;
+    background: #F4F2E9;
+    border: 1px solid #BBB8B8;
+    transition: background-color 300ms ease-out,
+                color 300ms ease;
+}
+
+form#header_search input[type="text"] {
+    width: 100%;
+}
+form#header_search input[type="text"]:focus {
+    border-color: #A2D054;
+    background-color: #fff;
+    box-shadow: 0 0px 12px -4px #A2D054;
+}
+
+
+
+form#header_search input[type="button"] {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    opacity: 1;
+    background: #DFDCCF;
+    color: #463734;
+    width: 125px;
+    cursor: pointer;
+    height: 38px;
+    border: none;
+}
+form#header_search input[type="text"]:focus ~ input[type='button']:hover,
+form#header_search input[type='button']:hover {
+    background-color: #A5CE56;
+    color: #fff;
+}
+form#header_search input[type="text"]:focus ~ input[type='button'] {
+    background-color: #52AEDF;
+    color: #fff;
+}
+
+</style>
+
+<script>
+function searchit(){
+    
+    // determine environment 
+    var search_env 
+    if (lycos_ad_www_server.indexOf(".pd.") > -1) {
+       search_env = 'http://search51.pd.lycos.com/a/';
+    } else if (lycos_ad_www_server.indexOf(".qa.") > -1) {
+       search_env = 'http://search51.qa.lycos.com/a/';
+    } else {
+       search_env = 'http://search51.lycos.com/a/';
+    }
+
+var search_term = encodeURIComponent(document.search.search2.value)
+var search_url = search_env+search_term;
+window.open(search_url);
+
+return false
+}
+</script-->
+<style>
+    .adCenterClass{margin:0 auto}
+</style>
+<div id="tb_ad" class="adCenterClass" style="display:block!important; overflow:hidden; width:916px;">
+
+<div id="ad_container" style="display:block!important; float:left; width:728px ">
+<script type="text/javascript">
+if (typeof lycos_ad !== "undefined" && "leaderboard" in lycos_ad) {
+  document.write(lycos_ad['leaderboard']);
+}
+</script>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+if (typeof lycos_ad !== "undefined" && "slider" in lycos_ad) {
+  document.write(lycos_ad['slider']);
+}
+</script> <!-- added 7/22 -->
+<div id="FooterAd" style="background:#DFDCCF; border-top:1px solid #393939; clear:both; display:none; width:100%!important; position:relative; z-index:999999!important; height:90px!important"> 
+<div class="adCenterClass" style="display:block!important; overflow:hidden; width:916px;">
+<div id="footerAd_container" style="display:block!important; float:left; width:728px">
+<iframe id="lycosFooterAdiFrame" style="border:0; display:block; float:left; height:96px; overflow:hidden; padding:0; width:750px"></iframe>
+</div>
+</div>
+</div>
+
+
+
+<center><b><font size=+3>13.&nbsp; Rubik's Cube Groups</font></b></center>
+
+<p><br>
+<p>If we consider all sequences of moves on a Rubik's Cube we notice the
+following:
+<ul>
+<li>
+One sequence followed by another sequence is a sequence:&nbsp; <b>Closure.</b></li>
+
+<li>
+<i>Followed by</i> is <b>associative</b>.</li>
+
+<li>
+The <b>do nothing</b> sequence does nothing:&nbsp; <b>Identity.</b></li>
+
+<li>
+Every sequence of moves can be done backwards and therefore undone: <b>Inverses.</b></li>
+</ul>
+This makes the set of all sequences of moves on a Rubik's Cube a group.&nbsp;
+However since a sequence of moves can be of any length (you can do <b>RLU
+</b>over
+and over until the cows come home) let's cut it down to a more manageable
+and useful set.&nbsp; Two sequences will be considered equivalent if they
+have the same final effect on the cube.&nbsp; We'll call the final effect
+of a sequence of moves a <b>process</b>.&nbsp; Thus a process is a possible
+permutation of the cubelets together with any twists of the corners or
+flips of the edges.
+<p>One of the first questions we ask is, <i>How many processes are there
+in the group of the cube?</i>&nbsp; In other words, what is the <b>order</b>
+of the group of the cube.&nbsp; We can solve this question by counting
+the permissible permutations of edges and the permissible permutations
+of corners.
+<p>There are 8 corner cubelets and 12 edge cubelets.&nbsp; Each corner
+cubelet can have three possible orientations ("twists") and each edge cubelet
+can have two possible orientations ("flips").&nbsp; Thus the possible states
+of the cube can be no more than
+<center>
+<p>Upper Bound on Order of Cube Group = (8!)(12!)(3<sup>8</sup>)(2<sup>12</sup>)</center>
+
+<p>However, as we have seen in the previous chapter not all of these configurations
+are reachable from the initial (solved) state.&nbsp; There we learned that
+only 1/12 of all conceivable states are actually reachable so to get the
+order of the cube we must divide the upper bound given above by 12
+<center>
+<p>Order of the Cube Group = (8!)(12!)(3<sup>8</sup>)(2<sup>12</sup>) &divide;
+12</center>
+
+<p>This is a rather large number:&nbsp; 43,252,003,274,489,856,000 (or
+a little over 43 quintillion).&nbsp; At the rate of 1,000,000 configurations
+per second it would take well over a million years to run through them
+all.&nbsp; From this we can safely conclude that coupling random twiddling
+with patience is a poor strategy for solving the cube.
+<p>One of the first things we notice is that the cube group is not Abelian.
+<b>F</b>&nbsp;
+followed by&nbsp; <b>R</b> is not the same as <b>R</b> followed by <b>F</b>.
+( To simplify the notation we will leave out the term "followed by" and
+simply juxtapose the moves in a sequence.)&nbsp; To have some simpler fun
+we'll look at some of the easier subgroups of the cube group.
+<p><b>The F subgroup</b>
+<p>This subgroup consists of all possible processes that are the result
+of turning only the front face <b>F</b>.&nbsp; This has the disadvantage
+of being a very boring subgroup whose only elements are <b>E</b> (the identity),
+<b>F</b>,
+<b>F</b><sup>2</sup>
+and <b>F</b><sup>-1</sup>.&nbsp; This is just the
+<b>Attayun--HOOT</b>
+group that we've seen before in various disguises.&nbsp; Of course there
+is nothing special about <b>F</b>.&nbsp; There are other copies of the
+<b>Attayu--HOOT</b>
+group using other faces or even central slices.
+<p><b>The SLICE SQUARED subgroup</b>
+<p>This is about the simplest non-trivial subgroup of the cube.&nbsp; It
+consists of all those processes that are the result of limiting ourselves
+to the following moves:&nbsp; <b>X</b> = (<b>R</b><sup>2</sup><b>L</b><sup>2</sup>),
+<b>Y</b>=
+(<b>U</b><sup>2</sup><b>D</b><sup>2</sup>) and <b>Z</b> = (<b>F</b><sup>2</sup><b>B</b><sup>2</sup>).&nbsp;
+This subgroup gets its name from the fact that each move is equivalent
+to moving a central "slice" by 180&deg;.&nbsp; Since a move is 90&deg;
+a move of 180&deg; is the same as a normal move followed by itself or "squared."
+<p>One of the first things we notice about this group is that it's Abelian;
+<b>XY
+</b>has
+the same effect on the cube as <b>YX</b> etc.&nbsp; Also we notice that
+<b>XYZ</b>
+applied to a solved cube results in a cute "checkerboard" pattern:
+<center>
+<p><img SRC="checkerboard.JPG" height=200 width=200>
+<br><b>The "Checkerboard"</b></center>
+
+<p>Since <b>X</b>, <b>Y</b> and <b>Z</b> are not only commute but are their
+own inverses we can write out all the elements of the slice squared group:
+<b>E</b>
+(the identity), <b>X</b>, <b>Y</b>, <b>Z</b>, <b>XY</b>, <b>XZ</b>,
+<b>YZ</b>,
+and <b>XYZ</b>.&nbsp; This group has the Cayley Table given here:
+<br>&nbsp;
+<br>&nbsp;
+<center><table BORDER COLS=9 WIDTH="60%" >
+<tr>
+<td>&nbsp;</td>
+
+<td>
+<center><b>E</b></center>
+</td>
+
+<td>
+<center><b>X</b></center>
+</td>
+
+<td>
+<center><b>Y</b></center>
+</td>
+
+<td>
+<center><b>Z</b></center>
+</td>
+
+<td>
+<center><b>XY</b></center>
+</td>
+
+<td>
+<center><b>XZ</b></center>
+</td>
+
+<td>
+<center><b>YZ</b></center>
+</td>
+
+<td>
+<center><b>XYZ</b></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><b>E</b></center>
+</td>
+
+<td>
+<center><b>E</b></center>
+</td>
+
+<td>
+<center><b>X</b></center>
+</td>
+
+<td>
+<center><b>Y</b></center>
+</td>
+
+<td>
+<center><b>Z</b></center>
+</td>
+
+<td>
+<center><b>XY</b></center>
+</td>
+
+<td>
+<center><b>XZ</b></center>
+</td>
+
+<td>
+<center><b>YZ</b></center>
+</td>
+
+<td>
+<center><b>XYZ</b></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><b>X</b></center>
+</td>
+
+<td>
+<center><b>X</b></center>
+</td>
+
+<td>
+<center><b>E</b></center>
+</td>
+
+<td>
+<center><b>XY</b></center>
+</td>
+
+<td>
+<center><b>XZ</b></center>
+</td>
+
+<td>
+<center><b>Y</b></center>
+</td>
+
+<td>
+<center><b>Z</b></center>
+</td>
+
+<td>
+<center><b>XYZ</b></center>
+</td>
+
+<td>
+<center><b>YZ</b></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><b>Y</b></center>
+</td>
+
+<td>
+<center><b>Y</b></center>
+</td>
+
+<td>
+<center><b>XY</b></center>
+</td>
+
+<td>
+<center><b>E</b></center>
+</td>
+
+<td>
+<center><b>YZ</b></center>
+</td>
+
+<td>
+<center><b>X</b></center>
+</td>
+
+<td>
+<center><b>XYZ</b></center>
+</td>
+
+<td>
+<center><b>Z</b></center>
+</td>
+
+<td>
+<center><b>XZ</b></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><b>Z</b></center>
+</td>
+
+<td>
+<center><b>Z</b></center>
+</td>
+
+<td>
+<center><b>XZ</b></center>
+</td>
+
+<td>
+<center><b>YZ</b></center>
+</td>
+
+<td>
+<center><b>E</b></center>
+</td>
+
+<td>
+<center><b>XYZ</b></center>
+</td>
+
+<td>
+<center><b>X</b></center>
+</td>
+
+<td>
+<center><b>Y</b></center>
+</td>
+
+<td>
+<center><b>XY</b></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><b>XY</b></center>
+</td>
+
+<td>
+<center><b>XY</b></center>
+</td>
+
+<td>
+<center><b>Y</b></center>
+</td>
+
+<td>
+<center><b>X</b></center>
+</td>
+
+<td>
+<center><b>XYZ</b></center>
+</td>
+
+<td>
+<center><b>E</b></center>
+</td>
+
+<td>
+<center><b>YZ</b></center>
+</td>
+
+<td>
+<center><b>XZ</b></center>
+</td>
+
+<td>
+<center><b>Z</b></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><b>XZ</b></center>
+</td>
+
+<td>
+<center><b>XZ</b></center>
+</td>
+
+<td>
+<center><b>Z</b></center>
+</td>
+
+<td>
+<center><b>XYZ</b></center>
+</td>
+
+<td>
+<center><b>X</b></center>
+</td>
+
+<td>
+<center><b>YZ</b></center>
+</td>
+
+<td>
+<center><b>E</b></center>
+</td>
+
+<td>
+<center><b>XY</b></center>
+</td>
+
+<td>
+<center><b>Y</b></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><b>YZ</b></center>
+</td>
+
+<td>
+<center><b>YZ</b></center>
+</td>
+
+<td>
+<center><b>XYZ</b></center>
+</td>
+
+<td>
+<center><b>Z</b></center>
+</td>
+
+<td>
+<center><b>Y</b></center>
+</td>
+
+<td>
+<center><b>XZ</b></center>
+</td>
+
+<td>
+<center><b>XY</b></center>
+</td>
+
+<td>
+<center><b>E</b></center>
+</td>
+
+<td>
+<center><b>X</b></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><b>XYZ</b></center>
+</td>
+
+<td>
+<center><b>XYZ</b></center>
+</td>
+
+<td>
+<center><b>YZ</b></center>
+</td>
+
+<td>
+<center><b>XZ</b></center>
+</td>
+
+<td>
+<center><b>XY</b></center>
+</td>
+
+<td>
+<center><b>Z</b></center>
+</td>
+
+<td>
+<center><b>Y</b></center>
+</td>
+
+<td>
+<center><b>X</b></center>
+</td>
+
+<td>
+<center><b>E</b></center>
+</td>
+</tr>
+</table></center>
+
+<center><b>Cayley Table of the SLICE SQUARED Subgroup</b></center>
+
+<p><br>
+<p><b>The SLICE subgroup</b>
+<p>This subgroup is large enough to be challenging to the beginning cubologist
+but not too big to be overwhelming.&nbsp; It consists of all processes
+generated by the moves <b>X</b> = (<b>RL</b><sup>-1</sup>),
+<b>Y</b>= (<b>UD</b><sup>-1</sup>)
+and
+<b>Z</b> = (<b>FB</b><sup>-1</sup>).&nbsp; This group gets its name
+from the fact that each of the allowed moves is equivalent to a move of
+a middle "slice."&nbsp; In the slice group the patterns on each face exhibit
+a certain symmetry.&nbsp; The corner facelets of each face are always the
+same color.&nbsp; Also, opposite edge facelets of each face are the same
+color.&nbsp; This gives a pattern similar to this:
+<center>
+<p><img SRC="slicepattern.JPG" height=140 width=140>
+<br><b>Pattern in the SLICE group</b></center>
+
+<p>One cute pattern in the slice group is formed by the move sequence <b>LR</b><sup>-1</sup><b>BF</b><sup>-1</sup><b>UD</b><sup>-1</sup><b>LR</b><sup>-1</sup>
+<br>This pattern goes by the name of "dots"
+<center>
+<p><img SRC="dots.JPG" height=200 width=200>
+<br><b>Dots</b></center>
+
+<p><br>
+<br>
+<p><b>Sanity Check:</b>&nbsp; A would-be cubologist tells you that the
+<b>SLICE</b>
+group has exactly 108 elements.&nbsp; How do you know, imediately, that
+this is incorrect?
+<br>...
+<br>...
+<br>...
+<br>...
+<br>...
+<br><b>Solution to Sanity Check</b>:&nbsp; The <b>SLICE</b> group contains
+the <b>SLICE SQUARED</b> group as a subgroup.&nbsp; Thus the order of the
+<b>SLICE
+SQUARED</b> group must be a divisor of the order of the <b>SLICE
+</b>group
+according to <b>Lagrange's Theorem</b>.&nbsp; But 8 doesn't divide evenly
+into 108.
+<p><b>The (F</b><sup>2</sup><b>R</b><sup>2</sup><b>) subgroup</b>
+<p>This group consists of all processes which consist of the moves&nbsp;<b>
+(F</b><sup>2</sup><b>R</b><sup>2</sup><b>)</b> repeated over and over again.&nbsp;
+This gives a <b>cyclic subgroup</b> of the cube group.&nbsp; A little experimenting
+shows that performing&nbsp;<b> (F</b><sup>2</sup><b>R</b><sup>2</sup><b>)</b>
+six times in succession brings the cube back to its original position.&nbsp;
+Thus the cube element&nbsp;<b> (F</b><sup>2</sup><b>R</b><sup>2</sup><b>)</b>
+has cyclic order of 6 and the&nbsp;<b> (F</b><sup>2</sup><b>R</b><sup>2</sup><b>)
+subgroup </b>is an abelian group of order 6.&nbsp; If you perform&nbsp;<b>
+(F</b><sup>2</sup><b>R</b><sup>2</sup><b>)</b> three times in succession
+you find that you have swapped the <b>uf</b> edge cubelet with the <b>df</b>
+edge cubelet and also swapped the <b>ur</b> edge cubelet with the <b>dr</b>
+edge cubelet.&nbsp; This is a useful process to remember when trying to
+restore the cube.
+<p><b>[Exercise:</b>&nbsp; Find processes which have the effect of
+<ul>
+<li>
+swapping the <b>ul</b> cubelet with the <b>dl</b> cubelet and the <b>ub</b>
+cubelet with the <b>db</b> cubelet.</li>
+
+<li>
+swapping the <b>ur</b> cubelet with the <b>dr</b> cubelet and the <b>ub</b>
+cubelet with the <b>db</b> cubelet.</li>
+
+<li>
+swapping the <b>uf</b> cubelet with the <b>df</b> cubelet and the <b>ul</b>
+cubelet with the <b>dl</b> cubelet.</li>
+
+<li>
+swapping the <b>fl</b> cubelet with the <b>bl</b> cubelet and the <b>uf</b>
+cubelet with the <b>bf</b> cubelet.</li>
+
+<li>
+swapping the <b>fr</b> cubelet with the <b>br</b> cubelet and the <b>df</b>
+cubelet with the <b>db</b> cubelet.</li>
+
+<li>
+swapping the <b>fr</b> cubelet with the <b>fl</b> cubelet and the <b>dr</b>
+cubelet with the <b>dl</b> cubelet.<b>]</b></li>
+</ul>
+The&nbsp;<b> (F</b><sup>2</sup><b>R</b><sup>2</sup><b>) </b>subgroup is
+a legitimate subgroup of the group of the cube.&nbsp; Let's use this fact
+to create some more processes that could be useful in restoring the cube.&nbsp;
+Let's create some <b>cosets</b> of the&nbsp;<b> (F</b><sup>2</sup><b>R</b><sup>2</sup><b>)
+</b>subgroup.&nbsp;
+If we perform a move before applying a process from the&nbsp;<b> (F</b><sup>2</sup><b>R</b><sup>2</sup><b>)</b>
+group we no longer have an element from the&nbsp;<b> (F</b><sup>2</sup><b>R</b><sup>2</sup><b>)
+</b>subgroup
+but we have instead an element from one of its <b>left cosets</b>.&nbsp;
+If we perform the move after performing a process from the&nbsp;<b> (F</b><sup>2</sup><b>R</b><sup>2</sup><b>)
+</b>subgroup
+then we will be left with an element of one of its <b>right cosets</b>.&nbsp;
+Now we can extend this idea to come up with some interesting and useful
+processes.
+<p>Multiplying a subgroup on the left by an element of the group creates
+a <b>left coset</b>.&nbsp; Multiplying a subgroup on the right by an element
+of the group creates a <b>right coset</b>.&nbsp; Now we'll look at multiplying
+something (not necessarily a subgroup) on <i>both</i> the left and the
+right by an element and its inverse.&nbsp; In other symbols we'll look
+at elements of the form&nbsp; <b>a • h • a</b><sup>-1</sup>&nbsp; Group
+elements of this form are called <b>conjugates</b>.&nbsp;&nbsp; <b>a •
+h • a</b><sup>-1</sup>&nbsp; is called the <b>conjugate of&nbsp; h&nbsp;
+by&nbsp; a</b>.&nbsp; If we consider all the conjugates by <b>a</b> of
+all the elements of a group <i>G</i> we note the following:
+<ul>
+<li>
+&nbsp;(<b>a • b • a</b><sup>-1</sup>) <b>•</b> ( <b>a • c • a</b><sup>-1</sup>)
+=&nbsp; <b>a • b • </b>(<b> a</b><sup>-1</sup><b> • a </b>)<b> • c • a</b><sup>-1</sup>
+= <b>a • </b>(<b>b • c</b>) <b>• a</b><sup>-1</sup></li>
+
+<li>
+&nbsp;(<b>a • e • a</b><sup>-1</sup>) = <b>e</b></li>
+
+<li>
+&nbsp;(<b>a • b • a</b><sup>-1</sup>)<sup>-1</sup> = (<b>a • b</b><sup>-1</sup><b>
+• a</b><sup>-1</sup>)</li>
+</ul>
+These properties of conjugates by <b>a</b> show that they are <b>closed</b>
+under the group operation, that the identity <b>e</b> is a conjugate by
+<b>a</b>
+and that the inverse of a conjugate by <b>a</b> is also a conjugate by
+<b>a</b>.&nbsp;
+These properties together with associativity show that conjugates by <b>a</b>
+form a subgroup.
+<p>Let's apply our idea of <b>conjugation</b> to our <b>(R</b><sup>2</sup><b>F</b><sup>2</sup><b>)</b>-repeated-three-times
+[or <b>(F</b><sup>2</sup><b>R</b><sup>2</sup><b>)</b><sup>3</sup>] process.&nbsp;
+We found that the <b>(F</b><sup>2</sup><b>R</b><sup>2</sup><b>)</b><sup>3</sup>
+process swapped the <b>uf</b> edge cubelet with the <b>df</b> edge cubelet
+and also swapped the <b>ur</b> edge cubelet with the <b>dr</b> edge cubelet.&nbsp;
+We also found in the exercise that by using faces other than the <b>F</b>
+and <b>R</b> faces we could various other pairs of opposite edge cubelets.&nbsp;
+Now let's perfom a <b>D</b> movement before performing the <b>(F</b><sup>2</sup><b>R</b><sup>2</sup><b>)</b><sup>3</sup>
+movement then performing <b>D</b><sup>-1</sup> afterwards.&nbsp; This gives
+the conjugate by <b>D</b> of the <b>(F</b><sup>2</sup><b>R</b><sup>2</sup><b>)</b><sup>3</sup>
+element.&nbsp; This will swap two pairs of edge cubelets but no longer
+is two pair of opposite cubelets that are swapped.&nbsp; This idea of using
+conjugates to create new useful processes from old useful processes is
+standard in cubology and we'll find it useful in creating a plan for solving
+the cube in the next chapter.
+<p><b>The (FRBL) ["furball"] subgroup</b>
+<p>This is the cyclic subgroup of all processes that are repetitions of
+<b>(FRBL)</b>.&nbsp;
+A question arises:&nbsp; what is the order of this group?&nbsp; In other
+words, how many times in a row must you perform the&nbsp;<b> (FRBL)</b>
+move in order to return to the original position?&nbsp; A little experimenting
+together with a little arithmetic gives the answer.
+<p>Pick up a cube and begin repeating the process <b>(FRBL)</b> over and
+over.&nbsp; One of the first things you notice will be that after 5 repetitions
+(20 total moves) the top four edge cubelets come back to their original
+positions.&nbsp; Also after 3 repetitions (12 total moves) the top four
+corner cubelets come back to their original positions.&nbsp; This means
+that after 5, 10, 15 repetitions etc. (20, 40, 60 moves etc.) the top edges
+will come back into place again.&nbsp; Also after 3, 6, 9, 12 repetitions
+etc. (12, 24, 36, 48, moves etc.) the top corners will come back again.&nbsp;
+Thus after exactly 15 repetitions (60 moves) of the <b>(FRBL)</b> process
+the top layer of the cube will be restored.&nbsp; This is because 15 is
+the smallest multiple of both 5 and 3 -- the <b>least common multiple</b>.
+<p>Back to the beginning and let's consider the middle layer of cubelets..&nbsp;
+After 5 repetitions of <b>(FRBL)</b> (20 moves) the <b>lf</b> cubelet comes
+back to its home position and after 7 repetitions (28 moves) the other
+middle-layer cubelets,&nbsp;<b> rf</b>, <b>lb</b> and <b>rb</b> return
+together to their home positions.&nbsp; Thus the middle layer will be restored
+after 35 repetitions of <b>(FRBL)</b> or after a total of 140 moves.
+<p>Now let's consider the bottom face.&nbsp; It is found that after 7 repetitions
+(28 moves) the bottom edge cubelets are restored and after 9 repetitions
+(36 moves) the bottom corner cubelets are restored.&nbsp; Now we are in
+a position to find the order of the <b>(FRBL)</b> group.&nbsp; The top
+will be restored every 15 repetitions, the middle layer will be restored
+every 35 repetitions and the bottom will be restored every 63 repetitions
+(least common multiple of 7 and 9).&nbsp; Thus the whole cube will be restored
+after any number of repetitions which is a common multiple of 7, 9, 15
+and 35.&nbsp; The least common multiple of these numbers is 315.&nbsp;
+Thus it will take 315 repetitions (1260 moves) to restore the cube and
+therefore the <b>(FRBL)</b> group is a subgroup of order 315.
+<p>Let's do this in a more <i>theoretical</i> way.&nbsp; Let's do it not
+with the cube in hand as much as with pencil and paper.&nbsp; In cyclic
+notation we can write out the effect of each move of the <b>(FRBL)</b>
+group:
+<ul>
+<li>
+<b>F = (ful, fru, fdr, fld) (fu,fr,fd,fl)</b></li>
+
+<li>
+<b>R = (fur, urb, brd, drf) (ru, rb, rd, rf)</b></li>
+
+<li>
+<b>B = (urb, lub, dlb, rdb) (rb, ub, lb, db)</b></li>
+
+<li>
+<b>L = (lub, lfu, ldf, lbd) (lu, lf, ld, lb)</b></li>
+</ul>
+We can now use these permutations to find the <b>cyclic decomposition</b>
+of the <b>(FRBL)</b> process--writing <b>(FRBL)</b> as the product of disjoint
+cycles.&nbsp; We first follow what happens to the
+<b>ful</b> cubelet. 
+<b>F</b>
+takes it to <b>fru</b> then <b>R</b> takes <b>fru</b> (listed there as
+"<b>fur</b>") to <b>ubr</b>, then <b>B</b> takes <b>ubr</b> to
+<b>lbu</b>
+and finally <b>L</b> takes <b>lbu</b> to
+<b>lfu</b>.&nbsp; Thus the <b>(FRBL)</b>
+process returns the <b>ful</b> cubelet to its home position but with a
++1 twist.&nbsp; To restore this cubelet to its home position and orientation
+we will have to give it a +3 twist (= 0 twist) which means we must repeat
+the <b>(FRBL)</b> process three times.
+<p>This once-to return-to-home-but-three-to return-to-home-orientation
+property of the <b>ful</b> cubelet is also shared by each of the other
+corner cublets except for three of them.&nbsp; These three corner cubelets
+cycle among themselves in a "twisting three-cycle"-- a three-cycle that
+returns each of its cubelets to its home position with a +1 twist after
+three repeats of the <b>(FRBL)</b> process.&nbsp; Thus to return these
+corner cubelets to their home position <i>and orientation</i> we will have
+to perform the three repeats three times for a total of 9 repeats.&nbsp;
+(just to check our calculations you should try 9 successive repetitions
+of <b>(FRBL)</b> on a cube [36 moves] to see that all 8 of the corner cubelets
+return to their home positions and orientations.)
+<p>Turning our attention to the edge cubelets we find that <b>fu</b> goes
+to <b>ur</b> which goes to <b>bu</b> which goes to <b>ul</b> which goes
+back to <b>fl</b>.&nbsp; Thus the <b>(FRBL)</b> process contains the 5-cycle
+<b>(fu,
+ur, bu, ul, fl)</b>.&nbsp; Similarly we find that the remaining edge cubelets
+form a 7-cycle <b>(fr, fd, dl, bl, bd, br, dr)</b>.
+<p>Thus the <b>(FRBL)</b> process can be written as
+<p><b>(ful)</b>+<b>(fru)+(fdr, dlb, rdb)+(fld)+(urb)+(lub)+ (fu, ur, bu,
+ul, fl)(fr, fd, dl, bl, bd, br, dr)</b>
+<p>where the "+" sign after a cycle means that that cycle gives a +1 twist
+to each corner and thus 3 repetitions are needed to restore the cubelets
+in that cycle.&nbsp; With that we find that we have cycles of length 3
+(remember the twists) 9, 5 and 7.&nbsp; The least common multiple of 3,
+9, 5 and 7 is 315.
+<p>
+<p>
+<A HREF="solvethecube1.html">14. Solve the Cube 1</A>
+<p>
+<A HREF="index.html">Back to the Index</A>
+<p>
+<HR>
+<p>
+<center>
+<B>send comments, corrections and criticisms to ...</b>
+<p>
+<A HREF="mailto:dogschool@dog.com">dogschool@dog.com</A>
+<p>
+
+</body>
+</html>
+                                          

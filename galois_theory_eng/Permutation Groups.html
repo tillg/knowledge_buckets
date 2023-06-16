@@ -1,0 +1,923 @@
+   
+   <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD><TITLE>Permutation Groups</TITLE></HEAD>
+
+
+<CENTER>
+<fONT SIZE="+3">
+11. Permutation Groups
+</FONT>
+</CENTER>
+<P>
+
+How many permutations are there on a group of <i>n</i> objects?
+Since there are <i>n</i> possible choices for the first position 
+and for each of these there are <i>n-1</i> choices for the second 
+position and for each of these <i>n(n-1)</i> ways of choosing the 
+first two there are <i>n-2</i> ways of choosing the object for the 
+third position etc. it turns out that there are <i>n!</i> 
+permutations on <i>n</i> objects.  The set of all permutations on 
+<i>n</i> objects is called the <b>symmetric group on n objects</b> 
+and is denoted by <b>S</b><sub>n</sub>.  Since the factorial grows 
+rather quickly <b>S</b><sub>n</sub> can be very large when <i>n</i> 
+is of only
+moderate size.  For example <b>S</b><sub>10</sub> contains
+10! = 3,628,800 elements and <b>S</b><sub>60</sub> contains more 
+elements than the number of atoms in the universe.
+<p>
+Let's look at <b>S</b><sub>1</sub>.  Its only element is the 
+permutation
+<pre>
+          | 1 |
+          | 1 |
+</pre>
+With only one element there is only one place for it to go.  Thus the
+group for <b>S</b><sub>1</sub> will have the following Cayley table
+<p>
+<TABLE BORDER>
+<TR>
+<TD> &#149 </TD><TD> e </TD>
+</TR>
+<TD> e </TD><TD> e </TD>
+</TR>
+</TABLE>
+<P>
+Here <b>e</b> is the permutation that changes element 1 to element 1.
+It's the only permutation possible and it's group under the operation
+<i>followed by</i> is a trivial one-element group.  In fact, there
+is (up to isomorphism) only one group with one element.  Thus we've
+found the structure of all one-element groups. (Big deal!)
+<p>
+With two elements there are two (2!) possible permutations
+<pre>
+          | 1 2 |             | 1 2 |
+          | 1 2 | = e         | 2 1 | = a
+</pre>
+With the labels <b>e</b> and <b>a</b> their group is given by the
+Caley table
+
+<p>
+<TABLE BORDER>
+<TR>
+<TD> &#149 </TD><TD> e </TD><TD> a </TD
+</TR>
+<TR>
+<TD> e </TD><TD> e </TD><TD> a </TD>
+</TR>
+<TR>
+<TD> a </TD><TD> a </TD><TD> e </TD>
+</TR>
+</TABLE>
+<P>
+This group has the identity <b>e</b> and a non-identity element 
+<b>a</b>.  A little reflection on the need for (1) an identity
+and (2) the cancellation rule and we realize that this table 
+represents all groups of two elements.  Thus we've "found" the
+structure of all groups of order 1 and 2. (Big deal!)
+<p>
+With three elements things begin to become a bit more interesting.
+<b>S</b><sub>3</sub> has 3! = 6 elements.  They are
+<pre>
+         | 1 2 3 |         | 1 2 3 |         | 1 2 3 |
+         | 1 2 3 | = e     | 2 3 1 | = a     | 3 1 2 | = b
+
+         | 1 2 3 |         | 1 2 3 |         | 1 2 3 |
+         | 1 3 2 | = X     | 3 2 1 | = Y     | 2 1 3 | = Z
+</pre>
+Now if we perform permutation <b>a</b> followed by permutation 
+<b>X</b> we end up with permutation <b>Y</b>.  However if we
+reverse the order and perform permutation <b>X</b> followed by
+permutation </b>a</b> we end up with permutation </b>Z</b>.
+The group <b>S</b><sub>3</sub> is a non-abelian group.  This calls
+for a short digression concerning notation.
+<p>
+<center><b>A Short Digression Concerning Notation</b></center>
+<p>
+If we're using the "followed by" operation we need to decide on our
+notation.  If <b>a</b> and <b>b</b> are two permutations does
+<p>
+<center><b>a &#149 b </b></center>
+<p>
+mean that permutation <b>a</b> is performed first and then permutation
+<b>b</b> is performed?  Or does it mean that <b>b</b> is performed
+first and then <b>a</b>?  Since we read English from left to right
+there is a strong reason to use the left-most element (in this case,
+<b>a</b>) as the one performed first.  Thus we would read <b>a &#149 
+b</b> as <b>a</b> <i>followed by</i> <b>b</b>.  However in mathematics
+the notation for operators and functions usually works differently. 
+If <i>f</i> and <i>g</i> are two functions and I <i>g</i> to act first
+and then have <i>f</i> act on the result of <i>g</i>'s action then
+the usual notation for this is
+<p>
+<center><i>f(g(x))</i></center>
+<p>
+Thus the element which operates first (<i>g</i>) is written to the 
+right of the element (<i>f</i>) which operates last.  We must 
+therefore be clear in our notation.  Since both the leftmost-first and
+the rightmost-first notations are used in mathematical literature
+we'll have to decide which we'll use here.  By a coin flip it has
+been determined that we will use the "followed by" notation where
+the leftmost operation is performed first.  Thus <b>a &#149 
+b</b>  will be read as <b>a</b> <i>followed by</i> <b>b</b>; that is,
+<b>a</b> is performed first <i>followed by</i> performing <b>b</b>.
+<p>
+With this convention decided upon together with the convention for
+Cayley tables that left element in the operation is in the column
+to the left of the table and the right element is in the row along
+the top of the table we get the following table for 
+<b>S</b><sub>3</sub>
+<p>
+<TABLE BORDER>
+<TR>
+<TD> &#149 </TD><TD> e </TD><TD> a </TD><TD> b </TD>
+            <TD> X </TD><TD> Y </TD><TD> Z </TD>
+</TR>
+<TR>
+<TD> e </TD><TD> . </TD><TD> . </TD><TD> . </TD>
+            <TD> . </TD><TD> . </TD><TD> . </TD>
+</TR>
+<TR>
+<TD> a </TD><TD> . </TD><TD> . </TD><TD> . </TD>
+            <TD> Y </TD><TD> . </TD><TD> . </TD>
+</TR>
+<TR>
+<TD> b </TD><TD> . </TD><TD> . </TD><TD> . </TD>
+            <TD> . </TD><TD> . </TD><TD> . </TD>
+</TR>
+<TR>
+<TD> X </TD><TD> . </TD><TD> Z </TD><TD> . </TD>
+            <TD> . </TD><TD> b </TD><TD> . </TD>
+</TR>
+<TR>
+<TD> Y </TD><TD> . </TD><TD> . </TD><TD> . </TD>
+            <TD> . </TD><TD> . </TD><TD> . </TD>
+</TR>
+<TR>
+<TD> Z </TD><TD> . </TD><TD> . </TD><TD> . </TD>
+            <TD> . </TD><TD> . </TD><TD> . </TD>
+</TR>
+</TABLE>
+<p>
+I've filled in the elements <b>a &#149 X</b> and <b>X &#149 a</b> 
+as well as <b>X &#149 Y</b> (which equals <b>b</b>) in the table.  
+As an exercise the student should work out what goes in the other
+33 cells of the table.  The solution is given below (no peeking)
+<p>
+.
+<p>
+.
+<p>
+.
+<p>
+.
+<p>
+Well have you finished filling in the table yet?
+<p>
+If not then go back and do it.  If so then continue on and check
+your answers.
+<p>
+.
+<p>
+.
+<p>
+.
+<p>
+.
+<p>
+<TABLE BORDER>
+<TR>
+<TD> &#149 </TD><TD> e </TD><TD> a </TD><TD> b </TD>
+            <TD> X </TD><TD> Y </TD><TD> Z </TD>
+</TR>
+<TR>
+<TD> e </TD><TD> e </TD><TD> a </TD><TD> b </TD>
+            <TD> X </TD><TD> Y </TD><TD> Z </TD>
+</TR>
+<TR>
+<TD> a </TD><TD> a </TD><TD> b </TD><TD> e </TD>
+            <TD> Y </TD><TD> Z </TD><TD> X </TD>
+</TR>
+<TR>
+<TD> b </TD><TD> b </TD><TD> e </TD><TD> a </TD>
+            <TD> Z </TD><TD> X </TD><TD> Y </TD>
+</TR>
+<TR>
+<TD> X </TD><TD> X </TD><TD> Z </TD><TD> Y </TD>
+            <TD> e </TD><TD> b </TD><TD> a </TD>
+</TR>
+<TR>
+<TD> Y </TD><TD> Y </TD><TD> X </TD><TD> Z </TD>
+            <TD> a </TD><TD> e </TD><TD> b </TD>
+</TR>
+<TR>
+<TD> Z </TD><TD> Z </TD><TD> Y </TD><TD> X </TD>
+            <TD> b </TD><TD> a </TD><TD> e </TD>
+</TR>
+</TABLE>
+<p>
+Does this table look familiar?  It's exactly the same table as we
+gave for the Symmetry Group of the Equilateral Triangle.  The two
+groups are isomorphic.  This becomes clear when we realize that any
+symmetry movement of the equilateral triangle simply permutes the
+three vertices of the triangle.
+<p>
+[<b>Exercise: </b> Write out the Caley tables for <b>S</b><sub>4</sub>
+ and <b>S</b><sub>5</sub>.]
+<p>
+[Just kidding!  <b>S</b><sub>4</sub> would have 576 entries in its
+Cayley table and <b>S</b><sub>5</sub> would have 14,400 entries.]
+<p>
+
+The Symmetric Group on n objects, <b>S</b><sub>n</sub> consists of
+all permutations on the n objects.  If we limit ourselves to even
+permutations then we get an object called <b>The Alternating Group
+on n Objects</b>.  From the name you can guess that the set of
+even permutations of n objects forms a group under the "followed
+by" operation.  In fact this is true.  The fact that <b>e</b> the
+identity permutation is even and that the product of two even 
+permutations is an even permutation as well as the fact that the
+inverse of an even permutation is an even permutation makes the
+Alternating Group on n Objects a subgroup of <b>S</b><sub>n</sub>.
+<p>
+The Alternating Group on n Objects has the symbol <b>A</b><sub>n</sub>.
+And since we know that there are n! permutations (even and odd) in
+<b>S</b><sub>n</sub> then there must be exactly half that many in
+<b>A</b><sub>n</sub>.  Or does that need to be proven?  Hmmm . . .
+<p>
+<b>Theorem:</b>  The order of <b>A</b><sub>n</sub> is half the order
+of <b>S</b><sub>n</sub>.
+<p>
+<b>Proof:</b>  The way to prove this is to find a one-to-one
+correspondence between the even permutations and the odd permutations.
+Since the even and odd permutations combine to make <b>S</b><sub>n</sub>
+then if there are as many evens as odds the evens must be half of
+the whole.
+
+<p>The trick is to append the transposition <b>(1, 2)</b> to the
+beginning of an even permutation and thereby turn it into an odd
+permutation.  If this gives a one to one correspondence between
+the even permutations and the odd permutations then we've done it.
+<p>
+But what about those odd permutations that don't "begin" with 
+<b>(1, 2)</b>?  Actually there are many different ways to write
+any permutation.  Appending <b>(1,2)(1,2)</b> (which, by the way,
+is the identity permutation) to the front of a permutation (or even
+inserting it anywhere in the middle) will not change the permutation.
+Thus any permutation can be written with <b>(1, 2)</b> at its front.
+<p>
+This is the correspondence we seek.  Appending <b>(1, 2)</b> to
+the beginning of any even permutation gives an odd permutation.
+Also, we may write any odd permutation beginning with <b>(1, 2)</b>
+so by removing the <b>(1, 2)</b> from the beginning gives an
+even permutation.  Replacing <b>(1, 2)</b> at the beginning gives
+us back the odd permutation again.  Thus we have found that every
+even permutation corresponds to exactly one odd permutation under
+this "transformation" of appending <b>(1, 2)</b> to the beginning and
+every odd permutation is corresponded to by exactly one even 
+permutation by this method.  
+<p>
+Using this Theorem we know now that there are exactly <b>3</b>
+(half of 3!) even permutations on 3 objects. 
+<p>
+<p>
+Why are permutations so important?  Let's look at that question from
+another viewpoint.  Let's define a <i>group function</i>.  That is,
+a function whose domain is the elements of a group <i>G</i> and whose 
+range is also the elements of <i>G</i>.  Call this function <i>f<sub>a</sub></i>
+where <b>a</b> is an element of the group <i>G</i>.  The action of
+this function is to multiply any element of <i>G</i> on the right by
+<b>a</b>.  Thus for any elements <b>x, y</b> or <b>z</b> of <i>G</i>  
+we have
+<p>
+<center><i>f<sub>a</sub></i>(<b>x</b>) = <b>xa</b><br>
+        <i>f<sub>a</sub></i>(<b>y</b>) = <b>ya</b><br>
+        <i>f<sub>a</sub></i>(<b>z</b>) = <b>za</b><br> </center>
+<p>
+For any other element, say <b>b</b>, of <i>G</i> we can also define <i>
+f<sub><b>b</b></sub></i>(<b>x</b>) = <b>xb</b> for all <b>x</b> in <i>G</i>.  
+Now what are these functions?  They are nothing other than 
+<b>permutations</b> on  the elements of <i>G</i>.  To see this we 
+only need notice that <i>f<sub>a</sub></i>(<b>x</b>) = 
+<i>f<sub>a</sub></i>(<b>y</b>)</i> means that <b>xa</b> = <b>ya</b>
+and by the cancellation law this means that <b>x</b> = <b>y</b>.  Also 
+for any element <b>c</b> of <i>G</i>, 
+<b>c</b> = <b>a(a</b><sup>-1</sup><b>c)</b>.  That is, there is some
+element of <i>G</i> (namely <b>a</b><sup>-1</sup><b>c</b>) that 
+<i>f<sub>a</sub></i> sends to <b>c</b>.  Therefore for every element 
+<b>a</b> of <i>G</i> the function <i>f<sub>a</sub></i> is one-to-one 
+and onto--the exact definition of a permutation.
+<p>
+Now we can ask ourselves, "how do these functions behave under 
+composition--under the operation <i>followed by</i>?"  The answer
+is exactly like the elements of <i>G</i> under its group operation.
+To see this notice that for any element <b>x</b> of <i>G</i>
+<p>
+<center><i>f<sub>a</sub></i>(<i>f<sub>b</sub></i>(<b>x</b>)) = 
+        <i>f<sub>a</sub></i>(<b>xb</b>) = (<b>xb</b>)<b>a</b> = 
+        <b>x</b>(<b>ba</b>)</center>
+<p>
+[Remember, <i>f<sub>a</sub></i>(<i>f<sub>b</sub></i>(<b>x</b>)) 
+means that <i>f<sub>b</sub></i> acts on <b>x</b> first "followed by" 
+<i>f<sub>a</sub></i> acting on the result of that.  This is equivalent
+to <i>f<sub>b</sub></i> &#149 <i>f<sub>a</sub></i> in our 
+<i>followed-by</i> notation.]
+The repeated operation of the functions is equivalent to repeated 
+multiplication on the right by the corresponding group element. 
+The functions/permutations not only form a group under the operation
+of <i>composition</i> ("followed by") but that the group that they
+form is <b>isomorphic</b> to the original group <i>G</i>.  This result is
+known as <b>Cayley's Theorem:</b>
+<p>
+<center><b>Cayley's Theorem: Every Group is isomorphic to a group of
+permutations.</b></center>
+<p>
+<p>
+<fONT SIZE = +1>
+<b>Cycle Notation</b>
+</FONT>
+<p>
+There is another notation for permutations that shows the structure of
+the permutation a bit more clearly.  It's called "cyclic notation."  It 
+works like this.  In the permutation.
+<pre>
+<p>
+       | 1 2 3 4 5 |
+       | 3 5 4 2 1 |
+</pre>
+<p>
+1 goes to 3 which goes to 4 which goes to 2 which goes to 5 which goes to 
+1 completing the cycle.  In cyclic notation this would be written.
+<pre>
+<p>
+        (1 3 4 2 5)
+</pre>
+<p>
+Where each element is followed by the one whose place it goes to.  The 
+5 at the end goes back to the 1 at the beginning of the cycle.  Now consider 
+the following permutation:
+<pre>
+<p>
+       | 1 2 3 4 5 6 7 8 |
+       | 3 5 7 8 4 2 1 6 |
+</pre>
+<p>
+If we begin with 1 we note that 1 goes to 3 which goes to 7 which goes 
+back to 1.  Thus we have the cycle (1 3 7).  Now we take one of the 
+elements that isn't in the cycle just found, say, 2.  2 goes to 5 
+which goes to 4 which goes to 6 which goes back to 2.  This gives the
+cycle
+<pre>
+<p>
+     (2 5 4 8 6)
+</pre>
+<p>
+Thus we have broken the permutation into two cycles, (1 3 7) and 
+(2 5 4 8 6).  There are a few things we should notice about this
+decomposition into cycles.
+<p>
+<b>The cycles are disjoint.</b>
+<p>
+They have no element in common.  This is clear because once we find 
+a cycle in a permutation we have found where every element in the
+cycle goes under the permutation.  The "destination" of every element
+of the cycle is in the cycle.  Also the elements that have things in 
+the cycle as their destination are also in the cycle.  Thus once we 
+close out a cycle by bringing it back to its first element we have 
+found everything that the permutation does to the elements of that 
+cycle and that they are in that cycle.  If an element of one cycle
+was in another cycle then there would be two (at least) elements that
+that element was mapped onto by the permutation.
+<p>
+So we can decompose any finite permutation into disjoint cycles.  Just
+choose an element see where it goes and then see where that element goes 
+and on until you close out the cycle.  Now if there are any elements 
+that are not in that cycle choose one of those and see where it goes 
+etc. until you close out a second cycle.  If there are any remaining elements 
+that are not in either of those two cycles choose one of them and 
+continue constructing cycles until you've exhausted all the elements of 
+the permutation.  This gives us the result that
+<p>
+<b>Theorem: Every permutation can be decomposed into disjoint cycles.</b>
+<p>
+When we combined permutations with the binary operation "followed by" 
+we found that the order of the permutations mattered.  Thus performing
+<pre>
+<p>
+     | 1 2 3 |
+     | 2 3 1 |
+<p>
+</pre>
+followed by
+<pre>
+<p>
+     | 1 2 3 |
+     | 2 1 3 |
+</pre>
+<p>
+was different that performing them in the reverse order.  In cyclic 
+notation this would be (1 2 3) followed by (1 2).  Let's work out the
+final permutation from the cyclic notation.  In (1 2 3) followed by (1 2) 
+the first cycle takes 1 to 2 and the second cycle takes 2 to 1 so the 
+result is that over all 1 goes to 1.  The first cycle takes 2 to 3 and the 
+second cycle does not operate on 3 so the overall effect is to take 2 to 3. 
+finally the first cycle takes 3 to 1 and the second cycle takes 1 to 2 
+for the overall effect of taking 3 to 2.  Thus the result of the combination 
+of the two permutations is (2 3). 
+<p>
+If we apply them in reverse order, (1 2) followed by (1 2 3) the result is
+(1 3) [work this out!].  The order of permutations matters.  The group 
+<b>S</b><sub>3</sub> is not Abelian.  However if two cycles are disjoint 
+then they will commute.  If the elements moved around by permutation <b>a</b>
+have no elements in common with those moved around by permutation <b>b</b> then
+which is performed first doesn't matter.  Each cycle operates on different 
+elements so their actions are independent of each other.  They live in different 
+worlds as it were.  Thus performing <b>a</b> after performing <b>b</b> 
+will have no affect on the elements permuted by <b>a</b>.  Thus:
+<p>
+<b>Theorem:  Disjoint permutations commute.</b>
+<p>
+So when we decompose a permutation into disjoint cycles the order of applying 
+those cycles does not matter.
+<p>
+Now let's study the cycles themselves.  The simplist cycle would be (1)
+which is the identity.  Element 1 goes to 1 and the others are unaffected.
+This is just the identity permutation.  
+<p>
+The next simplist is a cycle of length 2, (1 2)  This is just a transposition.
+Next let's look at a three cycle: (1 2 3)  This is equivalent to two transpositions: 
+(1 2) followed by (1 3) [try it!].  Thus (1 2 3) is the product of two 
+transpositions and is an <i>even</i> permutation.  Let's consider a
+four cycle:  (1 2 3 4)  This is equivalent to (1 2) followed by (1 3) 
+followed by (1 4) [try it!].  Thus it is the product of three transpositions
+and is therefore an odd permutation.  Notice that to get from (1 2 3) to
+(1 2 3 4) we just had to perform one more permutation at the end, 
+namely (1 4).  Similarly to (1 2 3 4 5) = (1 2 3 4) followed by (1 5)
+[try it!].  Continuing on we see that (1 2 3 . . . n) followed by 
+(1 n+1) gives (1 2 3 ... n n+1) [try it!].  Thus by mathematical induction we
+come to the conclusion that
+<p>
+<b>Theorem: A cycle with an even number of elements is an odd permutation. 
+and a cycle with an odd number of elements is an even permutation.</b>
+<p>
+So once we have expressed a permutation as the product of disjoint cycles 
+we can determine whether it is an even or odd permutation by noticing 
+the number of cycles with an even number of elements.  Since they contribute 
+an odd number of transpositions to the permutation the total parity of 
+transpositions, even or odd, will depend on the number of permutations with
+an even number of elements.  We see that
+<p>
+<b>Theorem:  If a permutation is decomposed into disjoint cycles such that 
+there is an odd number of cycles with an even number of elements then the
+permutation is odd.  If there is an even number of cycles with an even 
+number of elements then the permutation is even.<b>
+<p>
+<p>
+<A HREF="rubikscube.html" >Next: 12. Rubik's Cube</A>
+<p>
+<A HREF="index.html">Back to the Index</A>  
+<HR>
+
+<HR>
+
+<HR>
+
+<HR>
+
+&copy 1999 by Arfur Dogfrey
+
+
+</HTML>
+                                                                                                                                                                                                                                                            <!--'"</title></head>-->
+
+<script type="text/javascript">
+//OwnerIQ
+var __oiq_pct = 50;
+if( __oiq_pct>=100 || Math.floor(Math.random()*100/(100-__oiq_pct)) > 0 ) {
+var _oiqq = _oiqq || [];
+_oiqq.push(['oiq_addPageBrand','Lycos']);
+_oiqq.push(['oiq_addPageCat','Internet > Websites']);
+_oiqq.push(['oiq_addPageLifecycle','Intend']);
+_oiqq.push(['oiq_doTag']);
+(function() {
+var oiq = document.createElement('script'); oiq.type = 'text/javascript'; oiq.async = true;
+oiq.src = document.location.protocol + '//px.owneriq.net/stas/s/lycosn.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(oiq, s);
+})();
+}
+//Google Analytics
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount','UA-21402695-19']);
+_gaq.push(['_setDomainName','tripod.com']);
+_gaq.push(['_setCustomVar',1,'member_name','dogschool',3]);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+//Lycos Init
+function getReferrer() {
+var all= this.document.cookie;
+if (all== '') return false;
+var cookie_name = 'REFERRER=';
+var start = all.lastIndexOf(cookie_name);
+if (start == -1) return false;
+start += cookie_name.length;
+var end = all.indexOf(';', start);
+if (end == -1) end = all.length;
+return all.substring(start, end);
+}
+function getQuery() {
+var rfr = getReferrer();
+if (rfr == '') return false;
+var q = extractQuery(rfr, 'yahoo.com', 'p=');
+if (q) return q;
+q = extractQuery(rfr, '', 'q=');
+return q ? q : "";
+}
+function extractQuery(full, site, q_param) {
+var start = full.lastIndexOf(site);
+if (start == -1) return false;
+start = full.lastIndexOf(q_param);
+if (start == -1) return false;
+start += q_param.length;
+var end = full.indexOf('&', start);
+if (end == -1) end = full.length;
+return unescape(full.substring(start, end)).split(" ").join("+");
+}
+function generateHref(atag, template){
+atag.href=template.replace('_MYURL_', window.location.href.replace('http://', '')).replace('_MYTITLE_','Check%20out%20this%20Tripod%20Member%20site!'); 
+}
+var lycos_ad = Array();
+var lycos_onload_timer;
+var cm_role = "live";
+var cm_host = "tripod.lycos.com";
+var cm_taxid = "/memberembedded";
+var tripod_member_name = "dogschool";
+var tripod_member_page = "dogschool/permgroups.html";
+var tripod_ratings_hash = "1686895977:90e10ad9fba758a5dad431ba8cfcd50c";
+
+var lycos_ad_category = {"dmoz":"reference\/knots","ontarget":"&CAT=education&L2CAT=reference","find_what":"graduate courses"};
+
+var lycos_ad_remote_addr = "209.202.244.9";
+var lycos_ad_www_server = "www.tripod.lycos.com";
+var lycos_ad_track_small = "";
+var lycos_ad_track_served = "";
+var lycos_search_query = getQuery();
+</script>
+
+<script type="text/javascript" src="https://scripts.lycos.com/catman/init.js"></script>
+
+<script type='text/javascript'>
+ var googletag = googletag || {};
+ googletag.cmd = googletag.cmd || [];
+ (function() {
+   var gads = document.createElement('script');
+   gads.async = true;
+   gads.type = 'text/javascript';
+   var useSSL = 'https:' == document.location.protocol;
+   gads.src = (useSSL ? 'https:' : 'http:') +
+     '//www.googletagservices.com/tag/js/gpt.js';
+   var node = document.getElementsByTagName('script')[0];
+   node.parentNode.insertBefore(gads, node);
+ })();
+</script>
+
+<script type='text/javascript'>
+ googletag.cmd.push(function() {
+   googletag.defineSlot('/95963596/TRI_300X250_dfp', [300, 250], 'div-gpt-ad-1450204159126-0').addService(googletag.pubads());
+   googletag.defineSlot('/95963596/TRI_above_728x90_dfp', [728, 90], 'div-gpt-ad-1450204159126-1').addService(googletag.pubads());
+   googletag.defineSlot('/95963596/TRI_below_728x90_dfp', [728, 90], 'div-gpt-ad-1450204159126-2').addService(googletag.pubads());
+   googletag.pubads().enableSingleRequest();
+   googletag.enableServices();
+ });
+</script>
+
+
+<script type="text/javascript"> 
+(function(isV)
+{
+    if( !isV )
+    {
+        return;
+    }
+    var adMgr = new AdManager();
+    var lycos_prod_set = adMgr.chooseProductSet();
+    var slots = ["leaderboard", "leaderboard2", "toolbar_image", "toolbar_text", "smallbox", "top_promo", "footer2", "slider"];
+    var adCat = this.lycos_ad_category;
+    adMgr.setForcedParam('page', (adCat && adCat.dmoz) ? adCat.dmoz : 'member');
+    if (this.lycos_search_query)
+    {
+        adMgr.setForcedParam("keyword", this.lycos_search_query);
+    } 
+    else if(adCat && adCat.find_what)
+    {
+        adMgr.setForcedParam('keyword', adCat.find_what);
+    }
+    
+    for (var s in slots)
+    {
+        var slot = slots[s];
+        if (adMgr.isSlotAvailable(slot))
+        {
+            this.lycos_ad[slot] = adMgr.getSlot(slot);
+        }
+    }
+
+    adMgr.renderHeader();
+    adMgr.renderFooter();
+}((function() {
+
+var w = 0, h = 0, minimumThreshold = 300;
+
+if (top == self)
+{
+    return true;
+}
+if (typeof(window.innerWidth) == 'number' )
+{
+    w = window.innerWidth;
+    h = window.innerHeight;
+}
+else if (document.documentElement && (document.documentElement.clientWidth || document.documentElement.clientHeight))
+{
+    w = document.documentElement.clientWidth;
+    h = document.documentElement.clientHeight;
+}
+else if (document.body && (document.body.clientWidth || document.body.clientHeight))
+{
+    w = document.body.clientWidth;
+    h = document.body.clientHeight;
+}
+return ((w > minimumThreshold) && (h > minimumThreshold));
+}())));
+
+
+
+
+window.onload = function()
+{
+    var f = document.getElementById("FooterAd");
+    var b = document.getElementsByTagName("body")[0];
+    b.appendChild(f);
+    f.style.display = "block";
+    document.getElementById('lycosFooterAdiFrame').src = '/adm/ad/footerAd.iframe.html';
+    
+
+
+    
+    // DOM Inj Ad
+    (function(isTrellix)
+    {
+        var e = document.createElement('iframe');
+        e.style.border = '0';
+        e.style.margin = 0;
+        e.style.display = 'block';
+        e.style.cssFloat = 'right';
+        e.style.height = '254px';
+        e.style.overflow = 'hidden';
+        e.style.padding = 0;
+        e.style.width = '300px';
+
+
+        var isBlokedByDomain = function( href )
+        {
+            var blockedDomains = [
+                "ananyaporn13000.tripod.com",
+                "xxxpornxxx.tripod.com"
+            ];
+            var flag = false;
+            
+            for( var i=0; i<blockedDomains.length; i++ )
+            {
+                if( href.search( blockedDomains[ i ] ) >= 0 )
+                {
+                    flag = true;
+                }
+            }
+            return flag;
+        }
+
+        var getMetaContent = function( metaName )
+        {
+            var metas = document.getElementsByTagName('meta');
+            for (i=0; i<metas.length; i++)
+            { 
+                if( metas[i].getAttribute("name") == metaName )
+                { 
+                    return metas[i].getAttribute("content"); 
+                } 
+            }
+            return false;
+        }
+        
+        var getCommentNodes = function(regexPattern)
+        {
+            var nodes = {};
+            var nodesA = [];
+            var preferredNodesList = ['a', 'c', 'b'];
+        
+            (function getNodesThatHaveComments(n, pattern)
+            {
+                if (n.hasChildNodes())
+                {
+                    if (n.tagName === 'IFRAME')
+                    {
+                        return false;
+                    }
+                    for (var i = 0; i < n.childNodes.length; i++)
+                    {
+                        if ((n.childNodes[i].nodeType === 8) && (pattern.test(n.childNodes[i].nodeValue)))
+                        {
+                            var areaName = pattern.exec(n.childNodes[i].nodeValue)[1];
+                            nodes[areaName] = n;
+                        }
+                        else if (n.childNodes[i].nodeType === 1)
+                        {
+                            getNodesThatHaveComments(n.childNodes[i], pattern);
+                        }
+                    }
+                }
+            }(document.body, regexPattern));
+
+            for (var i in preferredNodesList)
+            {
+                if (nodes[preferredNodesList[i]])
+                {
+                    if( isTrellix && nodes[preferredNodesList[i]].parentNode.parentNode.parentNode.parentNode )
+                    {
+                        nodesA.push(nodes[preferredNodesList[i]].parentNode.parentNode.parentNode.parentNode);
+                    }
+                    else
+                    {
+                        nodesA.push( nodes[preferredNodesList[i]] );
+                    }
+                }
+            }
+            return nodesA;
+        }
+        
+        
+        var properNode = null;
+        var areaNodes = getCommentNodes( new RegExp( '^area Type="area_(\\w+)"' ) );
+
+        for (var i = 0; i < areaNodes.length; i++)
+        {
+            var a = parseInt(getComputedStyle(areaNodes[i]).width);
+            if ((a >= 300) && (a <= 400))
+            {
+                properNode = areaNodes[i];
+                break;
+            }
+        }
+
+
+        var propertyName = getMetaContent("property") || false;
+        if( isTrellix && (properNode) )
+        {
+            e.src = '/adm/ad/injectAd.iframe.html';
+            properNode.insertBefore(e, properNode.firstChild);
+        }
+        else if( isTrellix && !( properNode ) ) // Slap the ad eventhought there is no alocated slot
+        {
+            e.src = '/adm/ad/injectAd.iframe.html';
+            e.style.cssFloat = 'none';
+            var cdiv = document.createElement('div');
+            cdiv.style = "width:300px;margin:10px auto;";
+            cdiv.appendChild( e );
+            b.insertBefore(cdiv, b.lastChild);
+        }
+        else if( !isBlokedByDomain( location.href ) )
+        {
+            var injF = document.createElement('iframe');
+            injF.style.border = '0';
+            injF.style.margin = 0;
+            injF.style.display = 'block';
+            injF.style.cssFloat = 'none';
+            injF.style.height = '254px';
+            injF.style.overflow = 'hidden';
+            injF.style.padding = 0;
+            injF.style.width = '300px';
+            injF.src = '/adm/ad/injectAd.iframe.html';
+
+            if( b && ( !isTrellix || ( typeof isTrellix == "undefined" ) ) ) // All other tripod props
+            {
+                var cdiv = document.createElement('div');
+                cdiv.style = "width:300px;margin:10px auto;";
+                cdiv.appendChild( injF );
+                b.insertBefore(cdiv, b.lastChild);
+            } 
+        }
+  }( document.isTrellix ));
+}
+
+</script>
+
+<div id="tb_container" style="background:#DFDCCF; border-bottom:1px solid #393939; position:relative; z-index:999999999!important">
+<!--form name="search" onSubmit="return searchit()" id='header_search' >
+<input type="text" placeholder="Search" size=30 name="search2" value="">
+<input type="button" value="Go!" onClick="searchit()">
+</form>
+<style>
+form#header_search {
+    width: 916px;
+    margin: 0 auto 8px;
+    position: relative;
+}
+
+
+form#header_search input {
+    height: 40px;
+    font-size: 14px;
+    line-height: 40px;
+    padding: 0 8px;
+    box-sizing: border-box;
+    background: #F4F2E9;
+    border: 1px solid #BBB8B8;
+    transition: background-color 300ms ease-out,
+                color 300ms ease;
+}
+
+form#header_search input[type="text"] {
+    width: 100%;
+}
+form#header_search input[type="text"]:focus {
+    border-color: #A2D054;
+    background-color: #fff;
+    box-shadow: 0 0px 12px -4px #A2D054;
+}
+
+
+
+form#header_search input[type="button"] {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    opacity: 1;
+    background: #DFDCCF;
+    color: #463734;
+    width: 125px;
+    cursor: pointer;
+    height: 38px;
+    border: none;
+}
+form#header_search input[type="text"]:focus ~ input[type='button']:hover,
+form#header_search input[type='button']:hover {
+    background-color: #A5CE56;
+    color: #fff;
+}
+form#header_search input[type="text"]:focus ~ input[type='button'] {
+    background-color: #52AEDF;
+    color: #fff;
+}
+
+</style>
+
+<script>
+function searchit(){
+    
+    // determine environment 
+    var search_env 
+    if (lycos_ad_www_server.indexOf(".pd.") > -1) {
+       search_env = 'http://search51.pd.lycos.com/a/';
+    } else if (lycos_ad_www_server.indexOf(".qa.") > -1) {
+       search_env = 'http://search51.qa.lycos.com/a/';
+    } else {
+       search_env = 'http://search51.lycos.com/a/';
+    }
+
+var search_term = encodeURIComponent(document.search.search2.value)
+var search_url = search_env+search_term;
+window.open(search_url);
+
+return false
+}
+</script-->
+<style>
+    .adCenterClass{margin:0 auto}
+</style>
+<div id="tb_ad" class="adCenterClass" style="display:block!important; overflow:hidden; width:916px;">
+
+<div id="ad_container" style="display:block!important; float:left; width:728px ">
+<script type="text/javascript">
+if (typeof lycos_ad !== "undefined" && "leaderboard" in lycos_ad) {
+  document.write(lycos_ad['leaderboard']);
+}
+</script>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+if (typeof lycos_ad !== "undefined" && "slider" in lycos_ad) {
+  document.write(lycos_ad['slider']);
+}
+</script> <!-- added 7/22 -->
+<div id="FooterAd" style="background:#DFDCCF; border-top:1px solid #393939; clear:both; display:none; width:100%!important; position:relative; z-index:999999!important; height:90px!important"> 
+<div class="adCenterClass" style="display:block!important; overflow:hidden; width:916px;">
+<div id="footerAd_container" style="display:block!important; float:left; width:728px">
+<iframe id="lycosFooterAdiFrame" style="border:0; display:block; float:left; height:96px; overflow:hidden; padding:0; width:750px"></iframe>
+</div>
+</div>
+</div>
+

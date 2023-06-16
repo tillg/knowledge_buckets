@@ -1,0 +1,750 @@
+                         
+                         
+                         
+                         
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD><TITLE>An Introduction to GROUP THEORY</TITLE></HEAD>
+<body><!--'"</title></head>-->
+
+<script type="text/javascript">
+//OwnerIQ
+var __oiq_pct = 50;
+if( __oiq_pct>=100 || Math.floor(Math.random()*100/(100-__oiq_pct)) > 0 ) {
+var _oiqq = _oiqq || [];
+_oiqq.push(['oiq_addPageBrand','Lycos']);
+_oiqq.push(['oiq_addPageCat','Internet > Websites']);
+_oiqq.push(['oiq_addPageLifecycle','Intend']);
+_oiqq.push(['oiq_doTag']);
+(function() {
+var oiq = document.createElement('script'); oiq.type = 'text/javascript'; oiq.async = true;
+oiq.src = document.location.protocol + '//px.owneriq.net/stas/s/lycosn.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(oiq, s);
+})();
+}
+//Google Analytics
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount','UA-21402695-19']);
+_gaq.push(['_setDomainName','tripod.com']);
+_gaq.push(['_setCustomVar',1,'member_name','dogschool',3]);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+//Lycos Init
+function getReferrer() {
+var all= this.document.cookie;
+if (all== '') return false;
+var cookie_name = 'REFERRER=';
+var start = all.lastIndexOf(cookie_name);
+if (start == -1) return false;
+start += cookie_name.length;
+var end = all.indexOf(';', start);
+if (end == -1) end = all.length;
+return all.substring(start, end);
+}
+function getQuery() {
+var rfr = getReferrer();
+if (rfr == '') return false;
+var q = extractQuery(rfr, 'yahoo.com', 'p=');
+if (q) return q;
+q = extractQuery(rfr, '', 'q=');
+return q ? q : "";
+}
+function extractQuery(full, site, q_param) {
+var start = full.lastIndexOf(site);
+if (start == -1) return false;
+start = full.lastIndexOf(q_param);
+if (start == -1) return false;
+start += q_param.length;
+var end = full.indexOf('&', start);
+if (end == -1) end = full.length;
+return unescape(full.substring(start, end)).split(" ").join("+");
+}
+function generateHref(atag, template){
+atag.href=template.replace('_MYURL_', window.location.href.replace('http://', '')).replace('_MYTITLE_','Check%20out%20this%20Tripod%20Member%20site!'); 
+}
+var lycos_ad = Array();
+var lycos_onload_timer;
+var cm_role = "live";
+var cm_host = "tripod.lycos.com";
+var cm_taxid = "/memberembedded";
+var tripod_member_name = "dogschool";
+var tripod_member_page = "dogschool/groups.html";
+var tripod_ratings_hash = "1686895766:5436fc869789bf9b9596a47ac34ee86c";
+
+var lycos_ad_category = {"dmoz":"reference\/knots","ontarget":"&CAT=education&L2CAT=reference","find_what":"graduate courses"};
+
+var lycos_ad_remote_addr = "209.202.244.9";
+var lycos_ad_www_server = "www.tripod.lycos.com";
+var lycos_ad_track_small = "";
+var lycos_ad_track_served = "";
+var lycos_search_query = getQuery();
+</script>
+
+<script type="text/javascript" src="https://scripts.lycos.com/catman/init.js"></script>
+
+<script type='text/javascript'>
+ var googletag = googletag || {};
+ googletag.cmd = googletag.cmd || [];
+ (function() {
+   var gads = document.createElement('script');
+   gads.async = true;
+   gads.type = 'text/javascript';
+   var useSSL = 'https:' == document.location.protocol;
+   gads.src = (useSSL ? 'https:' : 'http:') +
+     '//www.googletagservices.com/tag/js/gpt.js';
+   var node = document.getElementsByTagName('script')[0];
+   node.parentNode.insertBefore(gads, node);
+ })();
+</script>
+
+<script type='text/javascript'>
+ googletag.cmd.push(function() {
+   googletag.defineSlot('/95963596/TRI_300X250_dfp', [300, 250], 'div-gpt-ad-1450204159126-0').addService(googletag.pubads());
+   googletag.defineSlot('/95963596/TRI_above_728x90_dfp', [728, 90], 'div-gpt-ad-1450204159126-1').addService(googletag.pubads());
+   googletag.defineSlot('/95963596/TRI_below_728x90_dfp', [728, 90], 'div-gpt-ad-1450204159126-2').addService(googletag.pubads());
+   googletag.pubads().enableSingleRequest();
+   googletag.enableServices();
+ });
+</script>
+
+
+<script type="text/javascript"> 
+(function(isV)
+{
+    if( !isV )
+    {
+        return;
+    }
+    var adMgr = new AdManager();
+    var lycos_prod_set = adMgr.chooseProductSet();
+    var slots = ["leaderboard", "leaderboard2", "toolbar_image", "toolbar_text", "smallbox", "top_promo", "footer2", "slider"];
+    var adCat = this.lycos_ad_category;
+    adMgr.setForcedParam('page', (adCat && adCat.dmoz) ? adCat.dmoz : 'member');
+    if (this.lycos_search_query)
+    {
+        adMgr.setForcedParam("keyword", this.lycos_search_query);
+    } 
+    else if(adCat && adCat.find_what)
+    {
+        adMgr.setForcedParam('keyword', adCat.find_what);
+    }
+    
+    for (var s in slots)
+    {
+        var slot = slots[s];
+        if (adMgr.isSlotAvailable(slot))
+        {
+            this.lycos_ad[slot] = adMgr.getSlot(slot);
+        }
+    }
+
+    adMgr.renderHeader();
+    adMgr.renderFooter();
+}((function() {
+
+var w = 0, h = 0, minimumThreshold = 300;
+
+if (top == self)
+{
+    return true;
+}
+if (typeof(window.innerWidth) == 'number' )
+{
+    w = window.innerWidth;
+    h = window.innerHeight;
+}
+else if (document.documentElement && (document.documentElement.clientWidth || document.documentElement.clientHeight))
+{
+    w = document.documentElement.clientWidth;
+    h = document.documentElement.clientHeight;
+}
+else if (document.body && (document.body.clientWidth || document.body.clientHeight))
+{
+    w = document.body.clientWidth;
+    h = document.body.clientHeight;
+}
+return ((w > minimumThreshold) && (h > minimumThreshold));
+}())));
+
+
+
+
+window.onload = function()
+{
+    var f = document.getElementById("FooterAd");
+    var b = document.getElementsByTagName("body")[0];
+    b.appendChild(f);
+    f.style.display = "block";
+    document.getElementById('lycosFooterAdiFrame').src = '/adm/ad/footerAd.iframe.html';
+    
+
+
+    
+    // DOM Inj Ad
+    (function(isTrellix)
+    {
+        var e = document.createElement('iframe');
+        e.style.border = '0';
+        e.style.margin = 0;
+        e.style.display = 'block';
+        e.style.cssFloat = 'right';
+        e.style.height = '254px';
+        e.style.overflow = 'hidden';
+        e.style.padding = 0;
+        e.style.width = '300px';
+
+
+        var isBlokedByDomain = function( href )
+        {
+            var blockedDomains = [
+                "ananyaporn13000.tripod.com",
+                "xxxpornxxx.tripod.com"
+            ];
+            var flag = false;
+            
+            for( var i=0; i<blockedDomains.length; i++ )
+            {
+                if( href.search( blockedDomains[ i ] ) >= 0 )
+                {
+                    flag = true;
+                }
+            }
+            return flag;
+        }
+
+        var getMetaContent = function( metaName )
+        {
+            var metas = document.getElementsByTagName('meta');
+            for (i=0; i<metas.length; i++)
+            { 
+                if( metas[i].getAttribute("name") == metaName )
+                { 
+                    return metas[i].getAttribute("content"); 
+                } 
+            }
+            return false;
+        }
+        
+        var getCommentNodes = function(regexPattern)
+        {
+            var nodes = {};
+            var nodesA = [];
+            var preferredNodesList = ['a', 'c', 'b'];
+        
+            (function getNodesThatHaveComments(n, pattern)
+            {
+                if (n.hasChildNodes())
+                {
+                    if (n.tagName === 'IFRAME')
+                    {
+                        return false;
+                    }
+                    for (var i = 0; i < n.childNodes.length; i++)
+                    {
+                        if ((n.childNodes[i].nodeType === 8) && (pattern.test(n.childNodes[i].nodeValue)))
+                        {
+                            var areaName = pattern.exec(n.childNodes[i].nodeValue)[1];
+                            nodes[areaName] = n;
+                        }
+                        else if (n.childNodes[i].nodeType === 1)
+                        {
+                            getNodesThatHaveComments(n.childNodes[i], pattern);
+                        }
+                    }
+                }
+            }(document.body, regexPattern));
+
+            for (var i in preferredNodesList)
+            {
+                if (nodes[preferredNodesList[i]])
+                {
+                    if( isTrellix && nodes[preferredNodesList[i]].parentNode.parentNode.parentNode.parentNode )
+                    {
+                        nodesA.push(nodes[preferredNodesList[i]].parentNode.parentNode.parentNode.parentNode);
+                    }
+                    else
+                    {
+                        nodesA.push( nodes[preferredNodesList[i]] );
+                    }
+                }
+            }
+            return nodesA;
+        }
+        
+        
+        var properNode = null;
+        var areaNodes = getCommentNodes( new RegExp( '^area Type="area_(\\w+)"' ) );
+
+        for (var i = 0; i < areaNodes.length; i++)
+        {
+            var a = parseInt(getComputedStyle(areaNodes[i]).width);
+            if ((a >= 300) && (a <= 400))
+            {
+                properNode = areaNodes[i];
+                break;
+            }
+        }
+
+
+        var propertyName = getMetaContent("property") || false;
+        if( isTrellix && (properNode) )
+        {
+            e.src = '/adm/ad/injectAd.iframe.html';
+            properNode.insertBefore(e, properNode.firstChild);
+        }
+        else if( isTrellix && !( properNode ) ) // Slap the ad eventhought there is no alocated slot
+        {
+            e.src = '/adm/ad/injectAd.iframe.html';
+            e.style.cssFloat = 'none';
+            var cdiv = document.createElement('div');
+            cdiv.style = "width:300px;margin:10px auto;";
+            cdiv.appendChild( e );
+            b.insertBefore(cdiv, b.lastChild);
+        }
+        else if( !isBlokedByDomain( location.href ) )
+        {
+            var injF = document.createElement('iframe');
+            injF.style.border = '0';
+            injF.style.margin = 0;
+            injF.style.display = 'block';
+            injF.style.cssFloat = 'none';
+            injF.style.height = '254px';
+            injF.style.overflow = 'hidden';
+            injF.style.padding = 0;
+            injF.style.width = '300px';
+            injF.src = '/adm/ad/injectAd.iframe.html';
+
+            if( b && ( !isTrellix || ( typeof isTrellix == "undefined" ) ) ) // All other tripod props
+            {
+                var cdiv = document.createElement('div');
+                cdiv.style = "width:300px;margin:10px auto;";
+                cdiv.appendChild( injF );
+                b.insertBefore(cdiv, b.lastChild);
+            } 
+        }
+  }( document.isTrellix ));
+}
+
+</script>
+
+<div id="tb_container" style="background:#DFDCCF; border-bottom:1px solid #393939; position:relative; z-index:999999999!important">
+<!--form name="search" onSubmit="return searchit()" id='header_search' >
+<input type="text" placeholder="Search" size=30 name="search2" value="">
+<input type="button" value="Go!" onClick="searchit()">
+</form>
+<style>
+form#header_search {
+    width: 916px;
+    margin: 0 auto 8px;
+    position: relative;
+}
+
+
+form#header_search input {
+    height: 40px;
+    font-size: 14px;
+    line-height: 40px;
+    padding: 0 8px;
+    box-sizing: border-box;
+    background: #F4F2E9;
+    border: 1px solid #BBB8B8;
+    transition: background-color 300ms ease-out,
+                color 300ms ease;
+}
+
+form#header_search input[type="text"] {
+    width: 100%;
+}
+form#header_search input[type="text"]:focus {
+    border-color: #A2D054;
+    background-color: #fff;
+    box-shadow: 0 0px 12px -4px #A2D054;
+}
+
+
+
+form#header_search input[type="button"] {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    opacity: 1;
+    background: #DFDCCF;
+    color: #463734;
+    width: 125px;
+    cursor: pointer;
+    height: 38px;
+    border: none;
+}
+form#header_search input[type="text"]:focus ~ input[type='button']:hover,
+form#header_search input[type='button']:hover {
+    background-color: #A5CE56;
+    color: #fff;
+}
+form#header_search input[type="text"]:focus ~ input[type='button'] {
+    background-color: #52AEDF;
+    color: #fff;
+}
+
+</style>
+
+<script>
+function searchit(){
+    
+    // determine environment 
+    var search_env 
+    if (lycos_ad_www_server.indexOf(".pd.") > -1) {
+       search_env = 'http://search51.pd.lycos.com/a/';
+    } else if (lycos_ad_www_server.indexOf(".qa.") > -1) {
+       search_env = 'http://search51.qa.lycos.com/a/';
+    } else {
+       search_env = 'http://search51.lycos.com/a/';
+    }
+
+var search_term = encodeURIComponent(document.search.search2.value)
+var search_url = search_env+search_term;
+window.open(search_url);
+
+return false
+}
+</script-->
+<style>
+    .adCenterClass{margin:0 auto}
+</style>
+<div id="tb_ad" class="adCenterClass" style="display:block!important; overflow:hidden; width:916px;">
+
+<div id="ad_container" style="display:block!important; float:left; width:728px ">
+<script type="text/javascript">
+if (typeof lycos_ad !== "undefined" && "leaderboard" in lycos_ad) {
+  document.write(lycos_ad['leaderboard']);
+}
+</script>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+if (typeof lycos_ad !== "undefined" && "slider" in lycos_ad) {
+  document.write(lycos_ad['slider']);
+}
+</script> <!-- added 7/22 -->
+<div id="FooterAd" style="background:#DFDCCF; border-top:1px solid #393939; clear:both; display:none; width:100%!important; position:relative; z-index:999999!important; height:90px!important"> 
+<div class="adCenterClass" style="display:block!important; overflow:hidden; width:916px;">
+<div id="footerAd_container" style="display:block!important; float:left; width:728px">
+<iframe id="lycosFooterAdiFrame" style="border:0; display:block; float:left; height:96px; overflow:hidden; padding:0; width:750px"></iframe>
+</div>
+</div>
+</div>
+
+
+
+<CENTER>
+<b><font size=+3>What is GROUP THEORY?</font></b>
+</CENTER>
+<P>
+We'll throw some light on the title question of this page by asking 
+another question.  What is the solution of the equation
+<br><br>
+<pre>
+   (1)        4x = 3
+</pre>
+<p>
+The answer depends on what "things" we allow <i>x</i> to be.  If 
+we are doing all our arithmetic using the integers then there is 
+no solution--there is no integer that gives 3 upon being multiplied 
+by 4.  On the other hand if we are doing our arithmetic in <b>Z</b>/5
+ ("Integers mod 5" as it's sometimes called) 
+then <i>x</i> = 2 is a solution.  If we are using the more usual 
+rational number system <b>Q</b>, then the solution is <i>x</i> = 3/4.
+<p>
+We can gain insight into all such questions by considering the equation
+<br><br>
+<pre>
+   (2)        a &#149 x = b
+</pre>
+<p>
+and then bringing up the question of solutions.  Well, what objects 
+are <i>a</i> and <i>b</i>?  To what class of objects is <i>x</i> 
+allowed to belong?  What is the operation symbolized by the dot (&#149)?
+<p>
+Group theory is concerned with systems in which (2) always has a unique 
+solution.  The theory does not concern itself with what  <i>a</i>  and  
+<i>b</i>  actually are nor with what the operation symbolized by &#149 
+actually is.  By taking this abstract approach group theory deals with 
+many mathematical systems at once.  Group theory requires only that a 
+mathematical system obey a few simple rules.  The theory then seeks to 
+find out properties common to all systems that obey these few rules.
+<p>
+The axioms (basic rules) for a <b>group</b> are:
+<OL>
+<LI><b>CLOSURE</b>:  If <b>a</b> and <b>b</b> are in the group then 
+<b>a &#149 b</b> is also in the group.
+<LI><b>ASSOCIATIVITY</b>:  If <b>a, b</b> and <b>c</b> are in the group 
+then <b>(a &#149 b) &#149 c = a &#149 (b &#149 c)</b>.
+<LI><b>IDENTITY</b>:  There is an element <b>e</b> of the group such 
+that for any element <b>a</b> of the group<br>
+<b>a &#149 e = e &#149 a = a.</b>
+<LI><b>INVERSES</b>:  For any element <b>a</b> of the group there is 
+    an element <b>a</b><sup>-1</sup> such that
+<UL> 
+<LI><b>a &#149 a</b><sup>-1</sup><b> = e</b> 
+    <br>and 
+<LI><b>a</b><SUP>-1</SUP><B> &#149 a = e</b>
+</UL>
+</OL>
+<p>
+That's it.  Any mathematical system that obeys those four rules is a 
+group.  The study of systems that obey these four rules is the basis 
+of <b>GROUP THEORY</b>
+<p>
+<h3><center>A Look at the Axioms</center></h3>
+<A NAME="closure">
+<P>
+<b>Closure</b>
+<BLOCKQUOTE>
+<b>CLOSURE</b>:  If <b>a</b> and <b>b</b> are in the group then 
+<b>a &#149 b</b> is also in the group.
+</bLOCKQUOTE>
+The first axiom of group theory is the <b>CLOSURE</b> axiom.  
+For a system to be a group the binary operation (symbolized here by 
+"<b>&#149</b>") must be valid for any pair of elements in the group 
+and the result of the operation must be an element of the group.   
+The set of negative integers, for example, is not closed under 
+multiplication because the product of two negative integers is not 
+a negative integer.  The set of vectors of unit magnitude is not 
+closed under vector addition because the vector sum of two unit 
+vectors is not necessarily a unit vector.  More interestingly, 
+the set of three-dimensional vectors is not closed  under scalar 
+(sometimes called "dot") product since the scalar product of two 
+vectors is not a vector.  On the other hand the counting numbers 
+are closed under addition and multiplication.  They are not closed 
+under either subtraction or division.  The set of three dimensional 
+vectors is closed under vector (or "cross") product since the result 
+of the operation is a three-dimensional vector.
+<A NAME="associativity">
+<p>
+<b>Associativity</b>
+<BLOCKQUOTE>
+<b>ASSOCIATIVITY</b>:  If <b>a, b</b> and <b>c</b> are in the group 
+then <b>(a &#149 b) &#149 c = a &#149 (b &#149 c)</b>.
+</bLOCKQUOTE>
+The group operation must be <B>ASSOCIATIVE</b>.  Addition and multiplication 
+of real numbers is associative.  As the following examples show,  
+subtraction and division of real numbers is not associative.  
+<p>
+<center><b> (5 - 3) - 2 = 2 - 2 = 0</b></center>
+<p>
+but
+<p>
+<center><b>5 - (3 - 2) = 5 - 1 = 4</b></center>
+<p>
+Thus <b>(5 - 3) - 2</b> does not equal <b>5 - (3 - 2).</b>  Similarly 
+with division we can see that
+<p>
+<center><b>5/(3/2) = 5/(1.5) = 3 1/3</b></center>
+<p>
+but
+<center><b>(5/3)/2 = (1 2/3)/2 = 5/6</b></center>
+<p>
+Another example of a binary operation that is not associative is the 
+binary operation of averaging, which I will represent as <i>av</i>.  
+It gives the average of the pair of numbers that it acts upon.  For 
+instance 4 <i>av</i> 6 = 5 and 9 <i>av</i>2 = 5 1/2.  When trying to 
+find the usual average of three numbers we cannot simply apply the 
+binary <i>av</i> operation twice:
+<p>
+<center>
+<b>2 <i>av</i> (3 <i>av</i> 7) = 2 <i>av</i> 5 = 3 1/2</b>
+</center>
+<p>but
+<center>
+<b>(2 <i>av</i> 3) <i>av</i> 7 = (2 1/2) <i>av</i> 7 = 4 3/4</b>
+</center>
+<A NAME="identity">
+<b>Identity</b>
+<BLOCKQUOTE>
+<b>IDENTITY</b>:  There is an element <b>e</b> of the group such 
+that for any element <b>a</b> of the group<br>
+<b>a &#149 e = e &#149 a = a.</b>
+</bLOCKQUOTE>
+<p>
+A group must have an <B>IDENTITY</b> element.  This is an element with a neutral action.  When the identity element is combined with any element of the 
+group in the group operation the result is always to give back the 
+same member of the group.  For multiplication of real numbers the 
+identity element is 1; for addition of real numbers it is 0.  
+For 2 &times 2 matrix multiplication the identity is
+<p>
+<b><pre>               | 1 0 |
+               | 0 1 |
+</b></pre>
+<p>
+The binary operation of <i>av</i>, given above, is an example of an 
+operation without an identity element.  There is no number which when 
+averaged with any chosen number gives that chosen number back again.  
+True, for any chosen number there is a number that may be averaged 
+with it to give the original chosen number back again, namely itself.  
+However, there is no one number that works this way for any chosen 
+number. (Saying, "everybody has a mother" is very different from saying,
+"someone is the mother of everybody.")
+<p>
+Cross product of three dimensional vectors is another example of a 
+binary operation that does not have an identity element.  Since the 
+cross product of vector <b>A</b> with any other vector is either the 
+zero vector or a vector perpendicular to <b>A</b> there can be no 
+vector <b>E</b> with <b>A</b>&times<b>E</b> = <b>A</b>. (otherwise
+<B>A</b> would be perpendicular to itself!)
+<A NAME="inverse">
+<p>
+<b>Inverses</b>
+<BLOCKQUOTE>
+<b>INVERSES</b>:  For any element <b>a</b> of the group there is 
+    an element <b>a</b><sup>-1</sup> such that
+<UL> 
+<LI><b>a &#149 a</b><sup>-1</sup><b> = e</b> 
+    <br>and 
+<LI><b>a</b><SUP>-1</SUP><B> &#149 a = e</b>
+</UL>
+
+</bLOCKQUOTE>
+In order for an operation to satisfy the axiom for <B>INVERSES</b> the 
+operation must have an identity element.  Thus we know without 
+further investigation that the <i>av</i> operation and the cross 
+product operation do not have inverses since they do not have 
+identity elements.  An inverse element is a way to <i>undo</i> 
+an operation.  For example suppose I add 7 to a number and get 
+the result 12.  If I want to undo the addition of 7 and return 
+to my original number that I added 7 to I simply add the inverse 
+of 7 which is -7.  This shows that my original number that I added 
+to 7 was 5.  I <i>undid</i> the addition.  Similarly I can undo 
+multiplication by 2 by multiplying by the inverse of 2 which is 1/2.  
+Many of the extensions of the number systems of arithmetic were made 
+to create inverses.  The integers are an extension of the natural 
+numbers in which addition has an inverse.  The rational numbers are 
+an extension of the integers in which each non-zero number has an 
+inverse under multiplication.  A 2 &times 2 matrix may or may not have 
+an inverse under matrix multiplication.  Those matrices which do not 
+have multiplicative inverses are called <i>singular.</i>
+<p>
+<center><b>Back to Equation (2)</b></center>
+<p>
+Now let's go back to our original question:  what is the solution of
+<p>
+<center><b> a &#149 x = b</b></center>
+<p>
+In "solving" this equation we will assume that <b>a</b> and <b>b</b> 
+are elements of a group with 
+the group operation symbolized by <b>&#149</b>.  We
+are looking for the member of the group that <b>x</b> could be 
+replaced by to satisfy the equation.  We'll use the group axioms to 
+"solve" the equation
+in any group.
+<p>
+Using the <b>closure</b> axiom and the axiom for <b>inverses</b> we 
+operate on both sides of the equation
+by the inverse of <b>a</b>.  The inverse axiom says that 
+<b>a</b><sup>-1</sup>, the inverse of <b>a</b> exists and the
+closure axiom says that the product of <b>a</b><sup>-1</sup> and 
+any other group element exists and is still in the group.
+<p>
+<center>
+<b>a</b><sup>-1</sup><b> &#149 (a &#149 x) = a</b><sup>-1</sup><b> &#149 b
+</center></b>
+<p>
+Now applying the <b>associative</b> axiom,
+<p>
+<center>
+<b>(a</b><sup>-1</sup><b> &#149 a) &#149 x = a</b><sup>-1</sup><b> &#149 b </b>
+</center>
+<p>
+The axiom of <b>inverses</b> gives
+<p>
+<center><b>e &#149 x = a</b><sup>-1</sup><b> &#149 b</b></center>
+<p>
+Finally using the axiom of <b>identity</b> we get,
+<p>
+<center><b>x = a</b><sup>-1</sup><b> &#149 b</b></center>
+<p>
+So we "solved" equation (2) without answering the questions about 
+<b>a, b</b> or <b>x</b> actually were or even what the operation 
+indicated by <b>&#149</b> 
+was.  This is the power of abstraction.  Group theory is a clear 
+example of abstraction in modern mathematics.  The emphasis is not 
+on the particular group we might be interested in for some given 
+application.  The emphasis is on the basic quality of <i>groupness</i> 
+that all groups have in common.  Once a result is demonstrated to be 
+valid for all groups then it is clearly valid for any specific group we 
+may choose.
+<p>
+<center><b>The Little Axiom that Wasn't There</b></center>
+<p>
+Noticeably missing from our list of four axioms is the 
+<b>commutative</b> property.  This is because in group theory
+commutativity is not assumed.  Many of the most useful and
+interesting groups are not commutative.
+<A NAME="abelian">
+ Those groups in which
+the group operation is commutative are named after the great
+Norwegian mathematician Neils Henrik Abel and are called <b>
+Abelian groups</b>.  For Abelian groups we have the further axiom
+<p>
+For all <b>a</b> and <b>b</b> in <b>G</b>:
+<p>
+<center><b>a &#149 b = b &#149 a</b></center>
+<p>
+However, this axiom cannot be used in establishing a result about
+groups unless we are restricting ourselves to Abelian groups.
+<p>
+<p>
+<b>To Be Continued . . .</b>
+
+
+<HR>
+<H2>Next:  Let's see some groups</H2>
+<A HREF="https://members.tripod.com/~dogschool/examples.html">Examples of Groups</A>: <BR>
+
+<A HREF="https://members.tripod.com/~dogschool/index.html">Back to the Index:</A>: <BR>
+
+<HR>
+<P>
+<P>
+
+<FONT SIZE="+2">
+<CENTER>
+Send comments, corrections and criticisms to:
+</CENTER>
+</FONT>
+<p>
+<p>
+<center><A HREF="mailto:dogschool@dog.com"> dogschool@dog.com </A>
+</center>
+<P>
+<HR>
+<P>
+&copy 1998 by Arfur Dogfrey
+<HR>
+<P>
+<CENTER>
+<BR CLEAR="all">
+This page has been visited <IMG SRC="/bin/counter/groups.html?000000"> times.
+<BR CLEAR="all">
+</CENTER>
+
+</HTML>
+                                                               
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       

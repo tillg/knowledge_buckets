@@ -1,0 +1,724 @@
+   
+      
+      
+      
+      
+      
+      
+      
+      
+   <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD><TITLE>Cosets</TITLE></HEAD>
+
+
+<CENTER>
+<fONT SIZE="+3">
+7. Cosets
+</FONT>
+</CENTER>
+<P>
+Consider the subgroup of integers divisible by 3.  This forms a subgroup of the additive group of integers. Its elements are { . . . -9, -6, -3, 0, 3, 6, 9, . . .}.   By adding 1 to any multiple of 3 we get another subset of group of integers, { . . . -8, -5, -2, 1, 4, 7, 10, . . .}.
+By adding 2 to the elements of the multiples-of-3 subgroup gives us the subset { . . . -7, -4, -1, 2, 5, 8, 11, . . .}.  These three subsets exhaust the integers.  Any integer will be in one and only one of these subsets.   
+<p>
+One interesting point about the three subsets.  If you take any two elements, <b>a</b> and <b>b</b> out of one of the subsets (both from the same subset) then their difference, <b>a - b</b>, will be a multiple of three.  Their difference will be in the subgroup that originally generated them.
+<p>
+Another example occurs in the <b>Atayun-HOOT!</b> group.
+<p>
+<TABLE BORDER>
+<TR>
+<TH>&#149</TH><TH>A</TH><TH>B</TH><TH>R</TH>
+<TH>L</TH>
+</TR>
+<TR>
+<TH>A</TH><TH>A</TH><TH>B</TH><TH>R</TH>
+<TH>L</TH>
+</TR>
+<TR>
+<TH>B</TH><TH>B</TH><TH>A</TH><TH>L</TH>
+<TH>R</TH>
+</TR>
+<TR>
+<TH>R</TH><TH>R</TH><TH>L</TH><TH>B</TH>
+<TH>A</TH>
+</TR>
+<TR>
+<TH>L</TH><TH>L</TH><TH>R</TH><TH>A</TH>
+<TH>B</TH>
+</TR>
+</TABLE>
+<p>
+<b>A</b> and <b>B</b> form a subgroup as we have already seen.  <b>R</b> and <b>L</b> form a coset of that subgroup.  The property mentioned in the multiple-of-three example holds here.  If any member of {<b>R, L</b>} is <i>multiplied</i> by the inverse of any member of {<b>R, L</b>} the result is in the {<b>A, B</b>} subgroup.
+<p>
+Let's look at another example, the group of symmetry movements of the
+equilateral triangle.  Its elements are, in the notation we gave in
+chapter 5, 
+<b>e, a, b, X, Y, Z</b>.
+<p>
+Let's look again at the Cayley table for this group:
+<p>
+
+<TABLE BORDER>
+<TR>
+<TD> &#149 </TD><TD> e </TD><TD> a </TD><TD> b </TD>
+            <TD> X </TD><TD> Y </TD><TD> Z </TD>
+</TR>
+<TR>
+<TD> e </TD><TD> e </TD><TD> a </TD><TD> b </TD>
+            <TD> X </TD><TD> Y </TD><TD> Z </TD>
+</TR>
+<TR>
+<TD> a </TD><TD> a </TD><TD> b </TD><TD> e </TD>
+            <TD> Y </TD><TD> Z </TD><TD> X </TD>
+</TR>
+<TR>
+<TD> b </TD><TD> b </TD><TD> e </TD><TD> a </TD>
+            <TD> Z </TD><TD> X </TD><TD> Y </TD>
+</TR>
+<TR>
+<TD> X </TD><TD> X </TD><TD> Z </TD><TD> Y </TD>
+            <TD> e </TD><TD> b </TD><TD> a </TD>
+</TR>
+<TR>
+<TD> Y </TD><TD> Y </TD><TD> X </TD><TD> Z </TD>
+            <TD> a </TD><TD> e </TD><TD> b </TD>
+</TR>
+<TR>
+<TD> Z </TD><TD> Z </TD><TD> Y </TD><TD> X </TD>
+            <TD> b </TD><TD> a </TD><TD> e </TD>
+</TR>
+</TABLE>
+<p>
+
+<!--
+
+<p>
+<TABLE BORDER>
+
+  <TR>
+<TH> &#149 </TH> <TH> (1)</TH><TH> (123) </TH> <TH> (132) </TH>
+<TH> (12) </TH> <TH> (23) </TH> <TH> (13)
+  </TR>
+  <TR>
+<TH> (1) </TH><TH> (1) </TH><TH> (123) </TH><TH> (132) </TH> <TH> (12) </TH><TH> (23) </TH><TH> (13)
+  </TR>
+  <TR>
+<TH> (123) </TH><TH> (123) </TH><TH> (132) </TH><TH> (1) </TH> </TH><TH> (23) </TH><TH> (13) </TH><TH> (13) </TH>
+  </TR>  
+  <TR>
+<TH> (132) </TH><TH> (132) </TH><TH> (1) </TH><TH> (123) </TH> <TH> (13) </TH><TH> (12) </TH><TH> (23) </TH>
+  </TR>
+  <TR>
+<TH> (12) </TH><TH> (12) </TH><TH> (13) </TH><TH> (23) </TH> <TH> (1) </TH><TH> (132) </TH><TH> (123) </TH>
+  </TR>
+<TH> (23) </TH><TH> (23) </TH><TH> (12) </TH><TH> (13) </TH> <TH> (123) </TH><TH> (1) </TH><TH> (132) </TH>
+  </TR>
+  <TR>
+<TH> (13) </TH><TH> (13) </TH><TH> (23) </TH><TH> (12) </TH> <TH> (132) </TH><TH> (123) </TH><TH> (1) </TH>
+  </TR>
+</TABLE>
+<p>
+
+-->
+
+A glance at the north-west corner of the Caley table for this group 
+shows that the subset {<b>e</b>, <b>a</b>, <b>b</b>} is closed 
+under the group operation <i>followed by</i>.  Since it is a finite 
+subset this suffices for it to be a subgroup.  A coset of the 
+subgroup is {<b>X</b>, <b>Y</b>, <b>Z</b>}.  Note again that any 
+member of this coset <i>multiplied</i> by the inverse of any member 
+gives an element of the subgroup.
+<p>
+If you look at the table again you will notice that the subset 
+{<b>e</b>, <b>X</b>} is also closed under the group operation.  As 
+it is finite we know that it also is a subgroup of the main group.  
+Cosets of this group are {<b>Y</b>, <b>b</b>} and {<b>Z</b>, <b>a</b>}.  
+These cosets obey the property that if <b>a</b> and <b>b</b> are in 
+the coset then <b>a &#149 b</b><sup>-1</sup> is in the subgroup.  But 
+what about <b>a</b><sup>-1</sup> &#149 <b>b</b>?  Let's try the coset 
+{<b>Y</b>, <b>b</b>}  Note that <br>
+<p>
+<center>
+<b>b</b><sup>-1</sup></b> &#149 <b>Y</b> = 
+<b>a</b> &#149 <b>Y</b> = <b>Z</b></center>  
+<p>
+which is <i>not</i> in the subgroup.  However the cosets 
+{<b>Y</b>, <b>a</b>) and {<b>Z</b>, <b>b</b>} obey the property 
+that if <b>u</b> and <b>v</b> are in the coset then 
+<b>u</b><sup>-1</sup> &#149 v</b> is in the subgroup.  Thus the 
+cosets with the <b>u &#149 v</b><sup>-1</sup> -is-in-the-subgroup 
+property and the cosets with the 
+<b>u</b><sup>-1</sup> &#149 <b>v</b>-is-in-the-subgroup property 
+are different cosets.  
+<p>
+The cosets that have the <b>u &#149 v</b><sup>-1</sup> -is-in-the-subgroup 
+property are called <b>right cosets</b> and the cosets that have the 
+<b>u</b><sup>-1</sup> &#149  <b>v</b>-is-in-the-subgroup property 
+are called <b>left cosets</b>.  
+<p>
+[<b>Exercise:</b> Find the left and right cosets for the subgroup 
+{<b>Y</b>, <b>e</b>}.  Find the left and right cosets for the 
+subgroup {<b>Z</b>, <b>e</b>}.]
+<p>
+Note that for the subgroup {<b>e</b>, <b>a</b>, <b>b</b>}, that we 
+previously looked at, {<b>X</b>, <b>Y</b>, <b>Z</b>} is both a right 
+coset and a left coset.
+<p>
+[<b>Exercise:</b>  Verify the last statement.]
+<p>
+Subgroups whose right cosets are also left cosets are very important 
+in group theory.  They are called <b>normal subgroups</b>.
+<p>
+<center><font size=4>Another View of Cosets</font></center>
+<p>
+Again let's take the subgroup {<b>e</b>, <b>X</b>} and mulitply each 
+member of the subgroup from the right by <b>Y</b>.
+<p>
+<UL>
+<LI><b>e &#149 Y = Y</b>
+<LI><b>X &#149 Y = b</b>
+</UL>
+<p>
+We get {<b>Y</b>, <b>b</b>} which was one of the <i>right cosets</i> 
+of the subgroup {<b>e</b>, <b>X</b>} that we found previously.  The 
+other element of the right coset is <b>b</b>.  Let's multiply each 
+member of the subset {<b>e</b>, <b>X</b>} by <b>b</b> and see what 
+happens
+<p>
+<UL>
+<LI><b>e &#149 b</b> = b</b>
+<LI><b>X &#149 b</b> = Y</b>
+</UL>
+<p>
+We end up with the same coset again.  This, as it turns out, always 
+works and is the usual way of defining a right coset of a subgroup.
+<p>
+<b>Definition</b>:  If <i>H</i> is a subgoup of a group <i>G</i> then
+for any element <b>g</b> of the group the set of products of the form <b>h &#149 g</b> where <b>h</b> is in <i>H</i> is a <b>right coset</b> of <i>H</i> denoted by the symbol <i>H</i><b>g</b>.  The set of all products of the form <b>g &#149 h</b> where <b>h</b> is in <i>H</i> is a <b>left coset</b> of the subgroup <i>H</i> denoted by the symbol <b>g</b><i>H</i>.
+<p>
+In fact if we take any subset  <i>U</i> of a group <b>G</b> (which 
+can be a subgroup or not) we can multiply every element in it from 
+the right by some group element <b>v</b> to get another subset 
+<i>V</i> of <b>G</b>.  If the subset <i>H</i> happens to be a 
+subgroup of <b>G</b> then the subset it is <i>transformed</i> into 
+is called a <b>right coset</b> of the subgroup <i>H</i>. 
+<p>
+In <b>set-builder</b> notation we can define <i>U</i><b>v</b> as
+<p>
+<center><i>U</i><b>v</b> = { <b>u &#149 v </b> | <b>u</b> is in 
+<i>U</i>}</center>
+<p>
+When <i>U</i> is a subgroup this is a right coset of <i>U</i>.
+<p>
+The operation of "multiplication on the right by a group element" 
+which transforms subsets into subsets (and subgroups into right 
+cosets) will also transforms any right coset of a subgroup <i>H</i> into 
+a right coset of <i>H</i>  (This could be a different right coset than
+we started with or the same one).  This follows from the definition since 
+(<i>H</i><b>u</b>)<b>v</b> is all elements of the form 
+(<b>h &#149 u</b>) <b>&#149 v</b> which by the associative property 
+is the same as the set of elements of the form <b>h &#149 
+</b>(<b>u &#149 v</b>) which is none other than 
+<i>H</i>(<b>u &#149 v</b>).
+<p>
+Of course similar stuff is true of left cosets.  Just hold your brain 
+up to a mirror while doing proofs of right-coset properties.
+<p>
+Can we recover our original property of right and left cosets from 
+this definition?
+<p>
+<b>THEOREM</b>: If <b>x</b> and <b>y</b> are in the same right coset of a subgroup <i>H</i> then <b>x &#149 y</b><sup>-1</sup> is in <i>H</i>.
+<p>
+<b>Proof</b>:  If <b>x</b> and <b>y</b> are in the same right coset of <i>H</i> then there are <b>h</b><sub>1</sub> and <b>h</b><sub>2</sub> in <i>H</i> and some element <b>a</b> of <i>G</i> such that
+<p>
+<center><b>h</b><sub>1</sub><b> &#149 a = x </b> and <b>h</b><sub>2</sub> &#149 <b>a = y</b></center>
+<p>
+By one of our housekeeping theorems the inverse of <b>y</b> is <b>(h</b><sub>2</sub><b> &#149 a)</b><sup>-1</sup><b> = a</b><sup>-1</sup><b> &#149 h</b><sub>2</sub><sup>-1</sup>.  Thus 
+<p>
+<center><b>x &#149 y</b><sup>-1</sup><b> = (h</b><sub>1</sub> <b> &#149 a) &#149 (a</b><sup>-1</sup><b> &#149 h</b><sub>2</sub><sup>-1</sup><b>) = h</b><sub>1</sub><b> &#149 (a &#149 a</b><sup>-1</sup><b>) &#149 h</b><sub>2</sub><sup>-1</sup><b> = h</b><sub>1</sub><b> &#149 h</b><sub>2</sub><sup>-1</sup></center>
+<p>
+By closure of the subgroup <b>h</b><sub>1</sub><b> &#149 h</b><sub>2</sub><sup>-1</sup> is in <i>H</i> and our original property is preserved by the new definition.
+<p>
+<b>THEOREM:</b> If <b>x &#149 y</b><sup>-1</sup> is in subgroup <i>H</i> of group <i>G</i> then <b>x</b> and <b>y</b> are in the same right coset of <i>H</b>.
+<p>
+This is the converse of the previous theorem.  It also establishes two equivalent definitions of "coset."
+<p>
+<b>Proof:</b> If <b>x &#149 y</b><sup>-1</sup> is in <i>H</i> then 
+<p>
+<center><b>x &#149 y</b><sup>-1</sup><b> = h</b><sub>1</sub></center>
+<p> for some <b>h</b><sub>1</sub> in <i>H</i>.  It then follows that
+<p>
+<center><b>x = h</b><sub>1</sub><b> &#149 y</b></center>
+<p>
+and therefore <b>x</b> is in <i>H</i><b>y</b>.  Also since <b>e</b> the identity element of <i>G</i> is in <i>H</i> it follows that 
+<p>
+<center><b>y = e &#149 y</b></center>
+<p>
+is also in <i>H</i><b>y</i>.  Thus <b>x</b> and <b>y</b> are both in the same coset of <i>H</i>, namely <i>H</i><b>y</b>
+<p>
+[<b>Exercise:</b> State and prove the parallel theorems concerning left cosets.]  
+<HR>
+<H2>Next:  Lagrange's Theorem:</H2>
+<A HREF="https://members.tripod.com/~dogschool/lagrange.html">8. Lagrange's Theorem</A>: <bR>
+
+<A HREF="https://members.tripod.com/~dogschool/index.html">Back to Index.</A>: <bR>
+
+
+<HR>
+<P>
+<P>
+
+<fONT SIZE="+2">
+<CENTER>
+Send comments, corrections and criticisms to:
+</CENTER>
+</FONT>
+<p>
+<p>
+<center><A HREF="mailto:dogschool@dog.com"> dogschool@dog.com </A>
+</center>
+<P>
+<HR>
+
+<HR>
+
+<P>
+
+&copy 1998 1999 by Arfur Dogfrey
+
+
+
+</HTML>
+                                                                                    <!--'"</title></head>-->
+
+<script type="text/javascript">
+//OwnerIQ
+var __oiq_pct = 50;
+if( __oiq_pct>=100 || Math.floor(Math.random()*100/(100-__oiq_pct)) > 0 ) {
+var _oiqq = _oiqq || [];
+_oiqq.push(['oiq_addPageBrand','Lycos']);
+_oiqq.push(['oiq_addPageCat','Internet > Websites']);
+_oiqq.push(['oiq_addPageLifecycle','Intend']);
+_oiqq.push(['oiq_doTag']);
+(function() {
+var oiq = document.createElement('script'); oiq.type = 'text/javascript'; oiq.async = true;
+oiq.src = document.location.protocol + '//px.owneriq.net/stas/s/lycosn.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(oiq, s);
+})();
+}
+//Google Analytics
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount','UA-21402695-19']);
+_gaq.push(['_setDomainName','tripod.com']);
+_gaq.push(['_setCustomVar',1,'member_name','dogschool',3]);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+//Lycos Init
+function getReferrer() {
+var all= this.document.cookie;
+if (all== '') return false;
+var cookie_name = 'REFERRER=';
+var start = all.lastIndexOf(cookie_name);
+if (start == -1) return false;
+start += cookie_name.length;
+var end = all.indexOf(';', start);
+if (end == -1) end = all.length;
+return all.substring(start, end);
+}
+function getQuery() {
+var rfr = getReferrer();
+if (rfr == '') return false;
+var q = extractQuery(rfr, 'yahoo.com', 'p=');
+if (q) return q;
+q = extractQuery(rfr, '', 'q=');
+return q ? q : "";
+}
+function extractQuery(full, site, q_param) {
+var start = full.lastIndexOf(site);
+if (start == -1) return false;
+start = full.lastIndexOf(q_param);
+if (start == -1) return false;
+start += q_param.length;
+var end = full.indexOf('&', start);
+if (end == -1) end = full.length;
+return unescape(full.substring(start, end)).split(" ").join("+");
+}
+function generateHref(atag, template){
+atag.href=template.replace('_MYURL_', window.location.href.replace('http://', '')).replace('_MYTITLE_','Check%20out%20this%20Tripod%20Member%20site!'); 
+}
+var lycos_ad = Array();
+var lycos_onload_timer;
+var cm_role = "live";
+var cm_host = "tripod.lycos.com";
+var cm_taxid = "/memberembedded";
+var tripod_member_name = "dogschool";
+var tripod_member_page = "dogschool/cosets.html";
+var tripod_ratings_hash = "1686895893:72bf52d164fafd46069dc06179529baf";
+
+var lycos_ad_category = {"dmoz":"reference\/knots","ontarget":"&CAT=education&L2CAT=reference","find_what":"graduate courses"};
+
+var lycos_ad_remote_addr = "209.202.244.9";
+var lycos_ad_www_server = "www.tripod.lycos.com";
+var lycos_ad_track_small = "";
+var lycos_ad_track_served = "";
+var lycos_search_query = getQuery();
+</script>
+
+<script type="text/javascript" src="https://scripts.lycos.com/catman/init.js"></script>
+
+<script type='text/javascript'>
+ var googletag = googletag || {};
+ googletag.cmd = googletag.cmd || [];
+ (function() {
+   var gads = document.createElement('script');
+   gads.async = true;
+   gads.type = 'text/javascript';
+   var useSSL = 'https:' == document.location.protocol;
+   gads.src = (useSSL ? 'https:' : 'http:') +
+     '//www.googletagservices.com/tag/js/gpt.js';
+   var node = document.getElementsByTagName('script')[0];
+   node.parentNode.insertBefore(gads, node);
+ })();
+</script>
+
+<script type='text/javascript'>
+ googletag.cmd.push(function() {
+   googletag.defineSlot('/95963596/TRI_300X250_dfp', [300, 250], 'div-gpt-ad-1450204159126-0').addService(googletag.pubads());
+   googletag.defineSlot('/95963596/TRI_above_728x90_dfp', [728, 90], 'div-gpt-ad-1450204159126-1').addService(googletag.pubads());
+   googletag.defineSlot('/95963596/TRI_below_728x90_dfp', [728, 90], 'div-gpt-ad-1450204159126-2').addService(googletag.pubads());
+   googletag.pubads().enableSingleRequest();
+   googletag.enableServices();
+ });
+</script>
+
+
+<script type="text/javascript"> 
+(function(isV)
+{
+    if( !isV )
+    {
+        return;
+    }
+    var adMgr = new AdManager();
+    var lycos_prod_set = adMgr.chooseProductSet();
+    var slots = ["leaderboard", "leaderboard2", "toolbar_image", "toolbar_text", "smallbox", "top_promo", "footer2", "slider"];
+    var adCat = this.lycos_ad_category;
+    adMgr.setForcedParam('page', (adCat && adCat.dmoz) ? adCat.dmoz : 'member');
+    if (this.lycos_search_query)
+    {
+        adMgr.setForcedParam("keyword", this.lycos_search_query);
+    } 
+    else if(adCat && adCat.find_what)
+    {
+        adMgr.setForcedParam('keyword', adCat.find_what);
+    }
+    
+    for (var s in slots)
+    {
+        var slot = slots[s];
+        if (adMgr.isSlotAvailable(slot))
+        {
+            this.lycos_ad[slot] = adMgr.getSlot(slot);
+        }
+    }
+
+    adMgr.renderHeader();
+    adMgr.renderFooter();
+}((function() {
+
+var w = 0, h = 0, minimumThreshold = 300;
+
+if (top == self)
+{
+    return true;
+}
+if (typeof(window.innerWidth) == 'number' )
+{
+    w = window.innerWidth;
+    h = window.innerHeight;
+}
+else if (document.documentElement && (document.documentElement.clientWidth || document.documentElement.clientHeight))
+{
+    w = document.documentElement.clientWidth;
+    h = document.documentElement.clientHeight;
+}
+else if (document.body && (document.body.clientWidth || document.body.clientHeight))
+{
+    w = document.body.clientWidth;
+    h = document.body.clientHeight;
+}
+return ((w > minimumThreshold) && (h > minimumThreshold));
+}())));
+
+
+
+
+window.onload = function()
+{
+    var f = document.getElementById("FooterAd");
+    var b = document.getElementsByTagName("body")[0];
+    b.appendChild(f);
+    f.style.display = "block";
+    document.getElementById('lycosFooterAdiFrame').src = '/adm/ad/footerAd.iframe.html';
+    
+
+
+    
+    // DOM Inj Ad
+    (function(isTrellix)
+    {
+        var e = document.createElement('iframe');
+        e.style.border = '0';
+        e.style.margin = 0;
+        e.style.display = 'block';
+        e.style.cssFloat = 'right';
+        e.style.height = '254px';
+        e.style.overflow = 'hidden';
+        e.style.padding = 0;
+        e.style.width = '300px';
+
+
+        var isBlokedByDomain = function( href )
+        {
+            var blockedDomains = [
+                "ananyaporn13000.tripod.com",
+                "xxxpornxxx.tripod.com"
+            ];
+            var flag = false;
+            
+            for( var i=0; i<blockedDomains.length; i++ )
+            {
+                if( href.search( blockedDomains[ i ] ) >= 0 )
+                {
+                    flag = true;
+                }
+            }
+            return flag;
+        }
+
+        var getMetaContent = function( metaName )
+        {
+            var metas = document.getElementsByTagName('meta');
+            for (i=0; i<metas.length; i++)
+            { 
+                if( metas[i].getAttribute("name") == metaName )
+                { 
+                    return metas[i].getAttribute("content"); 
+                } 
+            }
+            return false;
+        }
+        
+        var getCommentNodes = function(regexPattern)
+        {
+            var nodes = {};
+            var nodesA = [];
+            var preferredNodesList = ['a', 'c', 'b'];
+        
+            (function getNodesThatHaveComments(n, pattern)
+            {
+                if (n.hasChildNodes())
+                {
+                    if (n.tagName === 'IFRAME')
+                    {
+                        return false;
+                    }
+                    for (var i = 0; i < n.childNodes.length; i++)
+                    {
+                        if ((n.childNodes[i].nodeType === 8) && (pattern.test(n.childNodes[i].nodeValue)))
+                        {
+                            var areaName = pattern.exec(n.childNodes[i].nodeValue)[1];
+                            nodes[areaName] = n;
+                        }
+                        else if (n.childNodes[i].nodeType === 1)
+                        {
+                            getNodesThatHaveComments(n.childNodes[i], pattern);
+                        }
+                    }
+                }
+            }(document.body, regexPattern));
+
+            for (var i in preferredNodesList)
+            {
+                if (nodes[preferredNodesList[i]])
+                {
+                    if( isTrellix && nodes[preferredNodesList[i]].parentNode.parentNode.parentNode.parentNode )
+                    {
+                        nodesA.push(nodes[preferredNodesList[i]].parentNode.parentNode.parentNode.parentNode);
+                    }
+                    else
+                    {
+                        nodesA.push( nodes[preferredNodesList[i]] );
+                    }
+                }
+            }
+            return nodesA;
+        }
+        
+        
+        var properNode = null;
+        var areaNodes = getCommentNodes( new RegExp( '^area Type="area_(\\w+)"' ) );
+
+        for (var i = 0; i < areaNodes.length; i++)
+        {
+            var a = parseInt(getComputedStyle(areaNodes[i]).width);
+            if ((a >= 300) && (a <= 400))
+            {
+                properNode = areaNodes[i];
+                break;
+            }
+        }
+
+
+        var propertyName = getMetaContent("property") || false;
+        if( isTrellix && (properNode) )
+        {
+            e.src = '/adm/ad/injectAd.iframe.html';
+            properNode.insertBefore(e, properNode.firstChild);
+        }
+        else if( isTrellix && !( properNode ) ) // Slap the ad eventhought there is no alocated slot
+        {
+            e.src = '/adm/ad/injectAd.iframe.html';
+            e.style.cssFloat = 'none';
+            var cdiv = document.createElement('div');
+            cdiv.style = "width:300px;margin:10px auto;";
+            cdiv.appendChild( e );
+            b.insertBefore(cdiv, b.lastChild);
+        }
+        else if( !isBlokedByDomain( location.href ) )
+        {
+            var injF = document.createElement('iframe');
+            injF.style.border = '0';
+            injF.style.margin = 0;
+            injF.style.display = 'block';
+            injF.style.cssFloat = 'none';
+            injF.style.height = '254px';
+            injF.style.overflow = 'hidden';
+            injF.style.padding = 0;
+            injF.style.width = '300px';
+            injF.src = '/adm/ad/injectAd.iframe.html';
+
+            if( b && ( !isTrellix || ( typeof isTrellix == "undefined" ) ) ) // All other tripod props
+            {
+                var cdiv = document.createElement('div');
+                cdiv.style = "width:300px;margin:10px auto;";
+                cdiv.appendChild( injF );
+                b.insertBefore(cdiv, b.lastChild);
+            } 
+        }
+  }( document.isTrellix ));
+}
+
+</script>
+
+<div id="tb_container" style="background:#DFDCCF; border-bottom:1px solid #393939; position:relative; z-index:999999999!important">
+<!--form name="search" onSubmit="return searchit()" id='header_search' >
+<input type="text" placeholder="Search" size=30 name="search2" value="">
+<input type="button" value="Go!" onClick="searchit()">
+</form>
+<style>
+form#header_search {
+    width: 916px;
+    margin: 0 auto 8px;
+    position: relative;
+}
+
+
+form#header_search input {
+    height: 40px;
+    font-size: 14px;
+    line-height: 40px;
+    padding: 0 8px;
+    box-sizing: border-box;
+    background: #F4F2E9;
+    border: 1px solid #BBB8B8;
+    transition: background-color 300ms ease-out,
+                color 300ms ease;
+}
+
+form#header_search input[type="text"] {
+    width: 100%;
+}
+form#header_search input[type="text"]:focus {
+    border-color: #A2D054;
+    background-color: #fff;
+    box-shadow: 0 0px 12px -4px #A2D054;
+}
+
+
+
+form#header_search input[type="button"] {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    opacity: 1;
+    background: #DFDCCF;
+    color: #463734;
+    width: 125px;
+    cursor: pointer;
+    height: 38px;
+    border: none;
+}
+form#header_search input[type="text"]:focus ~ input[type='button']:hover,
+form#header_search input[type='button']:hover {
+    background-color: #A5CE56;
+    color: #fff;
+}
+form#header_search input[type="text"]:focus ~ input[type='button'] {
+    background-color: #52AEDF;
+    color: #fff;
+}
+
+</style>
+
+<script>
+function searchit(){
+    
+    // determine environment 
+    var search_env 
+    if (lycos_ad_www_server.indexOf(".pd.") > -1) {
+       search_env = 'http://search51.pd.lycos.com/a/';
+    } else if (lycos_ad_www_server.indexOf(".qa.") > -1) {
+       search_env = 'http://search51.qa.lycos.com/a/';
+    } else {
+       search_env = 'http://search51.lycos.com/a/';
+    }
+
+var search_term = encodeURIComponent(document.search.search2.value)
+var search_url = search_env+search_term;
+window.open(search_url);
+
+return false
+}
+</script-->
+<style>
+    .adCenterClass{margin:0 auto}
+</style>
+<div id="tb_ad" class="adCenterClass" style="display:block!important; overflow:hidden; width:916px;">
+
+<div id="ad_container" style="display:block!important; float:left; width:728px ">
+<script type="text/javascript">
+if (typeof lycos_ad !== "undefined" && "leaderboard" in lycos_ad) {
+  document.write(lycos_ad['leaderboard']);
+}
+</script>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+if (typeof lycos_ad !== "undefined" && "slider" in lycos_ad) {
+  document.write(lycos_ad['slider']);
+}
+</script> <!-- added 7/22 -->
+<div id="FooterAd" style="background:#DFDCCF; border-top:1px solid #393939; clear:both; display:none; width:100%!important; position:relative; z-index:999999!important; height:90px!important"> 
+<div class="adCenterClass" style="display:block!important; overflow:hidden; width:916px;">
+<div id="footerAd_container" style="display:block!important; float:left; width:728px">
+<iframe id="lycosFooterAdiFrame" style="border:0; display:block; float:left; height:96px; overflow:hidden; padding:0; width:750px"></iframe>
+</div>
+</div>
+</div>
+

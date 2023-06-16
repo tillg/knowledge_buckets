@@ -1,0 +1,600 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD><TITLE>subgroups</TITLE></HEAD>
+
+
+<CENTER>
+<fONT SIZE="+2">
+6. Subgroups
+</FONT>
+</CENTER>
+<P>
+
+In the <b>Atayun-HOOT!</b> group we can limit our commands to two: <b>"Attention!"</b> and <b>"About Face!"</b>  That would give us a group with the Cayley table as follows:
+<p>
+<p>
+<TABLE BORDER>
+<TR>
+<TH>*</TH><TH>A</TH><TH>B</TH>
+</TR>
+<TR>
+<TH>A</TH><TH>A</TH><TH>B</TH>
+</TR>
+<TR>
+<TH>B</TH><TH>B</TH><TH>A<TH>
+</TH>
+</TR>
+</TABLE>
+<p>
+<p>
+But we have seen this little table before.  It was just the northwest corner of one of our Cayley tables for the whole <b>Atayun-HOOT</b> group:
+<p>
+<p>
+<TABLE BORDER>
+<TR>
+<TH>*</TH><TH>A</TH><TH>B</TH><TH>R</TH>
+<TH>L</TH>
+</TR>
+<TR>
+<TH>A</TH><TH>A</TH><TH>B</TH><TH>R</TH>
+<TH>L</TH>
+</TR>
+<TR>
+<TH>B</TH><TH>B</TH><TH>A</TH><TH>L</TH>
+<TH>R</TH>
+</TR>
+<TR>
+<TH>R</TH><TH>R</TH><TH>L</TH><TH>B</TH>
+<TH>A</TH>
+</TR>
+<TR>
+<TH>L</TH><TH>L</TH><TH>R</TH><TH>A</TH>
+<TH>B</TH>
+</TR>
+</TABLE>
+<p>
+<p>
+This is an example of a <b>subgroup</b> -- a group within a group.  
+<blockquote>
+A subset <i>S</i> of a group <i>G</i> is a <b>subgroup</b> of <i>G</i> if
+<UL>
+<LI> <i>S</i> is <i>closed</i> under the group operation of <i>G</i>,
+<LI>if the identity element of <i>G</i> is in <i>S</i> and 
+<LI> for every <b>a</b> in <i>S</i>, <b>a</b><sup>-1</sup> is also in <i>S</i>.
+</UL>
+</blockquote>
+The definition specifically requires that three of the four group axioms be satisfied for the subgroup.  The axiom that gets in free is the associative property.  Since we are using the group operation of the "larger" group the associative property for all elements of the larger group is assumed .  Thus the restriction to the elements of the subgroup cannot introduce a violation of the associative axiom.
+<p>
+<b>Example</b> Consider the group of integers under the operation of addition.  If we look at the subset of integers that are divisible by 17 we can show that this subset is a <b>subgroup</b> of the group of integers.  If we add two numbers divisible by 17 together we ge a number that is divisible by 17.  <b>Closure is satisfied.</b>  0, the additive identity for the integers is divisible by 17 so <b>the identity property is satisfied.</b>  Finally if <b>M</b> is divisible by 17 then so is <b>-M</b> and we find that <b>the inverse property is satisfied</b>.  With all three conditions satisfied the set of integers divisible by 17 forms a subgroup of the additive group of integers.
+<p>
+There was nothing special about the number 17 in the above example.  We could repeat the same reasoning with any other integer such as 2 or 34 or 31415926535.  Thus we know that the set of all mulitples of a given n is a subgroup of the group of integers under addition.
+<p>
+Each group of two or more members has at least two subgroups.  The subgroup containing the identity element only and the group itself.  These are called <b>trivial</b> subgroups. Any subgroups of a group <i>G</i> other than the two trivial subgroups are <b>nontrivial</b> subgroups.
+<p>
+<b>THEOREM:</b>  A finite subset of a group that is closed under the group operation is a subgroup of that group.
+<p>
+This theorem states that for a <i>finite</i> subset of a group we need only check for closure to know that it is a subgroup.  To prove this theorem we, therefore, need to show that for a finite subset of a group closure implies that the identity axiom and inverse axiom are also satisfied.
+<p>
+<b>Proof:</b>
+<p>
+Consider the Cayley table for the finite subset. By the cancellation law we know that each element can appear at most once in each row and in each column.  Since the subgroup is closed each row and column must be just the elements of the subset in some arrangement.  More specifically for a given element, <b>a</b>, the row and column corresponding to <b>a</b> must each contain <b>a</b>.  Thus some member of the subset multiplies <b>a</b> to give the result <b>a</b>.  The only element that could do this is the identity element <b>e</b>.  Thus <b>e</b> must be in the subset.
+Similarly, if <b>e</b> is in the subset then it must appear once in the row and once in the column corresponding to <b>a</b>.  Therefore there is some element of the subset which multiplies <b>a</b> to give <b>e</b>.  That can only be <b>a</b><sup>-1</sup>.  Thus <b>e</b> must be in the subset and for every <b>a</b> in the subset <b>a</b><sup>-1</sup> must also be in the subset. Therefore the subset is a subgroup of the given group.
+<p>
+As an example of this theorem let's look at groups of permutations on <b>n</b> objects.  The elements of this group are all the ways of reordering ("shuffling") the n objects.  This was given as an example of a group on the <b>Examples</b> page.  Now let's pick any one of the n objects, or even a subset of the set of n objects and consider all permutations that do not affect the chosen subset of objects.  A permutation is in the bunch we're considering if and only if it leaves the objects in the special set alone. These specially chosen permutations are closed under the group operation of "followed by" (If neither <b>A</b> nor <b>B</b> disturb the chosen objects then <b>A &#149 B</b> will also not disturb them.)   Then we know by the theorem that the permutations that leave the chosen objects undistrubed is a subgroup of the group of all permutations.
+<p>
+Another example:  A <b>transposition</b> is a permutation that exchanges two objects while leaving all the other objects undisturbed.  It is a fact that any permutation can be built from enough transpositions done in the proper order.  If we limit ourselves to permutations that can be the result of an <b>even</b> number of transpositions (called <b>even</b> permutations) then we find that they are also closed under composition ("followed by") [why?].  Thus the set of even permutations on a set of n objects is a subgroup of the group of permutations on n objects.
+<p>
+It is necessary to include the restriction of this theorem to <b>finite</b> subsets.  If we consider the set of all postive integers we find that they:
+<UL>
+<LI>are a subset of the <b>group</b> of integers under addition
+<LI>are closed under addition
+<LI>do <b>not</b> form a subgroup of the integers. 
+</UL>
+<p>
+The subset of positive integers does not include the identity, 0, and also does not include the inverses (the negative integers) of any of its members.
+<p>
+A theorem that is not restricted to finite groups is the following:
+<p>
+<b>THEOREM</b>  If <i>S</i> is a subset of a group <i>G</i> and if for every <b>a</b> and <b>b</b> in <i>S</i> the group product <b>a &#149 b</b><sup>-1</sup> is in <i>S</i> then <i>S</i> is a subgroup of <i>G</i>.
+<p>
+by the first theorem a finite group requires only closure under the group operation to be a subgroup.  By the second theorem any subset is a subgroup if it is closed under taking an inverse then multiplying by a set element.
+<p>
+<b>Proof:</b>
+<p>
+The proof will establish the three properties required in the definition of a subgroup, <b>closure</b>, <b>identity</b> and <b>inverses</b>.
+<ul>
+<li> <b>identity</b>:  to prove that the group identity element, <b>e</b>, is in <i>S</i> we let <b>a = b</b>.  Then since <b>a</b> and <b>a</b> are in <i>S</i> then <b>a &#149 a</b><sup>-1</sup> is in <i>S</i>.  But <b>a &#149 a</b><sup>-1</sup> is just the identity element, <b>e</b>, of <i>G</i>.
+
+<li> <b>inverse</b>:  Since the group identity is in <i>S</i> we can establish that inverses of all members of <i>S</i> are also in <i>S</i>.
+If <b>a</b> is in <i>S</i> then, since <b>e</b> is in <i>S</i> it follows that <b>e</b> &#149 <b>a</b><sup>-1</sup> (which is simply <b>a</b><sup>-1</sup>) must be in <i>S</i>.
+
+<li> <b>closure</b>:  For <b>a</b> and <b>b</b> in <i>S</i> we know that <b>b</b><sup>-1</sup> is in <i>S</i>.  Since <b>a</b> and <b>b</b><sup>-1</sup> are in <i>S</i> then <b>a &#149 (b</b><sup>-1</sup><b>)</b><sup>-1</sup> is in <i>S</i>.  But we know from a housekeeping theorem that <b>(b</b><sup>-1</sup><b>)</b><sup>-1</sup> is simply <b>b</b>.  Thus <b>a &#149 b</b> is in <i>S</i>.
+</ul>
+<p>
+[Since there is nothing special about multiplying on the right by an inverse there is a <b>Parallel theorem:</b>
+<b>THEOREM</b>  If <i>S</i> is a subset of a group <i>G</i> and if for every <b>a</b> and <b>b</b> in <i>S</i> the group product <b>a</b><sup>-1</sup><b> &#149 b</b> is in <i>S</i> then <i>S</i> is a subgroup of <i>G</i>.]
+<p>
+As <b>A trivial example</b> of the theorem consider the subset of the integers consisting of all integers divisible by 5.  The integers form a group under addition.  The question we pose is "do the integers which are divisible by 5 form a subgroup of the additive group of integers?"  We could check the three properties in the definition of a subgroup or we could use the theorem.  When discussing the addition of integers we use the usual notation of elementary arithmetic.  The general group notation <b>a &#149 b</b><sup>-1</sup> then becomes <b>a + (-b)</b> or more usually, <b>a - b</b>.
+<p>
+If <b>a</b> and <b>b</b> are integers divisible by 5 then <b>a = 5m</b> and <b>b = 5n</b> for some integers <b>m</b> and <b>n</b>.  Thus:
+<p>
+<center><b>a - b = 5m - 5n = 5(m-n)</b></center>
+<p>
+So <b>a - b</b> is still the subset of integers divisible by 5 and thus by the theorem the set of integers divisible by 5 is a subgroup of the additive group of integers.
+<p>
+We can use the theorem to prove another result:
+<p>
+<b>THEOREM:</b> If <i>U</i> is a collection of subgroups of a group <i>G</i> then the intersection of <i>U</i> is also a subgroup of <i>G</i>.
+<p>
+<b>Proof:</b>  It suffices to prove that the intersection of <i>U</i> is closed under the operation <b>a &#149 b</b><sup>-1</sup>.  If <b>a</b> and <b>b</b> are in the intersection of <i>U</i> then they must both be elements of every subgroup of <i>G</i> in <i>U</i>.  Since <b>b</b> is in every subgroup in <i>U</i> then <b>b</b><sup>-1</sup> must be in every subgroup in <i>U</i>. Therefore by closure <b>a &#149 b</b><sup>-1</sup> is also in every subgroup in <i>U</i> and therefore in the intersection of <i>U</i>.
+<p>
+[<b>Question</b> does a similar theorem work for the <b>union</b> of <i>U</i>?  If so prove it.  If not find a counterexample.]
+
+
+
+
+<HR>
+<H2>Next: cosets</H2>
+<A HREF="https://members.tripod.com/~dogschool/cosets.html">cosets</A>: <bR>
+
+<A HREF="https://members.tripod.com/~dogschool">Back to the Index</A>: <bR>
+
+
+<HR>
+<P>
+<P>
+
+<fONT SIZE="+2">
+<CENTER>
+Send comments, corrections and criticisms to:
+</CENTER>
+</FONT>
+<p>
+<p>
+<center><A HREF="mailto:dogschool@dog.com"> dogschool@dog.com </A>
+</center>
+<P>
+<HR>
+
+<HR>
+
+<P>
+
+&copy 1998 1999 by Arfur Dogfrey
+
+
+
+</HTML>
+                                                                                    <!--'"</title></head>-->
+
+<script type="text/javascript">
+//OwnerIQ
+var __oiq_pct = 50;
+if( __oiq_pct>=100 || Math.floor(Math.random()*100/(100-__oiq_pct)) > 0 ) {
+var _oiqq = _oiqq || [];
+_oiqq.push(['oiq_addPageBrand','Lycos']);
+_oiqq.push(['oiq_addPageCat','Internet > Websites']);
+_oiqq.push(['oiq_addPageLifecycle','Intend']);
+_oiqq.push(['oiq_doTag']);
+(function() {
+var oiq = document.createElement('script'); oiq.type = 'text/javascript'; oiq.async = true;
+oiq.src = document.location.protocol + '//px.owneriq.net/stas/s/lycosn.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(oiq, s);
+})();
+}
+//Google Analytics
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount','UA-21402695-19']);
+_gaq.push(['_setDomainName','tripod.com']);
+_gaq.push(['_setCustomVar',1,'member_name','dogschool',3]);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+//Lycos Init
+function getReferrer() {
+var all= this.document.cookie;
+if (all== '') return false;
+var cookie_name = 'REFERRER=';
+var start = all.lastIndexOf(cookie_name);
+if (start == -1) return false;
+start += cookie_name.length;
+var end = all.indexOf(';', start);
+if (end == -1) end = all.length;
+return all.substring(start, end);
+}
+function getQuery() {
+var rfr = getReferrer();
+if (rfr == '') return false;
+var q = extractQuery(rfr, 'yahoo.com', 'p=');
+if (q) return q;
+q = extractQuery(rfr, '', 'q=');
+return q ? q : "";
+}
+function extractQuery(full, site, q_param) {
+var start = full.lastIndexOf(site);
+if (start == -1) return false;
+start = full.lastIndexOf(q_param);
+if (start == -1) return false;
+start += q_param.length;
+var end = full.indexOf('&', start);
+if (end == -1) end = full.length;
+return unescape(full.substring(start, end)).split(" ").join("+");
+}
+function generateHref(atag, template){
+atag.href=template.replace('_MYURL_', window.location.href.replace('http://', '')).replace('_MYTITLE_','Check%20out%20this%20Tripod%20Member%20site!'); 
+}
+var lycos_ad = Array();
+var lycos_onload_timer;
+var cm_role = "live";
+var cm_host = "tripod.lycos.com";
+var cm_taxid = "/memberembedded";
+var tripod_member_name = "dogschool";
+var tripod_member_page = "dogschool/subgroups.html";
+var tripod_ratings_hash = "1686895872:0aba1ceebc99f0550c168e0f1a894d7e";
+
+var lycos_ad_category = {"dmoz":"reference\/knots","ontarget":"&CAT=education&L2CAT=reference","find_what":"graduate courses"};
+
+var lycos_ad_remote_addr = "209.202.244.9";
+var lycos_ad_www_server = "www.tripod.lycos.com";
+var lycos_ad_track_small = "";
+var lycos_ad_track_served = "";
+var lycos_search_query = getQuery();
+</script>
+
+<script type="text/javascript" src="https://scripts.lycos.com/catman/init.js"></script>
+
+<script type='text/javascript'>
+ var googletag = googletag || {};
+ googletag.cmd = googletag.cmd || [];
+ (function() {
+   var gads = document.createElement('script');
+   gads.async = true;
+   gads.type = 'text/javascript';
+   var useSSL = 'https:' == document.location.protocol;
+   gads.src = (useSSL ? 'https:' : 'http:') +
+     '//www.googletagservices.com/tag/js/gpt.js';
+   var node = document.getElementsByTagName('script')[0];
+   node.parentNode.insertBefore(gads, node);
+ })();
+</script>
+
+<script type='text/javascript'>
+ googletag.cmd.push(function() {
+   googletag.defineSlot('/95963596/TRI_300X250_dfp', [300, 250], 'div-gpt-ad-1450204159126-0').addService(googletag.pubads());
+   googletag.defineSlot('/95963596/TRI_above_728x90_dfp', [728, 90], 'div-gpt-ad-1450204159126-1').addService(googletag.pubads());
+   googletag.defineSlot('/95963596/TRI_below_728x90_dfp', [728, 90], 'div-gpt-ad-1450204159126-2').addService(googletag.pubads());
+   googletag.pubads().enableSingleRequest();
+   googletag.enableServices();
+ });
+</script>
+
+
+<script type="text/javascript"> 
+(function(isV)
+{
+    if( !isV )
+    {
+        return;
+    }
+    var adMgr = new AdManager();
+    var lycos_prod_set = adMgr.chooseProductSet();
+    var slots = ["leaderboard", "leaderboard2", "toolbar_image", "toolbar_text", "smallbox", "top_promo", "footer2", "slider"];
+    var adCat = this.lycos_ad_category;
+    adMgr.setForcedParam('page', (adCat && adCat.dmoz) ? adCat.dmoz : 'member');
+    if (this.lycos_search_query)
+    {
+        adMgr.setForcedParam("keyword", this.lycos_search_query);
+    } 
+    else if(adCat && adCat.find_what)
+    {
+        adMgr.setForcedParam('keyword', adCat.find_what);
+    }
+    
+    for (var s in slots)
+    {
+        var slot = slots[s];
+        if (adMgr.isSlotAvailable(slot))
+        {
+            this.lycos_ad[slot] = adMgr.getSlot(slot);
+        }
+    }
+
+    adMgr.renderHeader();
+    adMgr.renderFooter();
+}((function() {
+
+var w = 0, h = 0, minimumThreshold = 300;
+
+if (top == self)
+{
+    return true;
+}
+if (typeof(window.innerWidth) == 'number' )
+{
+    w = window.innerWidth;
+    h = window.innerHeight;
+}
+else if (document.documentElement && (document.documentElement.clientWidth || document.documentElement.clientHeight))
+{
+    w = document.documentElement.clientWidth;
+    h = document.documentElement.clientHeight;
+}
+else if (document.body && (document.body.clientWidth || document.body.clientHeight))
+{
+    w = document.body.clientWidth;
+    h = document.body.clientHeight;
+}
+return ((w > minimumThreshold) && (h > minimumThreshold));
+}())));
+
+
+
+
+window.onload = function()
+{
+    var f = document.getElementById("FooterAd");
+    var b = document.getElementsByTagName("body")[0];
+    b.appendChild(f);
+    f.style.display = "block";
+    document.getElementById('lycosFooterAdiFrame').src = '/adm/ad/footerAd.iframe.html';
+    
+
+
+    
+    // DOM Inj Ad
+    (function(isTrellix)
+    {
+        var e = document.createElement('iframe');
+        e.style.border = '0';
+        e.style.margin = 0;
+        e.style.display = 'block';
+        e.style.cssFloat = 'right';
+        e.style.height = '254px';
+        e.style.overflow = 'hidden';
+        e.style.padding = 0;
+        e.style.width = '300px';
+
+
+        var isBlokedByDomain = function( href )
+        {
+            var blockedDomains = [
+                "ananyaporn13000.tripod.com",
+                "xxxpornxxx.tripod.com"
+            ];
+            var flag = false;
+            
+            for( var i=0; i<blockedDomains.length; i++ )
+            {
+                if( href.search( blockedDomains[ i ] ) >= 0 )
+                {
+                    flag = true;
+                }
+            }
+            return flag;
+        }
+
+        var getMetaContent = function( metaName )
+        {
+            var metas = document.getElementsByTagName('meta');
+            for (i=0; i<metas.length; i++)
+            { 
+                if( metas[i].getAttribute("name") == metaName )
+                { 
+                    return metas[i].getAttribute("content"); 
+                } 
+            }
+            return false;
+        }
+        
+        var getCommentNodes = function(regexPattern)
+        {
+            var nodes = {};
+            var nodesA = [];
+            var preferredNodesList = ['a', 'c', 'b'];
+        
+            (function getNodesThatHaveComments(n, pattern)
+            {
+                if (n.hasChildNodes())
+                {
+                    if (n.tagName === 'IFRAME')
+                    {
+                        return false;
+                    }
+                    for (var i = 0; i < n.childNodes.length; i++)
+                    {
+                        if ((n.childNodes[i].nodeType === 8) && (pattern.test(n.childNodes[i].nodeValue)))
+                        {
+                            var areaName = pattern.exec(n.childNodes[i].nodeValue)[1];
+                            nodes[areaName] = n;
+                        }
+                        else if (n.childNodes[i].nodeType === 1)
+                        {
+                            getNodesThatHaveComments(n.childNodes[i], pattern);
+                        }
+                    }
+                }
+            }(document.body, regexPattern));
+
+            for (var i in preferredNodesList)
+            {
+                if (nodes[preferredNodesList[i]])
+                {
+                    if( isTrellix && nodes[preferredNodesList[i]].parentNode.parentNode.parentNode.parentNode )
+                    {
+                        nodesA.push(nodes[preferredNodesList[i]].parentNode.parentNode.parentNode.parentNode);
+                    }
+                    else
+                    {
+                        nodesA.push( nodes[preferredNodesList[i]] );
+                    }
+                }
+            }
+            return nodesA;
+        }
+        
+        
+        var properNode = null;
+        var areaNodes = getCommentNodes( new RegExp( '^area Type="area_(\\w+)"' ) );
+
+        for (var i = 0; i < areaNodes.length; i++)
+        {
+            var a = parseInt(getComputedStyle(areaNodes[i]).width);
+            if ((a >= 300) && (a <= 400))
+            {
+                properNode = areaNodes[i];
+                break;
+            }
+        }
+
+
+        var propertyName = getMetaContent("property") || false;
+        if( isTrellix && (properNode) )
+        {
+            e.src = '/adm/ad/injectAd.iframe.html';
+            properNode.insertBefore(e, properNode.firstChild);
+        }
+        else if( isTrellix && !( properNode ) ) // Slap the ad eventhought there is no alocated slot
+        {
+            e.src = '/adm/ad/injectAd.iframe.html';
+            e.style.cssFloat = 'none';
+            var cdiv = document.createElement('div');
+            cdiv.style = "width:300px;margin:10px auto;";
+            cdiv.appendChild( e );
+            b.insertBefore(cdiv, b.lastChild);
+        }
+        else if( !isBlokedByDomain( location.href ) )
+        {
+            var injF = document.createElement('iframe');
+            injF.style.border = '0';
+            injF.style.margin = 0;
+            injF.style.display = 'block';
+            injF.style.cssFloat = 'none';
+            injF.style.height = '254px';
+            injF.style.overflow = 'hidden';
+            injF.style.padding = 0;
+            injF.style.width = '300px';
+            injF.src = '/adm/ad/injectAd.iframe.html';
+
+            if( b && ( !isTrellix || ( typeof isTrellix == "undefined" ) ) ) // All other tripod props
+            {
+                var cdiv = document.createElement('div');
+                cdiv.style = "width:300px;margin:10px auto;";
+                cdiv.appendChild( injF );
+                b.insertBefore(cdiv, b.lastChild);
+            } 
+        }
+  }( document.isTrellix ));
+}
+
+</script>
+
+<div id="tb_container" style="background:#DFDCCF; border-bottom:1px solid #393939; position:relative; z-index:999999999!important">
+<!--form name="search" onSubmit="return searchit()" id='header_search' >
+<input type="text" placeholder="Search" size=30 name="search2" value="">
+<input type="button" value="Go!" onClick="searchit()">
+</form>
+<style>
+form#header_search {
+    width: 916px;
+    margin: 0 auto 8px;
+    position: relative;
+}
+
+
+form#header_search input {
+    height: 40px;
+    font-size: 14px;
+    line-height: 40px;
+    padding: 0 8px;
+    box-sizing: border-box;
+    background: #F4F2E9;
+    border: 1px solid #BBB8B8;
+    transition: background-color 300ms ease-out,
+                color 300ms ease;
+}
+
+form#header_search input[type="text"] {
+    width: 100%;
+}
+form#header_search input[type="text"]:focus {
+    border-color: #A2D054;
+    background-color: #fff;
+    box-shadow: 0 0px 12px -4px #A2D054;
+}
+
+
+
+form#header_search input[type="button"] {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    opacity: 1;
+    background: #DFDCCF;
+    color: #463734;
+    width: 125px;
+    cursor: pointer;
+    height: 38px;
+    border: none;
+}
+form#header_search input[type="text"]:focus ~ input[type='button']:hover,
+form#header_search input[type='button']:hover {
+    background-color: #A5CE56;
+    color: #fff;
+}
+form#header_search input[type="text"]:focus ~ input[type='button'] {
+    background-color: #52AEDF;
+    color: #fff;
+}
+
+</style>
+
+<script>
+function searchit(){
+    
+    // determine environment 
+    var search_env 
+    if (lycos_ad_www_server.indexOf(".pd.") > -1) {
+       search_env = 'http://search51.pd.lycos.com/a/';
+    } else if (lycos_ad_www_server.indexOf(".qa.") > -1) {
+       search_env = 'http://search51.qa.lycos.com/a/';
+    } else {
+       search_env = 'http://search51.lycos.com/a/';
+    }
+
+var search_term = encodeURIComponent(document.search.search2.value)
+var search_url = search_env+search_term;
+window.open(search_url);
+
+return false
+}
+</script-->
+<style>
+    .adCenterClass{margin:0 auto}
+</style>
+<div id="tb_ad" class="adCenterClass" style="display:block!important; overflow:hidden; width:916px;">
+
+<div id="ad_container" style="display:block!important; float:left; width:728px ">
+<script type="text/javascript">
+if (typeof lycos_ad !== "undefined" && "leaderboard" in lycos_ad) {
+  document.write(lycos_ad['leaderboard']);
+}
+</script>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+if (typeof lycos_ad !== "undefined" && "slider" in lycos_ad) {
+  document.write(lycos_ad['slider']);
+}
+</script> <!-- added 7/22 -->
+<div id="FooterAd" style="background:#DFDCCF; border-top:1px solid #393939; clear:both; display:none; width:100%!important; position:relative; z-index:999999!important; height:90px!important"> 
+<div class="adCenterClass" style="display:block!important; overflow:hidden; width:916px;">
+<div id="footerAd_container" style="display:block!important; float:left; width:728px">
+<iframe id="lycosFooterAdiFrame" style="border:0; display:block; float:left; height:96px; overflow:hidden; padding:0; width:750px"></iframe>
+</div>
+</div>
+</div>
+

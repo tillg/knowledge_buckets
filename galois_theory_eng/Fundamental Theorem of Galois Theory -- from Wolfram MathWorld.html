@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en" class="algebra mathworldcontributors">
+<head>
+	<title>Fundamental Theorem of Galois Theory -- from Wolfram MathWorld</title>
+	
+<meta name="DC.Title" content="Fundamental Theorem of Galois Theory" />
+	
+<meta name="DC.Creator" content="Weisstein, Eric W." />
+	
+<meta name="DC.Description" content="For a Galois extension field K of a field F, the fundamental theorem of Galois theory states that the subgroups of the Galois group G=Gal(K/F) correspond with the subfields of K containing F. If the subfield L corresponds to the subgroup H, then the extension field degree of K over L is the group order of H, |K:L| = |H| (1)  |L:F| = |G:H|. (2)   Suppose F subset E subset L subset K, then E and L correspond to subgroups H_E and H_L of G such that H_E is a subgroup of H_L. Also, H_E is a..." />
+	
+<meta name="description" content="For a Galois extension field K of a field F, the fundamental theorem of Galois theory states that the subgroups of the Galois group G=Gal(K/F) correspond with the subfields of K containing F. If the subfield L corresponds to the subgroup H, then the extension field degree of K over L is the group order of H, |K:L| = |H| (1)  |L:F| = |G:H|. (2)   Suppose F subset E subset L subset K, then E and L correspond to subgroups H_E and H_L of G such that H_E is a subgroup of H_L. Also, H_E is a..." />
+	
+	
+<meta name="DC.Date.Created" scheme="W3CDTF" content="2002-04-16" />
+	
+<meta name="DC.Date.Modified" scheme="W3CDTF" content="2004-05-05" />
+<meta name="DC.Date.Modified" scheme="W3CDTF" content="2004-05-06" />
+	
+<meta name="DC.Subject" scheme="MathWorld" content="Mathematics:Algebra:Field Theory" />
+<meta name="DC.Subject" scheme="MathWorld" content="Mathematics:MathWorld Contributors:Rowland, Todd" />
+<meta name="DC.Subject" scheme="MathWorld" content="Mathematics:MathWorld Contributors:Terr" />
+	
+<meta name="DC.Subject" scheme="MSC_2000" content="12" />
+	
+<meta name="DC.Rights" content="Copyright 1999-2023 Wolfram Research, Inc.  See https://mathworld.wolfram.com/about/terms.html for a full terms of use statement." />
+	
+<meta name="DC.Format" scheme="IMT" content="text/html" />
+	
+<meta name="DC.Identifier" scheme="URI" content="https://mathworld.wolfram.com/FundamentalTheoremofGaloisTheory.html" />
+	
+<meta name="DC.Language" scheme="RFC3066" content="en" />
+	
+<meta name="DC.Publisher" content="Wolfram Research, Inc." />
+	
+<meta name="DC.Relation.IsPartOf" scheme="URI" content="https://mathworld.wolfram.com/" />
+	
+<meta name="DC.Type" scheme="DCMIType" content="Text" />
+	
+<meta name="Last-Modified" content="2004-05-06" />
+	
+<meta property="og:image" content="https://mathworld.wolfram.com/images/socialmedia/share.png">
+    
+<meta property="og:url" content="https://mathworld.wolfram.com/">
+    
+<meta property="og:type" content="website">
+    
+<meta property="og:title" content="Fundamental Theorem of Galois Theory -- from Wolfram MathWorld">
+    
+<meta property="og:description" content="For a Galois extension field K of a field F, the fundamental theorem of Galois theory states that the subgroups of the Galois group G=Gal(K/F) correspond with the subfields of K containing F. If the subfield L corresponds to the subgroup H, then the extension field degree of K over L is the group order of H, |K:L| = |H| (1)  |L:F| = |G:H|. (2)   Suppose F subset E subset L subset K, then E and L correspond to subgroups H_E and H_L of G such that H_E is a subgroup of H_L. Also, H_E is a...">
+    
+<meta name="twitter:card" content="summary_large_image">
+    
+<meta name="twitter:site" content="@WolframResearch">
+    
+<meta name="twitter:title" content="Fundamental Theorem of Galois Theory -- from Wolfram MathWorld">
+    
+<meta name="twitter:description" content="For a Galois extension field K of a field F, the fundamental theorem of Galois theory states that the subgroups of the Galois group G=Gal(K/F) correspond with the subfields of K containing F. If the subfield L corresponds to the subgroup H, then the extension field degree of K over L is the group order of H, |K:L| = |H| (1)  |L:F| = |G:H|. (2)   Suppose F subset E subset L subset K, then E and L correspond to subgroups H_E and H_L of G such that H_E is a subgroup of H_L. Also, H_E is a...">
+    
+<meta name="twitter:image:src" content="https://mathworld.wolfram.com/images/socialmedia/share.png">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<script async src="/common/javascript/analytics.js"></script>
+	<script async src="//www.wolframcdn.com/consent/cookie-consent.js"></script>
+	<script async src="/common/javascript/wal/latest/walLoad.js"></script>
+	<link rel="stylesheet" href="/css/styles.css">
+	<link rel="preload" href="//www.wolframcdn.com/fonts/source-sans-pro/1.0/global.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="//www.wolframcdn.com/fonts/source-sans-pro/1.0/global.css"></noscript>
+
+</head>
+<body id="topics">
+<main id="entry">
+    
+<div class="wrapper">
+        <section id="container">
+			<header class="text-align-c">
+				<div id="header-dropdown-menu">
+					<img src="/images/header/menu-icon.png" width="18" height="12">
+					<span class="display-n__600">TOPICS</span>
+				</div>
+
+				<a href="/">
+					<picture id="logo">
+						<source media="(min-width: 601px)" srcset="/images/logos/mathworld-logo-tagline.svg" width="100%" title="Wolfram MathWorld the web's most extensive mathematics resource" alt="Wolfram MathWorld the web's most extensive mathematics resource">
+						<img style="height: auto;" src="/images/logos/mathworld-logo.svg" title="Wolfram MathWorld" alt="Wolfram MathWorld" width="447" height="30">
+					</picture>
+				</a>
+				<form method="get" action="/search/" name="search" id="search" accept-charset="UTF-8">
+					<input type="text" name="query" placeholder="Search">
+					<img src="/images/header/search-icon.png" width="18" height="18" class="search-btn" title="Search" alt="Search" >
+					<img src="/images/header/menu-close.png" width="16" height="16" id="search-close" class="close-btn" title="Close" alt="Close" >
+				</form>
+			</header>
+            <section class="left-side">
+				<img src="/images/sidebar/menu-close.png" width="16" height="16" id="dropdown-topics-menu-close" class="close-btn">
+				<nav class="topics-nav">
+					<a href="/topics/Algebra.html" id="sidebar-algebra">
+						Algebra					
+					</a>
+					<a href="/topics/AppliedMathematics.html" id="sidebar-appliedmathematics">
+						Applied Mathematics					
+					</a>
+					<a href="/topics/CalculusandAnalysis.html" id="sidebar-calculusandanalysis">
+						Calculus and Analysis					
+					</a>
+					<a href="/topics/DiscreteMathematics.html" id="sidebar-discretemathematics">
+						Discrete Mathematics					
+					</a>
+					<a href="/topics/FoundationsofMathematics.html" id="sidebar-foundationsofmathematics">
+						Foundations of Mathematics					
+					</a>
+					<a href="/topics/Geometry.html" id="sidebar-geometry">
+						Geometry					
+					</a>
+					<a href="/topics/HistoryandTerminology.html" id="sidebar-historyandterminology">
+						History and Terminology					
+					</a>
+					<a href="/topics/NumberTheory.html" id="sidebar-numbertheory">
+						Number Theory					
+					</a>
+					<a href="/topics/ProbabilityandStatistics.html" id="sidebar-probabilityandstatistics">
+						Probability and Statistics					
+					</a>
+					<a href="/topics/RecreationalMathematics.html" id="sidebar-recreationalmathematics">
+						Recreational Mathematics					
+					</a>
+					<a href="/topics/Topology.html" id="sidebar-topology">
+						Topology					
+					</a>
+				</nav>
+				<nav class="secondary-nav">
+					<a href="/letters/">
+						Alphabetical Index
+					</a>
+					<a href="/whatsnew/">
+						New in MathWorld
+					</a>
+				</nav>
+			</section>
+            <section id="content">
+			  
+<!-- Begin Subject -->
+<nav class="breadcrumbs"><ul class="breadcrumb">
+<li>
+<a href="/topics/Algebra.html">Algebra</a>
+</li>
+<li>
+<a href="/topics/FieldTheory.html">Field Theory</a>
+</li>
+</ul><ul class="breadcrumb">
+<li>
+<a href="/topics/MathWorldContributors.html">MathWorld Contributors</a>
+</li>
+<li>
+<a href="/topics/RowlandTodd.html">Rowland, Todd</a>
+</li>
+</ul><ul class="breadcrumb">
+<li>
+<a href="/topics/MathWorldContributors.html">MathWorld Contributors</a>
+</li>
+<li>
+<a href="/topics/Terr.html">Terr</a>
+</li>
+</ul></nav>
+<!-- End Subject -->
+<!-- Begin Title -->
+<h1>Fundamental Theorem of Galois Theory</h1>
+<!-- End Title -->
+<hr class="margin-t-1-8 margin-b-3-4">
+<!-- Begin Total Content -->
+<!-- Begin Content -->
+<div class="entry-content">
+<p>
+For a <a href="/GaloisExtensionField.html">Galois extension field</a> <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline1.svg" class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="14"
+ height="21" alt="K" /> of a <a href="/Field.html">field</a> <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline2.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="12"
+ height="21" alt="F" />, the fundamental theorem of Galois theory states that the
+ subgroups of the <a href="/GaloisGroup.html">Galois group</a> <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline3.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="111"
+ height="21" alt="G=Gal(K/F)" /> correspond with the subfields of <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline4.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="14"
+ height="21" alt="K" /> containing <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline5.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="12"
+ height="21" alt="F" />. If the subfield <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline6.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="11"
+ height="21" alt="L" /> corresponds to the subgroup <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline7.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="15"
+ height="21" alt="H" />, then the <a href="/ExtensionFieldDegree.html">extension field
+ degree</a> of <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline8.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="14"
+ height="21" alt="K" /> over <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline9.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="11"
+ height="21" alt="L" /> is the <a href="/GroupOrder.html">group order</a> of <img
+ src="/images/equations/FundamentalTheoremofGaloisTheory/Inline10.svg" class="inlineformula"
+ style="max-height:100%;max-width:100%" border="0" width="15" height="21" alt="H" />,
+</p>
+<div class="table-responsive-noborders">
+<table align="center" width="100%" cellpadding="0" cellspacing="0" style="padding-left: 50px"
+ border="0">
+<tr style=""><td align="right" width=""><img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline11.svg" class="displayformula" style="max-height:100%;max-width:100%" border="0" width="42"
+ height="20" alt="|K:L|" /></td><td align="center" width="14"><img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline12.svg"
+ class="displayformula" style="max-height:100%;max-width:100%" border="0" width="10"
+ height="20" alt="=" /></td><td align="left"><img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline13.svg"
+ class="displayformula" style="max-height:100%;max-width:100%" border="0" width="22"
+ height="20" alt="|H|" /></td><td align="right" width="10">
+<div id="eqn1" class="eqnum">
+(1)
+</div>
+</td></tr><tr style=""><td align="right" width=""><img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline14.svg" class="displayformula" style="max-height:100%;max-width:100%" border="0" width="41"
+ height="20" alt="|L:F|" /></td><td align="center" width="14"><img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline15.svg"
+ class="displayformula" style="max-height:100%;max-width:100%" border="0" width="10"
+ height="20" alt="=" /></td><td align="left"><img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline16.svg"
+ class="displayformula" style="max-height:100%;max-width:100%" border="0" width="49"
+ height="20" alt="|G:H|." /></td><td align="right" width="10">
+<div id="eqn2" class="eqnum">
+(2)
+</div>
+</td></tr>
+</table>
+</div>
+<p>
+Suppose <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline17.svg" class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="106"
+ height="21" alt="F subset E subset L subset K" />, then <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline18.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="12"
+ height="21" alt="E" /> and <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline19.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="11"
+ height="21" alt="L" /> correspond to subgroups <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline20.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="22"
+ height="21" alt="H_E" /> and <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline21.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="22"
+ height="21" alt="H_L" /> of <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline22.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="13"
+ height="21" alt="G" /> such that <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline23.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="22"
+ height="21" alt="H_E" /> is a subgroup of <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline24.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="22"
+ height="21" alt="H_L" />. Also, <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline25.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="22"
+ height="21" alt="H_E" /> is a <a href="/NormalSubgroup.html">normal subgroup</a> <a
+ href="/Iff.html">iff</a> <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline26.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="12"
+ height="21" alt="E" /> is a <a href="/GaloisExtensionField.html">Galois extension
+ field</a>. Since any subfield of a <a href="/SeparableExtension.html">separable extension</a>,
+ which the Galois extension field <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline27.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="14"
+ height="21" alt="K" /> must be, is also separable, <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline28.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="12"
+ height="21" alt="E" /> is Galois <a href="/Iff.html">iff</a> <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline29.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="12"
+ height="21" alt="E" /> is a <a href="/NormalExtension.html">normal extension</a>
+ of <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline30.svg" class="inlineformula"
+ style="max-height:100%;max-width:100%" border="0" width="12" height="21" alt="F" />.
+ So normal extensions correspond to normal subgroups. When <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline31.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="22"
+ height="21" alt="H_E" /> is normal, then
+</p>
+<div>
+<table summary="" width="100%" align="center" cellspacing="0" cellpadding="0" style="padding-left: 50px">
+<tr><td align="left"><img src="/images/equations/FundamentalTheoremofGaloisTheory/NumberedEquation1.svg" class="numberedequation" style="max-height:100%;max-width:100%" border="0" width="130"
+ height="20" alt=" Gal(E/F)=G/H " /></td><td align="right" width="3">
+<div id="eqn3" class="eqnum">
+(3)
+</div>
+</td></tr>
+</table>
+</div>
+<p>
+as the <a href="/QuotientGroup.html">quotient group</a> of the <a href="/GroupAction.html">group action</a> of <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline32.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="13"
+ height="21" alt="G" /> on <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline33.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="14"
+ height="21" alt="K" />.
+</p>
+<img style="max-width:100%;max-height:100%;" width="506.522" height="291.149" src="images/eps-svg/FundamentalTheoremofGalois_900.svg"
+ class="center-image" alt="FundamentalTheoremofGalois" />
+<p>
+According to the fundamental theorem, there is a one-one correspondence between subgroups of the Galois group <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline34.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="76"
+ height="21" alt="Gal(L/K)" /> and subfields of <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline35.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="11"
+ height="21" alt="L" /> containing <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline36.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="14"
+ height="21" alt="K" />. For example, for the number field <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline37.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="11"
+ height="21" alt="L" /> shown above, the only automorphisms of <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline38.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="11"
+ height="21" alt="L" /> (keeping <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline39.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="48"
+ height="21" alt="K=Q" /> fixed) are the identity, <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline40.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="12"
+ height="21" alt="sigma" />, <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline41.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="8"
+ height="21" alt="tau" />, and <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline42.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="20"
+ height="21" alt="sigmatau" />, so these form the Galois group <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline43.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="76"
+ height="21" alt="Gal(L/K)" /> (which is generated by <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline44.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="12"
+ height="21" alt="sigma" /> and <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline45.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="8"
+ height="21" alt="tau" />). In particular, the generators <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline46.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="12"
+ height="21" alt="sigma" /> and <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline47.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="8"
+ height="21" alt="tau" /> of <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline48.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="13"
+ height="21" alt="G" /> are as follows: <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline49.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="12"
+ height="21" alt="sigma" /> maps <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline50.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="29"
+ height="23" alt="sqrt(3)" /> to <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline51.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="41"
+ height="23" alt="-sqrt(3)" />, <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline52.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="29"
+ height="23" alt="sqrt(6)" /> to <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline53.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="41"
+ height="23" alt="-sqrt(6)" />, and fixes <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline54.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="29"
+ height="23" alt="sqrt(2)" />; <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline55.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="8"
+ height="21" alt="tau" /> maps <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline56.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="29"
+ height="23" alt="sqrt(2)" /> to <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline57.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="41"
+ height="23" alt="-sqrt(2)" />, <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline58.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="29"
+ height="23" alt="sqrt(6)" /> to <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline59.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="41"
+ height="23" alt="-sqrt(6)" /> and fixes <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline60.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="29"
+ height="23" alt="sqrt(3)" />; and <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline61.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="20"
+ height="21" alt="sigmatau" /> maps <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline62.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="29"
+ height="23" alt="sqrt(2)" /> to <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline63.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="41"
+ height="23" alt="-sqrt(2)" />, <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline64.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="29"
+ height="23" alt="sqrt(3)" /> to <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline65.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="41"
+ height="23" alt="-sqrt(3)" /> and fixes <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline66.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="29"
+ height="23" alt="sqrt(6)" />.
+</p>
+<p>
+For example, consider the <a href="/GaloisExtensionField.html">Galois extension field</a>
+</p>
+<div class="table-responsive-noborders">
+<table align="center" width="100%" cellpadding="0" cellspacing="0" style="padding-left: 50px"
+ border="0">
+<tr style=""><td align="right" width=""><img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline67.svg" class="displayformula" style="max-height:100%;max-width:100%" border="0" width="13"
+ height="20" alt="K" /></td><td align="center" width="14"><img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline68.svg"
+ class="displayformula" style="max-height:100%;max-width:100%" border="0" width="10"
+ height="20" alt="=" /></td><td align="left"><img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline69.svg"
+ class="displayformula" style="max-height:100%;max-width:100%" border="0" width="70"
+ height="25" alt="Q(2^(1/3),omega)" /></td><td align="right" width="10">
+<div id="eqn4" class="eqnum">
+(4)
+</div>
+</td></tr><tr style=""><td align="right" width=""><img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline70.svg" class="displayformula" style="max-height:100%;max-width:100%" border="0" width="12"
+ height="20" alt="" /></td><td align="center" width="14"><img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline71.svg"
+ class="displayformula" style="max-height:100%;max-width:100%" border="0" width="10"
+ height="20" alt="=" /></td><td align="left"><img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline72.svg"
+ class="displayformula" style="max-height:100%;max-width:100%" border="0" width="400"
+ height="25" alt="{a_1+a_2omega+a_32^(1/3)+a_42^(1/3)omega+a_52^(2/3) +a_62^(2/3)omega:a_i in Q}" /></td><td
+ align="right" width="10">
+<div id="eqn5" class="eqnum">
+(5)
+</div>
+</td></tr>
+</table>
+</div>
+<p>
+over <img src="/images/equations/FundamentalTheoremofGaloisTheory/Inline73.svg" class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="46" height="21" alt="F=Q" />,
+ which has <a href="/ExtensionFieldDegree.html">extension field degree</a> six. That
+ is, it is a six-dimensional <a href="/VectorSpace.html">vector space</a> over the
+ rationals.
+</p>
+</div>
+<!-- End Content -->
+<hr class="margin-b-1-1-4">
+<div class="c-777 entry-secondary-content">
+<!-- Begin See Also -->
+<h2>See also</h2><a href="/FieldAutomorphism.html">Field Automorphism</a>, <a href="/GaloisTheory.html">Galois
+Theory</a>, <a href="/SimpleExtension.html">Simple Extension</a>
+<!-- End See Also -->
+<!-- Begin CrossURL -->
+<!-- End CrossURL -->
+<!-- Begin Contributor -->
+<p class="contributor">
+<i>Portions of this entry contributed by <a target="_blank" href="/topics/RowlandTodd.html">Todd
+Rowland</a></i>
+</p>
+<p class="contributor">
+<i>Portions of this entry contributed by <a target="_blank" href="/topics/Terr.html">David
+Terr</a></i>
+</p>
+<!-- End Contributor -->
+<!-- Begin Wolfram Alpha Pod -->
+<h2>Explore with Wolfram|Alpha</h2>
+<div id="WAwidget">
+<div class="WAwidget-wrapper">
+<img alt="WolframAlpha" title="WolframAlpha" src="/images/wolframalpha/WA-logo.png"
+ width="136" height="20">
+<form name="wolframalpha" action="https://www.wolframalpha.com/input/" target="_blank">
+      <input type="text" name="i" class="search" placeholder="Solve your math problems and get step-by-step solutions"
+ value="">
+       <button type="submit" title="Evaluate on WolframAlpha"></button>
+    </form>
+    
+</div>
+    
+<div class="WAwidget-wrapper try">
+    
+<p class="text-align-r">
+More things to try:
+</p>
+    <ul>
+	   
+<li><a target="_blank" href="https://www.wolframalpha.com/input/?i=100011010+base+2">100011010 base 2</a></li>
+
+<li><a target="_blank" href="https://www.wolframalpha.com/input/?i=colorize+image+of+Poe">colorize image of Poe</a></li>
+
+<li><a target="_blank" href="http://www.wolframalpha.com/input/?i=logic+circuit+%28p+or+%7Eq%29+and+%28r+xor+s%29">logic circuit (p or ~q) and (r xor s)</a></li>
+
+    </ul>
+</div>
+</div>
+<!-- End Wolfram Alpha Pod -->
+<!-- Begin References -->
+<!-- End References -->
+<!-- Begin CiteAs -->
+<h2>Cite this as:</h2>
+<p>
+<a href="/topics/RowlandTodd.html">Rowland, Todd</a>; <a href="/topics/Terr.html">Terr, David</a>; and <a href="/about/author.html">Weisstein, Eric W.</a>  &quot;Fundamental
+ Theorem of Galois Theory.&quot; From <a href="/"><i>MathWorld</i></a>--A Wolfram
+ Web Resource. <a href="https://mathworld.wolfram.com/FundamentalTheoremofGaloisTheory.html">https://mathworld.wolfram.com/FundamentalTheoremofGaloisTheory.html</a>
+</p>
+<!-- End CiteAs -->
+<h2>Subject classifications</h2><nav class="breadcrumbs"><ul class="breadcrumb">
+<li>
+<a href="/topics/Algebra.html">Algebra</a>
+</li>
+<li>
+<a href="/topics/FieldTheory.html">Field Theory</a>
+</li>
+</ul><ul class="breadcrumb">
+<li>
+<a href="/topics/MathWorldContributors.html">MathWorld Contributors</a>
+</li>
+<li>
+<a href="/topics/RowlandTodd.html">Rowland, Todd</a>
+</li>
+</ul><ul class="breadcrumb">
+<li>
+<a href="/topics/MathWorldContributors.html">MathWorld Contributors</a>
+</li>
+<li>
+<a href="/topics/Terr.html">Terr</a>
+</li>
+</ul></nav>
+<!-- End Total Content -->
+</div>
+            </section>
+        </section> <!-- /container -->
+    
+</div>
+</main>
+<aside id="bottom">
+		<footer>
+			<ul>
+				<li><a href="/about/">About MathWorld</a></li>
+				<li><a href="/classroom/">MathWorld Classroom</a></li>
+				<li><a href="/contact/">Send a Message</a></li>
+				<li><a href="https://www.amazon.com/exec/obidos/ASIN/1420072218/ref=nosim/weisstein-20" target="_blank">MathWorld Book</a></li>
+				<li class="display-n display-ib__600"><a href="https://www.wolfram.com" target="_blank">wolfram.com</a></li>
+			</ul>
+			<ul>
+				<li><a href="/whatsnew/">13,916 Entries</a></li>
+				<li><a href="/whatsnew/">Last Updated: Thu Jun 15 2023</a></li>
+				<li><a href="https://www.wolfram.com" target="_blank">&copy;1999&ndash;2023 Wolfram Research, Inc.</a></li>
+				<li><a href="https://www.wolfram.com/legal/terms/mathworld.html" target="_blank">Terms of Use</a></li>
+			</ul>
+			<ul class="wolfram display-n__600">
+				<li class="display-n__900"><a href="https://www.wolfram.com" target="_blank" aria-label="Wolfram"><img src="/images/footer/wolfram-logo.png" alt="Wolfram" title="Wolfram" width="121" height="28"></a></li>
+				<li><a href="https://www.wolfram.com" target="_blank">wolfram.com</a></li>
+				<li><a href="https://www.wolfram.com/language/" target="_blank">Wolfram Language</a></li>
+				<li><a href="https://www.wolfram.com/mathematica/" target="_blank">Mathematica</a></li>
+				<li><a href="https://demonstrations.wolfram.com" target="_blank">Wolfram Demonstrations</a></li>
+				<li class=""><a href="https://www.wolfram.com/education/" target="_blank">Wolfram for Education</a></li>
+			</ul>
+		</footer>
+<section id="acknowledgment">
+	<i>Created, developed and nurtured by Eric Weisstein at Wolfram Research</i>
+</section>
+</aside>
+<script type="text/javascript" src="/scripts/scripts.js"></script>
+</body>
+</html>

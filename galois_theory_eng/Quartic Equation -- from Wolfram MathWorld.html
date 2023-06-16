@@ -1,0 +1,1010 @@
+<!doctype html>
+<html lang="en" class="algebra">
+<head>
+	<title>Quartic Equation -- from Wolfram MathWorld</title>
+	
+<meta name="DC.Title" content="Quartic Equation" />
+	
+<meta name="DC.Creator" content="Weisstein, Eric W." />
+	
+<meta name="DC.Description" content="A quartic equation is a fourth-order polynomial equation of the form  z^4+a_3z^3+a_2z^2+a_1z+a_0=0.  (1)   While some authors (Beyer 1987b, p. 34) use the term &quot;biquadratic equation&quot; as a synonym for quartic equation, others (Hazewinkel 1988, Gellert et al. 1989) reserve the term for a quartic equation having no cubic term, i.e., a quadratic equation in x^2. Ferrari was the first to develop an algebraic technique for solving the general quartic, which was stolen and published in..." />
+	
+<meta name="description" content="A quartic equation is a fourth-order polynomial equation of the form  z^4+a_3z^3+a_2z^2+a_1z+a_0=0.  (1)   While some authors (Beyer 1987b, p. 34) use the term &quot;biquadratic equation&quot; as a synonym for quartic equation, others (Hazewinkel 1988, Gellert et al. 1989) reserve the term for a quartic equation having no cubic term, i.e., a quadratic equation in x^2. Ferrari was the first to develop an algebraic technique for solving the general quartic, which was stolen and published in..." />
+	
+	
+	
+<meta name="DC.Date.Modified" scheme="W3CDTF" content="2002-04-05" />
+<meta name="DC.Date.Modified" scheme="W3CDTF" content="2004-03-29" />
+<meta name="DC.Date.Modified" scheme="W3CDTF" content="2008-01-18" />
+<meta name="DC.Date.Modified" scheme="W3CDTF" content="2023-02-06" />
+	
+<meta name="DC.Subject" scheme="MathWorld" content="Mathematics:Algebra:Algebraic Equations" />
+<meta name="DC.Subject" scheme="MathWorld" content="Mathematics:Algebra:Polynomials" />
+	
+<meta name="DC.Subject" scheme="MSC_2000" content="08A40" />
+<meta name="DC.Subject" scheme="MSC_2000" content="11C" />
+	
+<meta name="DC.Rights" content="Copyright 1999-2022 Wolfram Research, Inc.  See https://mathworld.wolfram.com/about/terms.html for a full terms of use statement." />
+	
+<meta name="DC.Format" scheme="IMT" content="text/html" />
+	
+<meta name="DC.Identifier" scheme="URI" content="https://mathworld.wolfram.com/QuarticEquation.html" />
+	
+<meta name="DC.Language" scheme="RFC3066" content="en" />
+	
+<meta name="DC.Publisher" content="Wolfram Research, Inc." />
+	
+<meta name="DC.Relation.IsPartOf" scheme="URI" content="https://mathworld.wolfram.com/" />
+	
+<meta name="DC.Type" scheme="DCMIType" content="Text" />
+	
+<meta name="Last-Modified" content="2023-02-06" />
+	
+<meta property="og:image" content="https://mathworld.wolfram.com/images/socialmedia/share.png">
+    
+<meta property="og:url" content="https://mathworld.wolfram.com/">
+    
+<meta property="og:type" content="website">
+    
+<meta property="og:title" content="Quartic Equation -- from Wolfram MathWorld">
+    
+<meta property="og:description" content="A quartic equation is a fourth-order polynomial equation of the form  z^4+a_3z^3+a_2z^2+a_1z+a_0=0.  (1)   While some authors (Beyer 1987b, p. 34) use the term &quot;biquadratic equation&quot; as a synonym for quartic equation, others (Hazewinkel 1988, Gellert et al. 1989) reserve the term for a quartic equation having no cubic term, i.e., a quadratic equation in x^2. Ferrari was the first to develop an algebraic technique for solving the general quartic, which was stolen and published in...">
+    
+<meta name="twitter:card" content="summary_large_image">
+    
+<meta name="twitter:site" content="@WolframResearch">
+    
+<meta name="twitter:title" content="Quartic Equation -- from Wolfram MathWorld">
+    
+<meta name="twitter:description" content="A quartic equation is a fourth-order polynomial equation of the form  z^4+a_3z^3+a_2z^2+a_1z+a_0=0.  (1)   While some authors (Beyer 1987b, p. 34) use the term &quot;biquadratic equation&quot; as a synonym for quartic equation, others (Hazewinkel 1988, Gellert et al. 1989) reserve the term for a quartic equation having no cubic term, i.e., a quadratic equation in x^2. Ferrari was the first to develop an algebraic technique for solving the general quartic, which was stolen and published in...">
+    
+<meta name="twitter:image:src" content="https://mathworld.wolfram.com/images/socialmedia/share.png">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<script async src="/common/javascript/analytics.js"></script>
+	<script async src="//www.wolframcdn.com/consent/cookie-consent.js"></script>
+	<script async src="/common/javascript/wal/latest/walLoad.js"></script>
+	<link rel="stylesheet" href="/css/styles.css">
+	<link rel="preload" href="//www.wolframcdn.com/fonts/source-sans-pro/1.0/global.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="//www.wolframcdn.com/fonts/source-sans-pro/1.0/global.css"></noscript>
+
+</head>
+<body id="topics">
+<main id="entry">
+    
+<div class="wrapper">
+        <section id="container">
+			<header class="text-align-c">
+				<div id="header-dropdown-menu">
+					<img src="/images/header/menu-icon.png" width="18" height="12">
+					<span class="display-n__600">TOPICS</span>
+				</div>
+
+				<a href="/">
+					<picture id="logo">
+						<source media="(min-width: 601px)" srcset="/images/logos/mathworld-logo-tagline.svg" width="100%" title="Wolfram MathWorld the web's most extensive mathematics resource" alt="Wolfram MathWorld the web's most extensive mathematics resource">
+						<img style="height: auto;" src="/images/logos/mathworld-logo.svg" title="Wolfram MathWorld" alt="Wolfram MathWorld" width="447" height="30">
+					</picture>
+				</a>
+				<form method="get" action="/search/" name="search" id="search" accept-charset="UTF-8">
+					<input type="text" name="query" placeholder="Search">
+					<img src="/images/header/search-icon.png" width="18" height="18" class="search-btn" title="Search" alt="Search" >
+					<img src="/images/header/menu-close.png" width="16" height="16" id="search-close" class="close-btn" title="Close" alt="Close" >
+				</form>
+			</header>
+            <section class="left-side">
+				<img src="/images/sidebar/menu-close.png" width="16" height="16" id="dropdown-topics-menu-close" class="close-btn">
+				<nav class="topics-nav">
+					<a href="/topics/Algebra.html" id="sidebar-algebra">
+						Algebra					
+					</a>
+					<a href="/topics/AppliedMathematics.html" id="sidebar-appliedmathematics">
+						Applied Mathematics					
+					</a>
+					<a href="/topics/CalculusandAnalysis.html" id="sidebar-calculusandanalysis">
+						Calculus and Analysis					
+					</a>
+					<a href="/topics/DiscreteMathematics.html" id="sidebar-discretemathematics">
+						Discrete Mathematics					
+					</a>
+					<a href="/topics/FoundationsofMathematics.html" id="sidebar-foundationsofmathematics">
+						Foundations of Mathematics					
+					</a>
+					<a href="/topics/Geometry.html" id="sidebar-geometry">
+						Geometry					
+					</a>
+					<a href="/topics/HistoryandTerminology.html" id="sidebar-historyandterminology">
+						History and Terminology					
+					</a>
+					<a href="/topics/NumberTheory.html" id="sidebar-numbertheory">
+						Number Theory					
+					</a>
+					<a href="/topics/ProbabilityandStatistics.html" id="sidebar-probabilityandstatistics">
+						Probability and Statistics					
+					</a>
+					<a href="/topics/RecreationalMathematics.html" id="sidebar-recreationalmathematics">
+						Recreational Mathematics					
+					</a>
+					<a href="/topics/Topology.html" id="sidebar-topology">
+						Topology					
+					</a>
+				</nav>
+				<nav class="secondary-nav">
+					<a href="/letters/">
+						Alphabetical Index
+					</a>
+					<a href="/whatsnew/">
+						New in MathWorld
+					</a>
+				</nav>
+			</section>
+            <section id="content">
+			  
+<!-- Begin Subject -->
+<nav class="breadcrumbs"><ul class="breadcrumb">
+<li>
+<a href="/topics/Algebra.html">Algebra</a>
+</li>
+<li>
+<a href="/topics/AlgebraicEquations.html">Algebraic Equations</a>
+</li>
+</ul><ul class="breadcrumb">
+<li>
+<a href="/topics/Algebra.html">Algebra</a>
+</li>
+<li>
+<a href="/topics/Polynomials.html">Polynomials</a>
+</li>
+</ul></nav>
+<!-- End Subject -->
+<!-- Begin Title -->
+<h1>Quartic Equation</h1>
+<!-- End Title -->
+<hr class="margin-t-1-8 margin-b-3-4">
+<!-- Begin Total Content -->
+<div class="attachments text-align-r">
+<a href="/notebooks/Algebra/QuarticEquation.nb" download="QuarticEquation.nb"><img src="/images/entries/download-notebook-icon.png" width="26" height="27" alt="DOWNLOAD Mathematica Notebook" /><span>Download
+ <span class="display-i display-n__600">Wolfram&nbsp;</span>Notebook</span></a>
+</div>
+<!-- Begin Content -->
+<div class="entry-content">
+<p>
+A quartic equation is a fourth-order <a href="/PolynomialEquation.html">polynomial
+equation</a> <a href="/OftheForm.html">of the form</a>
+</p>
+<div>
+<table summary="" width="100%" align="center" cellspacing="0" cellpadding="0" style="padding-left: 50px">
+<tr><td align="left"><img src="/images/equations/QuarticEquation/NumberedEquation1.svg" class="numberedequation" style="max-height:100%;max-width:100%" border="0" width="220"
+ height="21" alt=" z^4+a_3z^3+a_2z^2+a_1z+a_0=0. " /></td><td align="right" width="3">
+<div id="eqn1" class="eqnum">
+(1)
+</div>
+</td></tr>
+</table>
+</div>
+<p>
+While some authors (Beyer 1987b, p.&nbsp;34) use the term &quot;<a href="/BiquadraticEquation.html">biquadratic equation</a>&quot; as a synonym for quartic equation, others (Hazewinkel 1988, Gellert
+ <i>et al. </i>1989) reserve the term for a quartic equation having no cubic term,
+ i.e., a <a href="/QuadraticEquation.html">quadratic equation</a> in <img src="/images/equations/QuarticEquation/Inline1.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="16"
+ height="21" alt="x^2" />.
+</p>
+<p>
+Ferrari was the first to develop an algebraic technique for solving the general quartic, which was stolen and published in Cardano's <i>Ars Magna</i> in 1545 (Boyer and Merzbach
+ 1991, p.&nbsp;283). The <a href="http://www.wolfram.com/language/">Wolfram Language</a>
+ can solve quartic equations exactly using the built-in command <tt><a href="http://reference.wolfram.com/language/ref/Solve.html">Solve</a></tt>[<tt>a4
+ x^4 + a3 x^3 + a2 x^2 + a1 x + a0 == 0</tt>, <tt>x</tt>]. The solution can also be
+ expressed in terms of <a href="http://www.wolfram.com/language/">Wolfram Language</a>
+ algebraic root objects by first issuing <tt><a href="http://reference.wolfram.com/language/ref/SetOptions.html">SetOptions</a></tt>[<tt>Roots</tt>,
+ <tt>Quartics -&gt; False</tt>].
+</p>
+<p>
+The <a href="/Root.html">roots</a> of this equation satisfy <a href="/VietasFormulas.html">Vieta's
+formulas</a>: 
+</p>
+<div class="table-responsive-noborders">
+<table align="center" width="100%" cellpadding="0" cellspacing="0" style="padding-left: 50px"
+ border="0">
+<tr style=""><td align="right" width=""><img src="/images/equations/QuarticEquation/Inline2.svg" class="displayformula" style="max-height:100%;max-width:100%" border="0" width="159"
+ height="20" alt="x_1+x_2+x_3+x_4=-a_3 " /></td><td align="right" width="10">
+<div id="eqn2" class="eqnum">
+(2)
+</div>
+</td></tr><tr style=""><td align="right" width=""><img src="/images/equations/QuarticEquation/Inline3.svg" class="displayformula" style="max-height:100%;max-width:100%" border="0" width="318"
+ height="20" alt="x_1x_2+x_1x_3+x_1x_4+x_2x_3+x_2x_4+x_3x_4=a_2 " /></td><td align="right"
+ width="10">
+<div id="eqn3" class="eqnum">
+(3)
+</div>
+</td></tr><tr style=""><td align="right" width=""><img src="/images/equations/QuarticEquation/Inline4.svg" class="displayformula" style="max-height:100%;max-width:100%" border="0" width="303"
+ height="20" alt="x_1x_2x_3+x_2x_3x_4+x_1x_2x_4+x_1x_3x_4=-a_1 " /></td><td align="right"
+ width="10">
+<div id="eqn4" class="eqnum">
+(4)
+</div>
+</td></tr><tr style=""><td align="right" width=""><img src="/images/equations/QuarticEquation/Inline5.svg" class="displayformula" style="max-height:100%;max-width:100%" border="0" width="118"
+ height="20" alt="x_1x_2x_3x_4=a_0, " /></td><td align="right" width="10">
+<div id="eqn5" class="eqnum">
+(5)
+</div>
+</td></tr>
+</table>
+</div>
+<p>
+where the denominators on the right side are all <img src="/images/equations/QuarticEquation/Inline6.svg" class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="44"
+ height="21" alt="a_4=1" />. Writing the quartic in the standard form
+</p>
+<div>
+<table summary="" width="100%" align="center" cellspacing="0" cellpadding="0" style="padding-left: 50px">
+<tr><td align="left"><img src="/images/equations/QuarticEquation/NumberedEquation2.svg" class="numberedequation" style="max-height:100%;max-width:100%" border="0" width="152"
+ height="22" alt=" x^4+px^2+qx+r=0, " /></td><td align="right" width="3">
+<div id="eqn6" class="eqnum">
+(6)
+</div>
+</td></tr>
+</table>
+</div>
+<p>
+the properties of the <a href="/SymmetricPolynomial.html">symmetric polynomials</a>
+appearing in <a href="/VietasFormulas.html">Vieta's formulas</a> then give
+</p>
+<div class="table-responsive-noborders">
+<table align="center" width="100%" cellpadding="0" cellspacing="0" style="padding-left: 50px"
+ border="0">
+<tr style=""><td align="right" width=""><img src="/images/equations/QuarticEquation/Inline7.svg" class="displayformula" style="max-height:100%;max-width:100%" border="0" width="104"
+ height="23" alt="z_1^2+z_2^2+z_3^2+z_4^2" /></td><td align="center" width="14"><img
+ src="/images/equations/QuarticEquation/Inline8.svg" class="displayformula" style="max-height:100%;max-width:100%"
+ border="0" width="10" height="20" alt="=" /></td><td align="left"><img src="/images/equations/QuarticEquation/Inline9.svg"
+ class="displayformula" style="max-height:100%;max-width:100%" border="0" width="33"
+ height="21" alt="-2p" /></td><td align="right" width="10">
+<div id="eqn7" class="eqnum">
+(7)
+</div>
+</td></tr><tr style=""><td align="right" width=""><img src="/images/equations/QuarticEquation/Inline10.svg" class="displayformula" style="max-height:100%;max-width:100%" border="0" width="104"
+ height="23" alt="z_1^3+z_2^3+z_3^3+z_4^3" /></td><td align="center" width="14"><img
+ src="/images/equations/QuarticEquation/Inline11.svg" class="displayformula" style="max-height:100%;max-width:100%"
+ border="0" width="10" height="20" alt="=" /></td><td align="left"><img src="/images/equations/QuarticEquation/Inline12.svg"
+ class="displayformula" style="max-height:100%;max-width:100%" border="0" width="32"
+ height="21" alt="-3q" /></td><td align="right" width="10">
+<div id="eqn8" class="eqnum">
+(8)
+</div>
+</td></tr><tr style=""><td align="right" width=""><img src="/images/equations/QuarticEquation/Inline13.svg" class="displayformula" style="max-height:100%;max-width:100%" border="0" width="104"
+ height="23" alt="z_1^4+z_2^4+z_3^4+z_4^4" /></td><td align="center" width="14"><img
+ src="/images/equations/QuarticEquation/Inline14.svg" class="displayformula" style="max-height:100%;max-width:100%"
+ border="0" width="10" height="20" alt="=" /></td><td align="left"><img src="/images/equations/QuarticEquation/Inline15.svg"
+ class="displayformula" style="max-height:100%;max-width:100%" border="0" width="64"
+ height="22" alt="2p^2-4r" /></td><td align="right" width="10">
+<div id="eqn9" class="eqnum">
+(9)
+</div>
+</td></tr><tr style=""><td align="right" width=""><img src="/images/equations/QuarticEquation/Inline16.svg" class="displayformula" style="max-height:100%;max-width:100%" border="0" width="104"
+ height="22" alt="z_1^5+z_2^5+z_3^5+z_4^5" /></td><td align="center" width="14"><img
+ src="/images/equations/QuarticEquation/Inline17.svg" class="displayformula" style="max-height:100%;max-width:100%"
+ border="0" width="10" height="20" alt="=" /></td><td align="left"><img src="/images/equations/QuarticEquation/Inline18.svg"
+ class="displayformula" style="max-height:100%;max-width:100%" border="0" width="38"
+ height="21" alt="5pq." /></td><td align="right" width="10">
+<div id="eqn10" class="eqnum">
+(10)
+</div>
+</td></tr>
+</table>
+</div>
+<p>
+Eliminating <img src="/images/equations/QuarticEquation/Inline19.svg" class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="11" height="22" alt="p" />,
+ <img src="/images/equations/QuarticEquation/Inline20.svg" class="inlineformula" style="max-height:100%;max-width:100%"
+ border="0" width="9" height="22" alt="q" />, and <img src="/images/equations/QuarticEquation/Inline21.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="7"
+ height="21" alt="r" />, respectively, gives the relations
+</p>
+<div>
+<table summary="" width="100%" align="center" cellspacing="0" cellpadding="0" style="padding-left: 50px">
+<tr><td align="left"><img src="/images/equations/QuarticEquation/NumberedEquation3.svg" class="numberedequation" style="max-height:100%;max-width:100%" border="0" width="214"
+ height="25" alt=" z_1z_2(p+z_1^2+z_1z_2+z_2^2)-r=0 " /></td><td align="right" width="3">
+<div id="eqn11" class="eqnum">
+(11)
+</div>
+</td></tr>
+</table>
+</div>
+<div>
+<table summary="" width="100%" align="center" cellspacing="0" cellpadding="0" style="padding-left: 50px">
+<tr><td align="left"><img src="/images/equations/QuarticEquation/NumberedEquation4.svg" class="numberedequation" style="max-height:100%;max-width:100%" border="0" width="183"
+ height="23" alt=" z_1^2z_2(z_1+z_2)-qz_1-r=0 " /></td><td align="right" width="3">
+<div id="eqn12" class="eqnum">
+(12)
+</div>
+</td></tr>
+</table>
+</div>
+<div>
+<table summary="" width="100%" align="center" cellspacing="0" cellpadding="0" style="padding-left: 50px">
+<tr><td align="left"><img src="/images/equations/QuarticEquation/NumberedEquation5.svg" class="numberedequation" style="max-height:100%;max-width:100%" border="0" width="116"
+ height="23" alt=" q+pz_2+z_2^3=0, " /></td><td align="right" width="3">
+<div id="eqn13" class="eqnum">
+(13)
+</div>
+</td></tr>
+</table>
+</div>
+<p>
+as well as their cyclic permutations.
+</p>
+<p>
+Ferrari was the first to develop an algebraic technique for solving the general quartic. He applied his technique (which was stolen and published by Cardano) to the equation
+</p>
+<div>
+<table summary="" width="100%" align="center" cellspacing="0" cellpadding="0" style="padding-left: 50px">
+<tr><td align="left"><img src="/images/equations/QuarticEquation/NumberedEquation6.svg" class="numberedequation" style="max-height:100%;max-width:100%" border="0" width="165"
+ height="21" alt=" x^4+6x^2-60x+36=0 " /></td><td align="right" width="3">
+<div id="eqn14" class="eqnum">
+(14)
+</div>
+</td></tr>
+</table>
+</div>
+<p>
+(Smith 1994, p.&nbsp;207).
+</p>
+<p>
+The <img src="/images/equations/QuarticEquation/Inline22.svg" class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="16" height="21" alt="x^3" />
+ term can be eliminated from the general quartic (&#9671;) by making a substitution
+ <a href="/OftheForm.html">of the form</a>
+</p>
+<div>
+<table summary="" width="100%" align="center" cellspacing="0" cellpadding="0" style="padding-left: 50px">
+<tr><td align="left"><img src="/images/equations/QuarticEquation/NumberedEquation7.svg" class="numberedequation" style="max-height:100%;max-width:100%" border="0" width="61"
+ height="20" alt=" z=x-lambda, " /></td><td align="right" width="3">
+<div id="eqn15" class="eqnum">
+(15)
+</div>
+</td></tr>
+</table>
+</div>
+<p>
+so
+</p>
+<div>
+<table summary="" width="100%" align="center" cellspacing="0" cellpadding="0" style="padding-left: 50px">
+<tr><td align="left"><img src="/images/equations/QuarticEquation/NumberedEquation8.svg" data-src-small="/images/equations/QuarticEquation/NumberedEquation8_400.svg" data-src-default="/images/equations/QuarticEquation/NumberedEquation8.svg" class="numberedequation swappable" style="max-height:100%;max-width:100%" width="434"
+ height="53" data-big="434 53" data-small="272 81" border="0" alt=" x^4+(a_3-4lambda)x^3+(a_2-3a_3lambda+6lambda^2)x^2 
+ +(a_1-2a_2lambda+3a_3lambda^2-4lambda^3)x+(a_0-a_1lambda+a_2lambda^2-a_3lambda^3+lambda^4).  " /></td><td
+ align="right" width="3">
+<div id="eqn16" class="eqnum">
+(16)
+</div>
+</td></tr>
+</table>
+</div>
+<p>
+Letting <img src="/images/equations/QuarticEquation/Inline23.svg" class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="66" height="21" alt="lambda=a_3/4" />
+ so
+</p>
+<div>
+<table summary="" width="100%" align="center" cellspacing="0" cellpadding="0" style="padding-left: 50px">
+<tr><td align="left"><img src="/images/equations/QuarticEquation/NumberedEquation9.svg" class="numberedequation" style="max-height:100%;max-width:100%" border="0" width="80"
+ height="27" alt=" z=x-1/4a_3 " /></td><td align="right" width="3">
+<div id="eqn17" class="eqnum">
+(17)
+</div>
+</td></tr>
+</table>
+</div>
+<p>
+then gives the standard form
+</p>
+<div>
+<table summary="" width="100%" align="center" cellspacing="0" cellpadding="0" style="padding-left: 50px">
+<tr><td align="left"><img src="/images/equations/QuarticEquation/NumberedEquation10.svg" class="numberedequation" style="max-height:100%;max-width:100%" border="0" width="152"
+ height="22" alt=" x^4+px^2+qx+r=0, " /></td><td align="right" width="3">
+<div id="eqn18" class="eqnum">
+(18)
+</div>
+</td></tr>
+</table>
+</div>
+<p>
+where
+</p>
+<div class="table-responsive-noborders">
+<table align="center" width="100%" cellpadding="0" cellspacing="0" style="padding-left: 50px"
+ border="0">
+<tr style=""><td align="right" width=""><img src="/images/equations/QuarticEquation/Inline24.svg" class="displayformula" style="max-height:100%;max-width:100%" border="0" width="10"
+ height="21" alt="p" /></td><td align="center" width="14"><img src="/images/equations/QuarticEquation/Inline25.svg"
+ class="displayformula" style="max-height:100%;max-width:100%" border="0" width="10"
+ height="20" alt="=" /></td><td align="left"><img src="/images/equations/QuarticEquation/Inline26.svg"
+ class="displayformula" style="max-height:100%;max-width:100%" border="0" width="63"
+ height="27" alt="a_2-3/8a_3^2" /></td><td align="right" width="10">
+<div id="eqn19" class="eqnum">
+(19)
+</div>
+</td></tr><tr style=""><td align="right" width=""><img src="/images/equations/QuarticEquation/Inline27.svg" class="displayformula" style="max-height:100%;max-width:100%" border="0" width="9"
+ height="21" alt="q" /></td><td align="center" width="14"><img src="/images/equations/QuarticEquation/Inline28.svg"
+ class="displayformula" style="max-height:100%;max-width:100%" border="0" width="10"
+ height="20" alt="=" /></td><td align="left"><img src="/images/equations/QuarticEquation/Inline29.svg"
+ class="displayformula" style="max-height:100%;max-width:100%" border="0" width="128"
+ height="27" alt="a_1-1/2a_2a_3+1/8a_3^3" /></td><td align="right" width="10">
+<div id="eqn20" class="eqnum">
+(20)
+</div>
+</td></tr><tr style=""><td align="right" width=""><img src="/images/equations/QuarticEquation/Inline30.svg" class="displayformula" style="max-height:100%;max-width:100%" border="0" width="7"
+ height="20" alt="r" /></td><td align="center" width="14"><img src="/images/equations/QuarticEquation/Inline31.svg"
+ class="displayformula" style="max-height:100%;max-width:100%" border="0" width="10"
+ height="20" alt="=" /></td><td align="left"><img src="/images/equations/QuarticEquation/Inline32.svg"
+ class="displayformula" style="max-height:100%;max-width:100%" border="0" width="215"
+ height="27" alt="a_0-1/4a_1a_3+1/(16)a_2a_3^2-3/(256)a_3^4." /></td><td align="right"
+ width="10">
+<div id="eqn21" class="eqnum">
+(21)
+</div>
+</td></tr>
+</table>
+</div>
+<p>
+The quartic can be solved by writing it in a general form that would allow it to be algebraically factorable and then finding the condition to put it in this form.
+ The equation that must be solved to make it factorable is called the <a href="/ResolventCubic.html">resolvent
+ cubic</a>. To do this, note that the quartic will be factorable if it can be written
+ as the difference of two squared terms,
+</p>
+<div>
+<table summary="" width="100%" align="center" cellspacing="0" cellpadding="0" style="padding-left: 50px">
+<tr><td align="left"><img src="/images/equations/QuarticEquation/NumberedEquation11.svg" class="numberedequation" style="max-height:100%;max-width:100%" border="0" width="179"
+ height="22" alt=" P^2-Q^2=(P+Q)(P-Q). " /></td><td align="right" width="3">
+<div id="eqn22" class="eqnum">
+(22)
+</div>
+</td></tr>
+</table>
+</div>
+<p>
+It turns out that a factorization of this form can be obtained by adding and subtracting <img src="/images/equations/QuarticEquation/Inline33.svg" class="inlineformula" style="max-height:100%;max-width:100%"
+ border="0" width="87" height="25" alt="x^2u+u^2/4" /> (where <img src="/images/equations/QuarticEquation/Inline34.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="9"
+ height="21" alt="u" /> is for now an arbitrary quantity, but which will be specified
+ shortly) to equation (&#9671;) to obtain
+</p>
+<div>
+<table summary="" width="100%" align="center" cellspacing="0" cellpadding="0" style="padding-left: 50px">
+<tr><td align="left"><img src="/images/equations/QuarticEquation/NumberedEquation12.svg" class="numberedequation" style="max-height:100%;max-width:100%" border="0" width="341"
+ height="27" alt=" (x^4+x^2u+1/4u^2)-x^2u-1/4u^2+px^2+qx+r=0. " /></td><td align="right"
+ width="3">
+<div id="eqn23" class="eqnum">
+(23)
+</div>
+</td></tr>
+</table>
+</div>
+<p>
+This equation can be rewritten
+</p>
+<div>
+<table summary="" width="100%" align="center" cellspacing="0" cellpadding="0" style="padding-left: 50px">
+<tr><td align="left"><img src="/images/equations/QuarticEquation/NumberedEquation13.svg" class="numberedequation" style="max-height:100%;max-width:100%" border="0" width="306"
+ height="29" alt=" (x^2+1/2u)^2-[(u-p)x^2-qx+(1/4u^2-r)]=0 " /></td><td align="right"
+ width="3">
+<div id="eqn24" class="eqnum">
+(24)
+</div>
+</td></tr>
+</table>
+</div>
+<p>
+(Birkhoff and Mac Lane 1966). Note that the first term is immediately a perfect square <img src="/images/equations/QuarticEquation/Inline35.svg" class="inlineformula" style="max-height:100%;max-width:100%"
+ border="0" width="19" height="21" alt="P^2" /> with
+</p>
+<div>
+<table summary="" width="100%" align="center" cellspacing="0" cellpadding="0" style="padding-left: 50px">
+<tr><td align="left"><img src="/images/equations/QuarticEquation/NumberedEquation14.svg" class="numberedequation" style="max-height:100%;max-width:100%" border="0" width="88"
+ height="27" alt=" P=x^2+1/2u, " /></td><td align="right" width="3">
+<div id="eqn25" class="eqnum">
+(25)
+</div>
+</td></tr>
+</table>
+</div>
+<p>
+and the second term will be a perfect square <img src="/images/equations/QuarticEquation/Inline36.svg" class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="20"
+ height="22" alt="Q^2" /> if <img src="/images/equations/QuarticEquation/Inline37.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="9"
+ height="21" alt="u" /> is chosen to that the square can be completed in
+</p>
+<div>
+<table summary="" width="100%" align="center" cellspacing="0" cellpadding="0" style="padding-left: 50px">
+<tr><td align="left"><img src="/images/equations/QuarticEquation/NumberedEquation15.svg" class="numberedequation" style="max-height:100%;max-width:100%" border="0" width="258"
+ height="55" alt=" Q^2=(u-p)(x^2-q/(u-p)x+(1/4u^2-r)/(u-p)). " /></td><td align="right"
+ width="3">
+<div id="eqn26" class="eqnum">
+(26)
+</div>
+</td></tr>
+</table>
+</div>
+<p>
+This means we want
+</p>
+<div>
+<table summary="" width="100%" align="center" cellspacing="0" cellpadding="0" style="padding-left: 50px">
+<tr><td align="left"><img src="/images/equations/QuarticEquation/NumberedEquation16.svg" class="numberedequation" style="max-height:100%;max-width:100%" border="0" width="211"
+ height="71" alt=" Q^2=(u-p)(x-sqrt((1/4u^2-r)/(u-p)))^2 " /></td><td align="right"
+ width="3">
+<div id="eqn27" class="eqnum">
+(27)
+</div>
+</td></tr>
+</table>
+</div>
+<p>
+which requires that
+</p>
+<div>
+<table summary="" width="100%" align="center" cellspacing="0" cellpadding="0" style="padding-left: 50px">
+<tr><td align="left"><img src="/images/equations/QuarticEquation/NumberedEquation17.svg" class="numberedequation" style="max-height:100%;max-width:100%" border="0" width="157"
+ height="61" alt=" 2sqrt((1/4u^2-r)/(u-p))=q/(u-p), " /></td><td align="right" width="3">
+<div id="eqn28" class="eqnum">
+(28)
+</div>
+</td></tr>
+</table>
+</div>
+<p>
+or
+</p>
+<div>
+<table summary="" width="100%" align="center" cellspacing="0" cellpadding="0" style="padding-left: 50px">
+<tr><td align="left"><img src="/images/equations/QuarticEquation/NumberedEquation18.svg" class="numberedequation" style="max-height:100%;max-width:100%" border="0" width="165"
+ height="27" alt=" q^2=4(u-p)(1/4u^2-r). " /></td><td align="right" width="3">
+<div id="eqn29" class="eqnum">
+(29)
+</div>
+</td></tr>
+</table>
+</div>
+<p>
+This is the <a href="/ResolventCubic.html">resolvent cubic</a>.
+</p>
+<p>
+Since an analytic solution to the cubic is known, we can immediately solve algebraically for one of the three solution of equation (<a href="#eqn29">29</a>), say <img src="/images/equations/QuarticEquation/Inline38.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="16"
+ height="21" alt="u_1" />, and plugging equation (<a href="#eqn29">29</a>) into equation
+ (<a href="#eqn26">26</a>) then gives
+</p>
+<div>
+<table summary="" width="100%" align="center" cellspacing="0" cellpadding="0" style="padding-left: 50px">
+<tr><td align="left"><img src="/images/equations/QuarticEquation/NumberedEquation19.svg" class="numberedequation" style="max-height:100%;max-width:100%" border="0" width="100"
+ height="35" alt=" Q=Ax-q/(2A) " /></td><td align="right" width="3">
+<div id="eqn30" class="eqnum">
+(30)
+</div>
+</td></tr>
+</table>
+</div>
+<p>
+with
+</p>
+<div>
+<table summary="" width="100%" align="center" cellspacing="0" cellpadding="0" style="padding-left: 50px">
+<tr><td align="left"><img src="/images/equations/QuarticEquation/NumberedEquation20.svg" class="numberedequation" style="max-height:100%;max-width:100%" border="0" width="94"
+ height="25" alt=" A=sqrt(u_1-p). " /></td><td align="right" width="3">
+<div id="eqn31" class="eqnum">
+(31)
+</div>
+</td></tr>
+</table>
+</div>
+<p>
+<img src="/images/equations/QuarticEquation/Inline39.svg" class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="13" height="22" alt="Q" /> therefore is linear in <img src="/images/equations/QuarticEquation/Inline40.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="9"
+ height="21" alt="x" /> and <img src="/images/equations/QuarticEquation/Inline41.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="12"
+ height="21" alt="P" /> is quadratic in <img src="/images/equations/QuarticEquation/Inline42.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="9"
+ height="21" alt="x" />, so each term <img src="/images/equations/QuarticEquation/Inline43.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="44"
+ height="22" alt="P+Q" /> and <img src="/images/equations/QuarticEquation/Inline44.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="44"
+ height="22" alt="P-Q" /> is quadratic and can be solved using the <a href="/QuadraticFormula.html">quadratic
+ formula</a>, thus giving all four solutions to the original quartic.
+</p>
+<p>
+Explicitly, plugging <img src="/images/equations/QuarticEquation/Inline45.svg" class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="11" height="22" alt="p" />,
+ <img src="/images/equations/QuarticEquation/Inline46.svg" class="inlineformula" style="max-height:100%;max-width:100%"
+ border="0" width="9" height="22" alt="q" />, and <img src="/images/equations/QuarticEquation/Inline47.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="7"
+ height="21" alt="r" /> back into (&#9671;) gives
+</p>
+<div>
+<table summary="" width="100%" align="center" cellspacing="0" cellpadding="0" style="padding-left: 50px">
+<tr><td align="left"><img src="/images/equations/QuarticEquation/NumberedEquation21.svg" data-src-small="/images/equations/QuarticEquation/NumberedEquation21_400.svg" data-src-default="/images/equations/QuarticEquation/NumberedEquation21.svg" class="numberedequation swappable" style="max-height:100%;max-width:100%" width="729"
+ height="27" data-big="729 27" data-small="371 57" border="0" alt=" u^3+(3/8a_3^2-a_2)u^2+(3/(64)a_3^4-1/4a_2a_3^2+a_1a_3-4a_0)u+(1/(512)a_3^6-1/(64)a_2a_3^4+1/8a_1a_3^3-3/2a_0a_3^2+4a_0a_2-a_1^2).  " /></td><td
+ align="right" width="3">
+<div id="eqn32" class="eqnum">
+(32)
+</div>
+</td></tr>
+</table>
+</div>
+<p>
+This can be simplified by making the substitution
+</p>
+<div>
+<table summary="" width="100%" align="center" cellspacing="0" cellpadding="0" style="padding-left: 50px">
+<tr><td align="left"><img src="/images/equations/QuarticEquation/NumberedEquation22.svg" class="numberedequation" style="max-height:100%;max-width:100%" border="0" width="90"
+ height="27" alt=" u=y-1/8a_3^2, " /></td><td align="right" width="3">
+<div id="eqn33" class="eqnum">
+(33)
+</div>
+</td></tr>
+</table>
+</div>
+<p>
+which gives the resolvent <a href="/CubicEquation.html">cubic equation</a>
+</p>
+<div>
+<table summary="" width="100%" align="center" cellspacing="0" cellpadding="0" style="padding-left: 50px">
+<tr><td align="left"><img src="/images/equations/QuarticEquation/NumberedEquation23.svg" class="numberedequation" style="max-height:100%;max-width:100%" border="0" width="374"
+ height="25" alt=" y^3-a_2y^2+(a_1a_3-4a_0)y+(4a_2a_0-a_1^2-a_3^2a_0)=0. " /></td><td
+ align="right" width="3">
+<div id="eqn34" class="eqnum">
+(34)
+</div>
+</td></tr>
+</table>
+</div>
+<p>
+Let <img src="/images/equations/QuarticEquation/Inline48.svg" class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="16" height="22" alt="y_1" />
+ be a <a href="/RealNumber.html">real</a> <a href="/Root.html">root</a> of (<a href="#eqn34">34</a>),
+ then the four <a href="/Root.html">roots</a> of the original quartic are given by
+ the <a href="/Root.html">roots</a> of the equation
+</p>
+<div>
+<table summary="" width="100%" align="center" cellspacing="0" cellpadding="0" style="padding-left: 50px">
+<tr><td align="left"><img src="/images/equations/QuarticEquation/NumberedEquation24.svg" data-src-small="/images/equations/QuarticEquation/NumberedEquation24_400.svg" data-src-default="/images/equations/QuarticEquation/NumberedEquation24.svg" class="numberedequation swappable" style="max-height:100%;max-width:100%" width="406"
+ height="32" data-big="406 32" data-small="213 69" border="0" alt=" x^2+1/2(a_3+/-sqrt(a_3^2-4a_2+4y_1))x+1/2(y_1+/-sqrt(y_1^2-4a_0))=0, " /></td><td
+ align="right" width="3">
+<div id="eqn35" class="eqnum">
+(35)
+</div>
+</td></tr>
+</table>
+</div>
+<p>
+which are
+</p>
+<div class="table-responsive-noborders">
+<table align="center" width="100%" cellpadding="0" cellspacing="0" style="padding-left: 50px"
+ border="0">
+<tr style=""><td align="right" width=""><img src="/images/equations/QuarticEquation/Inline49.svg" class="displayformula" style="max-height:100%;max-width:100%" border="0" width="14"
+ height="20" alt="z_1" /></td><td align="center" width="14"><img src="/images/equations/QuarticEquation/Inline50.svg"
+ class="displayformula" style="max-height:100%;max-width:100%" border="0" width="10"
+ height="20" alt="=" /></td><td align="left"><img src="/images/equations/QuarticEquation/Inline51.svg"
+ class="displayformula" style="max-height:100%;max-width:100%" border="0" width="126"
+ height="27" alt="-1/4a_3+1/2R+1/2D" /></td><td align="right" width="10">
+<div id="eqn36" class="eqnum">
+(36)
+</div>
+</td></tr><tr style=""><td align="right" width=""><img src="/images/equations/QuarticEquation/Inline52.svg" class="displayformula" style="max-height:100%;max-width:100%" border="0" width="14"
+ height="20" alt="z_2" /></td><td align="center" width="14"><img src="/images/equations/QuarticEquation/Inline53.svg"
+ class="displayformula" style="max-height:100%;max-width:100%" border="0" width="10"
+ height="20" alt="=" /></td><td align="left"><img src="/images/equations/QuarticEquation/Inline54.svg"
+ class="displayformula" style="max-height:100%;max-width:100%" border="0" width="126"
+ height="27" alt="-1/4a_3+1/2R-1/2D" /></td><td align="right" width="10">
+<div id="eqn37" class="eqnum">
+(37)
+</div>
+</td></tr><tr style=""><td align="right" width=""><img src="/images/equations/QuarticEquation/Inline55.svg" class="displayformula" style="max-height:100%;max-width:100%" border="0" width="14"
+ height="20" alt="z_3" /></td><td align="center" width="14"><img src="/images/equations/QuarticEquation/Inline56.svg"
+ class="displayformula" style="max-height:100%;max-width:100%" border="0" width="10"
+ height="20" alt="=" /></td><td align="left"><img src="/images/equations/QuarticEquation/Inline57.svg"
+ class="displayformula" style="max-height:100%;max-width:100%" border="0" width="124"
+ height="27" alt="-1/4a_3-1/2R+1/2E" /></td><td align="right" width="10">
+<div id="eqn38" class="eqnum">
+(38)
+</div>
+</td></tr><tr style=""><td align="right" width=""><img src="/images/equations/QuarticEquation/Inline58.svg" class="displayformula" style="max-height:100%;max-width:100%" border="0" width="14"
+ height="20" alt="z_4" /></td><td align="center" width="14"><img src="/images/equations/QuarticEquation/Inline59.svg"
+ class="displayformula" style="max-height:100%;max-width:100%" border="0" width="10"
+ height="20" alt="=" /></td><td align="left"><img src="/images/equations/QuarticEquation/Inline60.svg"
+ class="displayformula" style="max-height:100%;max-width:100%" border="0" width="128"
+ height="27" alt="-1/4a_3-1/2R-1/2E," /></td><td align="right" width="10">
+<div id="eqn39" class="eqnum">
+(39)
+</div>
+</td></tr>
+</table>
+</div>
+<p>
+where
+</p>
+<div class="table-responsive-noborders">
+<table align="center" width="100%" cellpadding="0" cellspacing="0" style="padding-left: 50px"
+ border="0">
+<tr style=""><td align="right" width=""><img src="/images/equations/QuarticEquation/Inline61.svg" class="displayformula" style="max-height:100%;max-width:100%" border="0" width="11"
+ height="20" alt="R" /></td><td align="center" width="14"><img src="/images/equations/QuarticEquation/Inline62.svg"
+ class="displayformula" style="max-height:100%;max-width:100%" border="0" width="10"
+ height="20" alt="=" /></td><td align="left"><img src="/images/equations/QuarticEquation/Inline63.svg"
+ class="displayformula" style="max-height:100%;max-width:100%" border="0" width="114"
+ height="32" alt="sqrt(1/4a_3^2-a_2+y_1)" /></td><td align="right" width="10">
+<div id="eqn40" class="eqnum">
+(40)
+</div>
+</td></tr><tr style=""><td align="right" width=""><img src="/images/equations/QuarticEquation/Inline64.svg" class="displayformula" style="max-height:100%;max-width:100%" border="0" width="13"
+ height="20" alt="D" /></td><td align="center" width="14"><img src="/images/equations/QuarticEquation/Inline65.svg"
+ class="displayformula" style="max-height:100%;max-width:100%" border="0" width="10"
+ height="20" alt="=" /></td><td align="left"><img src="/images/equations/QuarticEquation/Inline66.svg" data-src-small="/images/equations/QuarticEquation/Inline66_400.svg" data-src-default="/images/equations/QuarticEquation/Inline66.svg"
+ class="displayformula swappable" style="max-height:100%;max-width:100%" width="406"
+ height="79" data-big="406 79" data-small="406 111" border="0" alt="{sqrt(3/4a_3^2-R^2-2a_2+1/4(4a_3a_2-8a_1-a_3^3)R^(-1)) for R!=0; sqrt(3/4a_3^2-2a_2+2sqrt(y_1^2-4a_0)) for R=0" /></td><td
+ align="right" width="10">
+<div id="eqn41" class="eqnum">
+(41)
+</div>
+</td></tr><tr style=""><td align="right" width=""><img src="/images/equations/QuarticEquation/Inline67.svg" class="displayformula" style="max-height:100%;max-width:100%" border="0" width="11"
+ height="20" alt="E" /></td><td align="center" width="14"><img src="/images/equations/QuarticEquation/Inline68.svg"
+ class="displayformula" style="max-height:100%;max-width:100%" border="0" width="10"
+ height="20" alt="=" /></td><td align="left"><img src="/images/equations/QuarticEquation/Inline69.svg" data-src-small="/images/equations/QuarticEquation/Inline69_400.svg" data-src-default="/images/equations/QuarticEquation/Inline69.svg"
+ class="displayformula swappable" style="max-height:100%;max-width:100%" width="406"
+ height="79" data-big="406 79" data-small="406 111" border="0" alt="{sqrt(3/4a_3^2-R^2-2a_2-1/4(4a_3a_2-8a_1-a_3^3)R^(-1)) for R!=0; sqrt(3/4a_3^2-2a_2-2sqrt(y_1^2-4a_0)) for R=0" /></td><td
+ align="right" width="10">
+<div id="eqn42" class="eqnum">
+(42)
+</div>
+</td></tr>
+</table>
+</div>
+<p>
+(Abramowitz and Stegun 1972, p.&nbsp;17; Beyer 1987a, p.&nbsp;12). This result is
+sometimes known as the <a href="/QuarticFormula.html">quartic formula</a>.
+</p>
+<p>
+Another approach to solving the quartic (&#9671;) defines
+</p>
+<div class="table-responsive-noborders">
+<table align="center" width="100%" cellpadding="0" cellspacing="0" style="padding-left: 50px"
+ border="0">
+<tr style=""><td align="right" width=""><img src="/images/equations/QuarticEquation/Inline70.svg" class="displayformula" style="max-height:100%;max-width:100%" border="0" width="9"
+ height="20" alt="alpha" /></td><td align="center" width="14"><img src="/images/equations/QuarticEquation/Inline71.svg"
+ class="displayformula" style="max-height:100%;max-width:100%" border="0" width="10"
+ height="20" alt="=" /></td><td align="left"><img src="/images/equations/QuarticEquation/Inline72.svg"
+ class="displayformula" style="max-height:100%;max-width:100%" border="0" width="210"
+ height="21" alt="(x_1+x_2)(x_3+x_4)=-(x_1+x_2)^2" /></td><td align="right" width="10">
+<div id="eqn43" class="eqnum">
+(43)
+</div>
+</td></tr><tr style=""><td align="right" width=""><img src="/images/equations/QuarticEquation/Inline73.svg" class="displayformula" style="max-height:100%;max-width:100%" border="0" width="10"
+ height="21" alt="beta" /></td><td align="center" width="14"><img src="/images/equations/QuarticEquation/Inline74.svg"
+ class="displayformula" style="max-height:100%;max-width:100%" border="0" width="10"
+ height="20" alt="=" /></td><td align="left"><img src="/images/equations/QuarticEquation/Inline75.svg"
+ class="displayformula" style="max-height:100%;max-width:100%" border="0" width="210"
+ height="21" alt="(x_1+x_3)(x_2+x_4)=-(x_1+x_3)^2" /></td><td align="right" width="10">
+<div id="eqn44" class="eqnum">
+(44)
+</div>
+</td></tr><tr style=""><td align="right" width=""><img src="/images/equations/QuarticEquation/Inline76.svg" class="displayformula" style="max-height:100%;max-width:100%" border="0" width="8"
+ height="21" alt="gamma" /></td><td align="center" width="14"><img src="/images/equations/QuarticEquation/Inline77.svg"
+ class="displayformula" style="max-height:100%;max-width:100%" border="0" width="10"
+ height="20" alt="=" /></td><td align="left"><img src="/images/equations/QuarticEquation/Inline78.svg"
+ class="displayformula" style="max-height:100%;max-width:100%" border="0" width="214"
+ height="21" alt="(x_1+x_4)(x_2+x_3)=-(x_2+x_3)^2," /></td><td align="right" width="10">
+<div id="eqn45" class="eqnum">
+(45)
+</div>
+</td></tr>
+</table>
+</div>
+<p>
+where the second forms follow from
+</p>
+<div>
+<table summary="" width="100%" align="center" cellspacing="0" cellpadding="0" style="padding-left: 50px">
+<tr><td align="left"><img src="/images/equations/QuarticEquation/NumberedEquation25.svg" class="numberedequation" style="max-height:100%;max-width:100%" border="0" width="190"
+ height="20" alt=" x_1+x_2+x_3+x_4=-a_3=0, " /></td><td align="right" width="3">
+<div id="eqn46" class="eqnum">
+(46)
+</div>
+</td></tr>
+</table>
+</div>
+<p>
+and defining
+</p>
+<div class="table-responsive-noborders">
+<table align="center" width="100%" cellpadding="0" cellspacing="0" style="padding-left: 50px"
+ border="0">
+<tr style=""><td align="right" width=""><img src="/images/equations/QuarticEquation/Inline79.svg" class="displayformula" style="max-height:100%;max-width:100%" border="0" width="30"
+ height="20" alt="h(x)" /></td><td align="center" width="14"><img src="/images/equations/QuarticEquation/Inline80.svg"
+ class="displayformula" style="max-height:100%;max-width:100%" border="0" width="10"
+ height="20" alt="=" /></td><td align="left"><img src="/images/equations/QuarticEquation/Inline81.svg"
+ class="displayformula" style="max-height:100%;max-width:100%" border="0" width="135"
+ height="21" alt="(x-alpha)(x-beta)(x-gamma)" /></td><td align="right" width="10">
+<div id="eqn47" class="eqnum">
+(47)
+</div>
+</td></tr><tr style=""><td align="right" width=""><img src="/images/equations/QuarticEquation/Inline82.svg" class="displayformula" style="max-height:100%;max-width:100%" border="0" width="12"
+ height="20" alt="" /></td><td align="center" width="14"><img src="/images/equations/QuarticEquation/Inline83.svg"
+ class="displayformula" style="max-height:100%;max-width:100%" border="0" width="10"
+ height="20" alt="=" /></td><td align="left"><img src="/images/equations/QuarticEquation/Inline84.svg"
+ class="displayformula" style="max-height:100%;max-width:100%" border="0" width="287"
+ height="22" alt="x^3-(alpha+beta+gamma)x^2+(alphabeta+alphagamma+betagamma)x-alphabetagamma." /></td><td
+ align="right" width="10">
+<div id="eqn48" class="eqnum">
+(48)
+</div>
+</td></tr>
+</table>
+</div>
+<p>
+This equation can be written in terms of the original coefficients <img src="/images/equations/QuarticEquation/Inline85.svg" class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="11"
+ height="22" alt="p" />, <img src="/images/equations/QuarticEquation/Inline86.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="9"
+ height="22" alt="q" />, and <img src="/images/equations/QuarticEquation/Inline87.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="7"
+ height="21" alt="r" /> as
+</p>
+<div>
+<table summary="" width="100%" align="center" cellspacing="0" cellpadding="0" style="padding-left: 50px">
+<tr><td align="left"><img src="/images/equations/QuarticEquation/NumberedEquation26.svg" class="numberedequation" style="max-height:100%;max-width:100%" border="0" width="247"
+ height="25" alt=" h(x)=x^3-2px^2+(p^2-4r)x+q^2. " /></td><td align="right" width="3">
+<div id="eqn49" class="eqnum">
+(49)
+</div>
+</td></tr>
+</table>
+</div>
+<p>
+The roots of this <a href="/CubicEquation.html">cubic equation</a> then give <img src="/images/equations/QuarticEquation/Inline88.svg" class="inlineformula" style="max-height:100%;max-width:100%"
+ border="0" width="10" height="21" alt="alpha" />, <img src="/images/equations/QuarticEquation/Inline89.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="10"
+ height="22" alt="beta" />, and <img src="/images/equations/QuarticEquation/Inline90.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="9"
+ height="22" alt="gamma" />, and the equations (&#9671;) to (&#9671;) can be solved
+ for the four roots <img src="/images/equations/QuarticEquation/Inline91.svg" class="inlineformula"
+ style="max-height:100%;max-width:100%" border="0" width="14" height="21" alt="x_i" />
+ of the original quartic (Faucette 1996).
+</p>
+</div>
+<!-- End Content -->
+<hr class="margin-b-1-1-4">
+<div class="c-777 entry-secondary-content">
+<!-- Begin See Also -->
+<h2>See also</h2><a href="/BiquadraticEquation.html">Biquadratic Equation</a>, <a href="/CubicEquation.html">Cubic Equation</a>, <a href="/PolynomialDiscriminant.html">Polynomial
+ Discriminant</a>, <a href="/QuadraticEquation.html">Quadratic Equation</a>, <a href="/QuarticFormula.html">Quartic
+ Formula</a>, <a href="/QuinticEquation.html">Quintic Equation</a>
+<!-- End See Also -->
+<!-- Begin CrossURL -->
+<!-- End CrossURL -->
+<!-- Begin Contributor -->
+<!-- End Contributor -->
+<!-- Begin Wolfram Alpha Pod -->
+<h2>Explore with Wolfram|Alpha</h2>
+<div id="WAwidget">
+<div class="WAwidget-wrapper">
+<img alt="WolframAlpha" title="WolframAlpha" src="/images/wolframalpha/WA-logo.png"
+ width="136" height="20">
+<form name="wolframalpha" action="https://www.wolframalpha.com/input/" target="_blank">
+      <input type="text" name="i" class="search" placeholder="Solve your math problems and get step-by-step solutions"
+ value="">
+       <button type="submit" title="Evaluate on WolframAlpha"></button>
+    </form>
+    
+</div>
+    
+<div class="WAwidget-wrapper try">
+    
+<p class="text-align-r">
+More things to try:
+</p>
+    <ul>
+<li>
+<a target="_blank" href="http://www.wolframalpha.com/input/?i=algebraic+equations">
+algebraic equations
+</a>
+</li>
+<li>
+<a target="_blank" href="http://www.wolframalpha.com/input/?i=solve+a+x^4+%2B+b+x^3+%2B+c+x^2+%2B+d+x+%2B+e+%3D+0">
+solve a x^4 + b x^3 + c x^2 + d x + e = 0
+</a>
+</li>
+<li>
+<a target="_blank" href="http://www.wolframalpha.com/input/?i=solve+a+x^4+%2B+e+%3D+0">
+solve a x^4 + e = 0
+</a>
+</li>
+	   
+    </ul>
+</div>
+</div>
+<!-- End Wolfram Alpha Pod -->
+<!-- Begin References -->
+<h2>References</h2><cite>Abramowitz, M. and Stegun, I.&nbsp;A. (Eds.). &quot;Solutions of Quartic Equations.&quot; &sect;3.8.3 in <i><a href="http://www.amazon.com/exec/obidos/ASIN/0486612724/ref=nosim/ericstreasuretro">Handbook
+ of Mathematical Functions with Formulas, Graphs, and Mathematical Tables, 9th printing.</a></i>
+ New York: Dover, pp.&nbsp;17-18, 1972.</cite><cite>Berger, M. &sect;16.4.1-16.4.11.1
+ in <i><a href="http://www.amazon.com/exec/obidos/ASIN/0387116583/ref=nosim/ericstreasuretro">Geometry
+ I.</a></i> New York:Springer-Verlag, 1987.</cite><cite>Beyer, W.&nbsp;H. <i><a href="http://www.amazon.com/exec/obidos/ASIN/1584882913/ref=nosim/ericstreasuretro">CRC
+ Standard Mathematical Tables, 28th ed.</a></i> Boca Raton, FL: CRC Press, p.&nbsp;12,
+ 1987a.</cite><cite>Beyer, W.&nbsp;H. <i>Handbook of Mathematical Sciences, 6th ed.</i>
+ Boca Raton, FL: CRC Press, 1987b.</cite><cite>Birkhoff, G. and Mac Lane, S. <i><a
+ href="http://www.amazon.com/exec/obidos/ASIN/1568810687/ref=nosim/ericstreasuretro">A
+ Survey of Modern Algebra, 5th ed.</a></i> New York: Macmillan, pp.&nbsp;107-108,
+ 1996.</cite><cite>Borwein, P. and Erd&eacute;lyi, T. &quot;Quartic Equations.&quot;
+ &sect;1.1.E.1e in <i><a href="http://www.amazon.com/exec/obidos/ASIN/0387945091/ref=nosim/ericstreasuretro">Polynomials
+ and Polynomial Inequalities.</a></i> New York:Springer-Verlag, p.&nbsp;4, 1995.</cite><cite>Boyer,
+ C.&nbsp;B. and Merzbach, U.&nbsp;C. <i><a href="http://www.amazon.com/exec/obidos/ASIN/0471543977/ref=nosim/ericstreasuretro">A
+ History of Mathematics, 2nd ed.</a></i> New York: Wiley, pp.&nbsp;286-287, 1991.</cite><cite>Ehrlich,
+ G. &sect;4.16 in <i><a href="http://www.amazon.com/exec/obidos/ASIN/0534924557/ref=nosim/ericstreasuretro">Fundamental
+ Concepts of Abstract Algebra.</a></i> Boston, MA: PWS-Kent, 1991.</cite><cite>Faucette,
+ W.&nbsp;M. &quot;A Geometric Interpretation of the Solution of the General Quartic
+ Polynomial.&quot; <i>Amer. Math. Monthly</i> <b>103</b>, 51-57, 1996.</cite><cite>Gellert,
+ W.; Gottwald, S.; Hellwich, M.; K&auml;stner, H.; and K&uuml;nstner, H. (Eds.). <i><a
+ href="http://www.amazon.com/exec/obidos/ASIN/0442205902/ref=nosim/ericstreasuretro">VNR
+ Concise Encyclopedia of Mathematics, 2nd ed.</a></i> New York: Van Nostrand Reinhold,
+ 1989.</cite><cite>Hazewinkel, M. (Managing Ed.). <i><a href="http://www.amazon.com/exec/obidos/ASIN/0792334981/ref=nosim/ericstreasuretro">Encyclopaedia
+ of Mathematics: An Updated and Annotated Translation of the Soviet &quot;Mathematical
+ Encyclopaedia.&quot;</a></i> Dordrecht, Netherlands: Reidel, 1988.</cite><cite>MathPages.
+ &quot;Reducing Quartics to Cubics.&quot; <a href="http://www.mathpages.com/home/kmath296.htm">http://www.mathpages.com/home/kmath296.htm</a>.</cite><cite>Smith,
+ D.&nbsp;E. <i><a href="http://www.amazon.com/exec/obidos/ASIN/0486646904/ref=nosim/ericstreasuretro">A
+ Source Book in Mathematics.</a></i> New York: Dover, 1994.</cite><cite>van der Waerden,
+ B.&nbsp;L. &sect;64 in <i><a href="http://www.amazon.com/exec/obidos/ASIN/0387974245/ref=nosim/ericstreasuretro">Algebra,
+ Vol.&nbsp;1.</a></i> New York:Springer-Verlag, 1993.</cite><h2>Referenced on Wolfram|Alpha</h2><a
+ href="http://www.wolframalpha.com/entities/mathworld/quartic_equation/dm/do/qi/"
+ title="Quartic Equation" target="_blank">Quartic Equation</a>
+<!-- End References -->
+<!-- Begin CiteAs -->
+<h2>Cite this as:</h2>
+<p>
+<a href="/about/author.html">Weisstein, Eric W.</a> &quot;Quartic Equation.&quot;
+From <a href="/"><i>MathWorld</i></a>--A Wolfram Web Resource. <a href="https://mathworld.wolfram.com/QuarticEquation.html">https://mathworld.wolfram.com/QuarticEquation.html</a>
+</p>
+<!-- End CiteAs -->
+<h2>Subject classifications</h2><nav class="breadcrumbs"><ul class="breadcrumb">
+<li>
+<a href="/topics/Algebra.html">Algebra</a>
+</li>
+<li>
+<a href="/topics/AlgebraicEquations.html">Algebraic Equations</a>
+</li>
+</ul><ul class="breadcrumb">
+<li>
+<a href="/topics/Algebra.html">Algebra</a>
+</li>
+<li>
+<a href="/topics/Polynomials.html">Polynomials</a>
+</li>
+</ul></nav>
+<!-- End Total Content -->
+</div>
+            </section>
+        </section> <!-- /container -->
+    
+</div>
+</main>
+<aside id="bottom">
+		<footer>
+			<ul>
+				<li><a href="/about/">About MathWorld</a></li>
+				<li><a href="/classroom/">MathWorld Classroom</a></li>
+				<li><a href="/contact/">Send a Message</a></li>
+				<li><a href="https://www.amazon.com/exec/obidos/ASIN/1420072218/ref=nosim/weisstein-20" target="_blank">MathWorld Book</a></li>
+				<li class="display-n display-ib__600"><a href="https://www.wolfram.com" target="_blank">wolfram.com</a></li>
+			</ul>
+			<ul>
+				<li><a href="/whatsnew/">13,916 Entries</a></li>
+				<li><a href="/whatsnew/">Last Updated: Thu Jun 15 2023</a></li>
+				<li><a href="https://www.wolfram.com" target="_blank">&copy;1999&ndash;2023 Wolfram Research, Inc.</a></li>
+				<li><a href="https://www.wolfram.com/legal/terms/mathworld.html" target="_blank">Terms of Use</a></li>
+			</ul>
+			<ul class="wolfram display-n__600">
+				<li class="display-n__900"><a href="https://www.wolfram.com" target="_blank" aria-label="Wolfram"><img src="/images/footer/wolfram-logo.png" alt="Wolfram" title="Wolfram" width="121" height="28"></a></li>
+				<li><a href="https://www.wolfram.com" target="_blank">wolfram.com</a></li>
+				<li><a href="https://www.wolfram.com/language/" target="_blank">Wolfram Language</a></li>
+				<li><a href="https://www.wolfram.com/mathematica/" target="_blank">Mathematica</a></li>
+				<li><a href="https://demonstrations.wolfram.com" target="_blank">Wolfram Demonstrations</a></li>
+				<li class=""><a href="https://www.wolfram.com/education/" target="_blank">Wolfram for Education</a></li>
+			</ul>
+		</footer>
+<section id="acknowledgment">
+	<i>Created, developed and nurtured by Eric Weisstein at Wolfram Research</i>
+</section>
+</aside>
+<script type="text/javascript" src="/scripts/scripts.js"></script>
+</body>
+</html>

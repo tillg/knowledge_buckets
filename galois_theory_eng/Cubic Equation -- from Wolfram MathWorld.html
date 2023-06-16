@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en" class="algebra">
+<head>
+	<title>Cubic Equation -- from Wolfram MathWorld</title>
+	
+<meta name="DC.Title" content="Cubic Equation" />
+	
+<meta name="DC.Creator" content="Weisstein, Eric W." />
+	
+<meta name="DC.Description" content="A cubic equation is an equation involving a cubic polynomial, i.e., one of the form  a_3x^3+a_2x^2+a_1x+a_0=0.   Since a_3!=0 (or else the polynomial would be quadratic and not cubic), this can without loss of generality be divided through by a_3, giving  x^3+a_2^'x^2+a_1^'x+a_0^'=0.   A closed-form formula known as the cubic formula exists for the solutions of a cubic equation. " />
+	
+<meta name="description" content="A cubic equation is an equation involving a cubic polynomial, i.e., one of the form  a_3x^3+a_2x^2+a_1x+a_0=0.   Since a_3!=0 (or else the polynomial would be quadratic and not cubic), this can without loss of generality be divided through by a_3, giving  x^3+a_2^'x^2+a_1^'x+a_0^'=0.   A closed-form formula known as the cubic formula exists for the solutions of a cubic equation. " />
+	
+	
+<meta name="DC.Date.Created" scheme="W3CDTF" content="2004-10-02" />
+	
+	
+<meta name="DC.Subject" scheme="MathWorld" content="Mathematics:Algebra:Algebraic Equations" />
+<meta name="DC.Subject" scheme="MathWorld" content="Mathematics:Algebra:Polynomials" />
+	
+<meta name="DC.Subject" scheme="MSC_2000" content="08A40" />
+<meta name="DC.Subject" scheme="MSC_2000" content="11C" />
+	
+<meta name="DC.Rights" content="Copyright 1999-2023 Wolfram Research, Inc.  See https://mathworld.wolfram.com/about/terms.html for a full terms of use statement." />
+	
+<meta name="DC.Format" scheme="IMT" content="text/html" />
+	
+<meta name="DC.Identifier" scheme="URI" content="https://mathworld.wolfram.com/CubicEquation.html" />
+	
+<meta name="DC.Language" scheme="RFC3066" content="en" />
+	
+<meta name="DC.Publisher" content="Wolfram Research, Inc." />
+	
+<meta name="DC.Relation.IsPartOf" scheme="URI" content="https://mathworld.wolfram.com/" />
+	
+<meta name="DC.Type" scheme="DCMIType" content="Text" />
+	
+<meta name="Last-Modified" content="2004-10-02" />
+	
+<meta property="og:image" content="https://mathworld.wolfram.com/images/socialmedia/share.png">
+    
+<meta property="og:url" content="https://mathworld.wolfram.com/">
+    
+<meta property="og:type" content="website">
+    
+<meta property="og:title" content="Cubic Equation -- from Wolfram MathWorld">
+    
+<meta property="og:description" content="A cubic equation is an equation involving a cubic polynomial, i.e., one of the form  a_3x^3+a_2x^2+a_1x+a_0=0.   Since a_3!=0 (or else the polynomial would be quadratic and not cubic), this can without loss of generality be divided through by a_3, giving  x^3+a_2^'x^2+a_1^'x+a_0^'=0.   A closed-form formula known as the cubic formula exists for the solutions of a cubic equation. ">
+    
+<meta name="twitter:card" content="summary_large_image">
+    
+<meta name="twitter:site" content="@WolframResearch">
+    
+<meta name="twitter:title" content="Cubic Equation -- from Wolfram MathWorld">
+    
+<meta name="twitter:description" content="A cubic equation is an equation involving a cubic polynomial, i.e., one of the form  a_3x^3+a_2x^2+a_1x+a_0=0.   Since a_3!=0 (or else the polynomial would be quadratic and not cubic), this can without loss of generality be divided through by a_3, giving  x^3+a_2^'x^2+a_1^'x+a_0^'=0.   A closed-form formula known as the cubic formula exists for the solutions of a cubic equation. ">
+    
+<meta name="twitter:image:src" content="https://mathworld.wolfram.com/images/socialmedia/share.png">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<script async src="/common/javascript/analytics.js"></script>
+	<script async src="//www.wolframcdn.com/consent/cookie-consent.js"></script>
+	<script async src="/common/javascript/wal/latest/walLoad.js"></script>
+	<link rel="stylesheet" href="/css/styles.css">
+	<link rel="preload" href="//www.wolframcdn.com/fonts/source-sans-pro/1.0/global.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="//www.wolframcdn.com/fonts/source-sans-pro/1.0/global.css"></noscript>
+
+</head>
+<body id="topics">
+<main id="entry">
+    
+<div class="wrapper">
+        <section id="container">
+			<header class="text-align-c">
+				<div id="header-dropdown-menu">
+					<img src="/images/header/menu-icon.png" width="18" height="12">
+					<span class="display-n__600">TOPICS</span>
+				</div>
+
+				<a href="/">
+					<picture id="logo">
+						<source media="(min-width: 601px)" srcset="/images/logos/mathworld-logo-tagline.svg" width="100%" title="Wolfram MathWorld the web's most extensive mathematics resource" alt="Wolfram MathWorld the web's most extensive mathematics resource">
+						<img style="height: auto;" src="/images/logos/mathworld-logo.svg" title="Wolfram MathWorld" alt="Wolfram MathWorld" width="447" height="30">
+					</picture>
+				</a>
+				<form method="get" action="/search/" name="search" id="search" accept-charset="UTF-8">
+					<input type="text" name="query" placeholder="Search">
+					<img src="/images/header/search-icon.png" width="18" height="18" class="search-btn" title="Search" alt="Search" >
+					<img src="/images/header/menu-close.png" width="16" height="16" id="search-close" class="close-btn" title="Close" alt="Close" >
+				</form>
+			</header>
+            <section class="left-side">
+				<img src="/images/sidebar/menu-close.png" width="16" height="16" id="dropdown-topics-menu-close" class="close-btn">
+				<nav class="topics-nav">
+					<a href="/topics/Algebra.html" id="sidebar-algebra">
+						Algebra					
+					</a>
+					<a href="/topics/AppliedMathematics.html" id="sidebar-appliedmathematics">
+						Applied Mathematics					
+					</a>
+					<a href="/topics/CalculusandAnalysis.html" id="sidebar-calculusandanalysis">
+						Calculus and Analysis					
+					</a>
+					<a href="/topics/DiscreteMathematics.html" id="sidebar-discretemathematics">
+						Discrete Mathematics					
+					</a>
+					<a href="/topics/FoundationsofMathematics.html" id="sidebar-foundationsofmathematics">
+						Foundations of Mathematics					
+					</a>
+					<a href="/topics/Geometry.html" id="sidebar-geometry">
+						Geometry					
+					</a>
+					<a href="/topics/HistoryandTerminology.html" id="sidebar-historyandterminology">
+						History and Terminology					
+					</a>
+					<a href="/topics/NumberTheory.html" id="sidebar-numbertheory">
+						Number Theory					
+					</a>
+					<a href="/topics/ProbabilityandStatistics.html" id="sidebar-probabilityandstatistics">
+						Probability and Statistics					
+					</a>
+					<a href="/topics/RecreationalMathematics.html" id="sidebar-recreationalmathematics">
+						Recreational Mathematics					
+					</a>
+					<a href="/topics/Topology.html" id="sidebar-topology">
+						Topology					
+					</a>
+				</nav>
+				<nav class="secondary-nav">
+					<a href="/letters/">
+						Alphabetical Index
+					</a>
+					<a href="/whatsnew/">
+						New in MathWorld
+					</a>
+				</nav>
+			</section>
+            <section id="content">
+			  
+<!-- Begin Subject -->
+<nav class="breadcrumbs"><ul class="breadcrumb">
+<li>
+<a href="/topics/Algebra.html">Algebra</a>
+</li>
+<li>
+<a href="/topics/AlgebraicEquations.html">Algebraic Equations</a>
+</li>
+</ul><ul class="breadcrumb">
+<li>
+<a href="/topics/Algebra.html">Algebra</a>
+</li>
+<li>
+<a href="/topics/Polynomials.html">Polynomials</a>
+</li>
+</ul></nav>
+<!-- End Subject -->
+<!-- Begin Title -->
+<h1>Cubic Equation</h1>
+<!-- End Title -->
+<hr class="margin-t-1-8 margin-b-3-4">
+<!-- Begin Total Content -->
+<!-- Begin Content -->
+<div class="entry-content">
+<p>
+A cubic equation is an equation involving a <a href="/CubicPolynomial.html">cubic
+polynomial</a>, i.e., one of the form
+</p>
+<div>
+<table summary="" width="100%" align="center" cellspacing="0" cellpadding="0" style="padding-left: 50px">
+<tr><td align="left"><img src="/images/equations/CubicEquation/NumberedEquation1.svg" class="numberedequation" style="max-height:100%;max-width:100%" border="0" width="193"
+ height="21" alt=" a_3x^3+a_2x^2+a_1x+a_0=0. " /></td></tr>
+</table>
+</div>
+<p>
+Since <img src="/images/equations/CubicEquation/Inline1.svg" class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="44" height="21" alt="a_3!=0" />
+ (or else the polynomial would be quadratic and not cubic), this can without loss
+ of generality be divided through by <img src="/images/equations/CubicEquation/Inline2.svg"
+ class="inlineformula" style="max-height:100%;max-width:100%" border="0" width="16"
+ height="21" alt="a_3" />, giving
+</p>
+<div>
+<table summary="" width="100%" align="center" cellspacing="0" cellpadding="0" style="padding-left: 50px">
+<tr><td align="left"><img src="/images/equations/CubicEquation/NumberedEquation2.svg" class="numberedequation" style="max-height:100%;max-width:100%" border="0" width="174"
+ height="23" alt=" x^3+a_2^'x^2+a_1^'x+a_0^'=0. " /></td></tr>
+</table>
+</div>
+<p>
+A closed-form formula known as the <a href="/CubicFormula.html">cubic formula</a>
+exists for the solutions of a cubic equation.
+</p>
+</div>
+<!-- End Content -->
+<hr class="margin-b-1-1-4">
+<div class="c-777 entry-secondary-content">
+<!-- Begin See Also -->
+<h2>See also</h2><a href="/CasusIrreducibilis.html">Casus Irreducibilis</a>, <a href="/CubicFormula.html">Cubic
+Formula</a>, <a href="/CubicPolynomial.html">Cubic Polynomial</a>
+<!-- End See Also -->
+<!-- Begin CrossURL -->
+<!-- End CrossURL -->
+<!-- Begin Contributor -->
+<!-- End Contributor -->
+<!-- Begin Wolfram Alpha Pod -->
+<h2>Explore with Wolfram|Alpha</h2>
+<div id="WAwidget">
+<div class="WAwidget-wrapper">
+<img alt="WolframAlpha" title="WolframAlpha" src="/images/wolframalpha/WA-logo.png"
+ width="136" height="20">
+<form name="wolframalpha" action="https://www.wolframalpha.com/input/" target="_blank">
+      <input type="text" name="i" class="search" placeholder="Solve your math problems and get step-by-step solutions"
+ value="">
+       <button type="submit" title="Evaluate on WolframAlpha"></button>
+    </form>
+    
+</div>
+    
+<div class="WAwidget-wrapper try">
+    
+<p class="text-align-r">
+More things to try:
+</p>
+    <ul>
+<li>
+<a target="_blank" href="http://www.wolframalpha.com/input/?i=algebraic+equations">
+algebraic equations
+</a>
+</li>
+<li>
+<a target="_blank" href="http://www.wolframalpha.com/input/?i=solve+x^3+%2B+b+x^2+%2B+c+x+%2B+d+%3D+0">
+solve x^3 + b x^2 + c x + d = 0
+</a>
+</li>
+	   
+<li><a target="_blank" href="https://www.wolframalpha.com/input/?i=arcsin%281%2F2%29">arcsin(1/2)</a></li>
+
+    </ul>
+</div>
+</div>
+<!-- End Wolfram Alpha Pod -->
+<!-- Begin References -->
+<!-- End References -->
+<!-- Begin CiteAs -->
+<h2>Cite this as:</h2>
+<p>
+<a href="/about/author.html">Weisstein, Eric W.</a> &quot;Cubic Equation.&quot; From
+<a href="/"><i>MathWorld</i></a>--A Wolfram Web Resource. <a href="https://mathworld.wolfram.com/CubicEquation.html">https://mathworld.wolfram.com/CubicEquation.html</a>
+</p>
+<!-- End CiteAs -->
+<h2>Subject classifications</h2><nav class="breadcrumbs"><ul class="breadcrumb">
+<li>
+<a href="/topics/Algebra.html">Algebra</a>
+</li>
+<li>
+<a href="/topics/AlgebraicEquations.html">Algebraic Equations</a>
+</li>
+</ul><ul class="breadcrumb">
+<li>
+<a href="/topics/Algebra.html">Algebra</a>
+</li>
+<li>
+<a href="/topics/Polynomials.html">Polynomials</a>
+</li>
+</ul></nav>
+<!-- End Total Content -->
+</div>
+            </section>
+        </section> <!-- /container -->
+    
+</div>
+</main>
+<aside id="bottom">
+		<footer>
+			<ul>
+				<li><a href="/about/">About MathWorld</a></li>
+				<li><a href="/classroom/">MathWorld Classroom</a></li>
+				<li><a href="/contact/">Send a Message</a></li>
+				<li><a href="https://www.amazon.com/exec/obidos/ASIN/1420072218/ref=nosim/weisstein-20" target="_blank">MathWorld Book</a></li>
+				<li class="display-n display-ib__600"><a href="https://www.wolfram.com" target="_blank">wolfram.com</a></li>
+			</ul>
+			<ul>
+				<li><a href="/whatsnew/">13,916 Entries</a></li>
+				<li><a href="/whatsnew/">Last Updated: Thu Jun 15 2023</a></li>
+				<li><a href="https://www.wolfram.com" target="_blank">&copy;1999&ndash;2023 Wolfram Research, Inc.</a></li>
+				<li><a href="https://www.wolfram.com/legal/terms/mathworld.html" target="_blank">Terms of Use</a></li>
+			</ul>
+			<ul class="wolfram display-n__600">
+				<li class="display-n__900"><a href="https://www.wolfram.com" target="_blank" aria-label="Wolfram"><img src="/images/footer/wolfram-logo.png" alt="Wolfram" title="Wolfram" width="121" height="28"></a></li>
+				<li><a href="https://www.wolfram.com" target="_blank">wolfram.com</a></li>
+				<li><a href="https://www.wolfram.com/language/" target="_blank">Wolfram Language</a></li>
+				<li><a href="https://www.wolfram.com/mathematica/" target="_blank">Mathematica</a></li>
+				<li><a href="https://demonstrations.wolfram.com" target="_blank">Wolfram Demonstrations</a></li>
+				<li class=""><a href="https://www.wolfram.com/education/" target="_blank">Wolfram for Education</a></li>
+			</ul>
+		</footer>
+<section id="acknowledgment">
+	<i>Created, developed and nurtured by Eric Weisstein at Wolfram Research</i>
+</section>
+</aside>
+<script type="text/javascript" src="/scripts/scripts.js"></script>
+</body>
+</html>
